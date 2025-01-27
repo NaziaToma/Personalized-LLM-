@@ -1,0 +1,46 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="26.0.9">
+  <diagram name="Page-1" id="wfl2JhkkJllOuQan0xcO">
+    <mxGraphModel dx="1115" dy="566" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="xAf1wNFKMHfitu6JWivG-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="xAf1wNFKMHfitu6JWivG-1" target="xAf1wNFKMHfitu6JWivG-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xAf1wNFKMHfitu6JWivG-1" value="Dataset" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xAf1wNFKMHfitu6JWivG-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="xAf1wNFKMHfitu6JWivG-2" target="xAf1wNFKMHfitu6JWivG-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xAf1wNFKMHfitu6JWivG-2" value="Fine-tune LLM" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xAf1wNFKMHfitu6JWivG-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="xAf1wNFKMHfitu6JWivG-3" target="xAf1wNFKMHfitu6JWivG-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xAf1wNFKMHfitu6JWivG-3" value="RAG&lt;br&gt;vector database" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xAf1wNFKMHfitu6JWivG-4" value="GEN AI for content creation" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="630" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xAf1wNFKMHfitu6JWivG-5" value="AI part:" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="110" y="210" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xAf1wNFKMHfitu6JWivG-6" value="Software Dev Part:" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="120" y="370" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xAf1wNFKMHfitu6JWivG-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="xAf1wNFKMHfitu6JWivG-7" target="xAf1wNFKMHfitu6JWivG-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xAf1wNFKMHfitu6JWivG-7" value="Frontend&lt;br&gt;&lt;br&gt;1. Show content&lt;div&gt;2. Topic Search&lt;/div&gt;&lt;div&gt;3. Chatbot&lt;br&gt;4. Quiz page&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="125" y="420" width="185" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="xAf1wNFKMHfitu6JWivG-8" value="Backend&lt;br&gt;&lt;br&gt;1. Handle APIs&lt;div&gt;2. Query Processing&lt;/div&gt;&lt;div&gt;3. Retrieval from vector database&lt;br&gt;4. Generation from fine-tuned LLM&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="420" width="185" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
