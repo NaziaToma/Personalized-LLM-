@@ -1,1 +1,1 @@
-# Intelligent-Study-Partner
+# Personalized LLM research project 
