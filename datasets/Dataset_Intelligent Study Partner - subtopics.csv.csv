@@ -1,0 +1,2592 @@
+Main Topic,Subtopic,Description,Code Snippets
+Array,Basic terminologies of Array,"Array Index:  In an array, elements are identified by their indexes. Array index starts from 0. Array element:  Elements are items stored in an array and can be accessed by their index. Array Length:  The length of an array is determined by the number of elements it can contain.",
+Array,Memory representation of Array,"In an array, all the elements are stored in contiguous memory locations. So, if we initialize an array, the elements will be allocated sequentially in memory. This allows for efficient access and manipulation of elements. ",
+Array,Declaration of Array,"Arrays can be declared in various ways in different languages. For better illustration, below are python language-specific array declarations:","# In Python, all types of lists are created same way
+arr = []"
+Array,Initialization of Array,Arrays can be initialized in different ways in different languages. Below are some language-specific array initializations:,"# This list will store integer type elements
+arr = [1, 2, 3, 4, 5]
+
+# This list will store character type elements (strings in Python)
+arr = ['a', 'b', 'c', 'd', 'e']
+
+# This list will store float type elements
+arr = [1.4, 2.0, 24.0, 5.0, 0.0]  # All float values"
+Array,Why do we Need Arrays?,"Assume there is a class of five students and if we have to keep records of their marks in examination then, we can do this by declaring five variables individual and keeping track of records but what if the number of students becomes very large, it would be challenging to manipulate and maintain the data. What it means is that, we can use normal variables (v1, v2, v3, ..) when we have a small number of objects. But if we want to store a large number of instances, it becomes difficult to manage them with normal variables.  The idea of an array is to represent many instances in one variable . ",
+Array,Types of Arrays,"Arrays can be classified in two ways: On the basis of Size On the basis of Dimensions 1. Fixed Sized Arrays: We cannot alter or update the size of this array.  Here only a fixed size (i,e. the size that is mentioned in square brackets  [] ) of memory will be allocated for storage. In case, we don’t know the size of the array then if we declare a larger size and store a lesser number of elements will result in a wastage of memory or we declare a lesser size than the number of elements then we won’t get enough memory to store all the elements. In such cases, static memory allocation is not preferred.  2. Dynamic Sized Arrays: The size of the array changes as per user requirements during execution of code so the coders do not have to worry about sizes. They can add and removed the elements as per the need. The memory is mostly dynamically allocated and de-allocated in these arrays. 1. One-dimensional Array(1-D Array):  You can imagine a 1d array as a row, where elements are stored one after another.  2. Multi-dimensional Array:  A multi-dimensional array is an array with more than one dimension. We can use multidimensional array to store complex data in the form of tables, etc. We can have 2-D arrays, 3-D arrays, 4-D arrays and so on. Two-Dimensional Array(2-D Array or Matrix):   2-D Multidimensional arrays can be considered as an array of arrays or as a matrix consisting of rows and columns.  Three-Dimensional Array(3-D Array):  A 3-D Multidimensional array contains three dimensions, so it can be considered an array of two-dimensional arrays. ","# Create a fixed-size list of length 5, 
+# initialized with zeros
+arr = [0] * 5
+
+# Output the fixed-size list
+print(arr)
+# Dynamic Array
+arr = []"
+Array,Operations on Array,Array traversal involves visiting all the elements of the array once. Below is the implementation of Array traversal in different Languages: We can insert one or multiple elements at any position in the array. Below is the implementation of Insertion in Array in different languages: We can delete an element at any index in an array. Below is the implementation of Deletion of element in an array: We can traverse over an array and search for an element. Below is the implementation of Searching of element in an array:,"# This list will store integer type elements
+arr = [1, 2, 3, 4, 5]
+
+# Traversing over arr
+for i in range(len(arr)):
+    print(arr[i], end="" "")
+# Example usage
+arr = [1, 2, 3, 4, 5]
+x = 10  # Element to be inserted
+pos = 2  # Position to insert the element
+
+arr.insert(pos, x)
+
+# Print the updated list
+print(""Updated List:"", arr)
+# Initialize a list
+arr = [10, 20, 30, 40, 50]
+
+# Value to delete
+key = 40
+
+# Remove the element with the specified value
+# if present in the list
+if key in arr:
+   arr.remove(key)
+else:
+   print(""Element Not Found"")
+
+# Output the modified list
+print(arr)  # Output: [10, 20, 30, 50]
+# Function to implement search operation
+def find_element(arr, n, key):
+    for i in range(n):
+        if arr[i] == key:
+            return i
+    return -1"
+Hashing,Hash Data Structure Overview,"It is one of the most widely used data structure after arrays.  
+ It mainly supports search, insert and delete in O(1) time on average which is more efficient than other popular data structures like arrays, Linked List and  Self Balancing BST . 
+ We use hashing for dictionaries, frequency counting, maintaining data for quick access by key, etc.  
+ Real World Applications include Database Indexing, Cryptography, Caches, Symbol Table and Dictionaries. 
+ There are mainly two forms of hash typically implemented in programming languages.  Hash Set  :  Collection of unique keys (Implemented as  Set in Python ,  Set in JavaScrtipt ,  unordered_set in C++  and  HashSet in Java . Hash Map  : Collection of key value pairs with keys being unique (Implemented as  dictionary in Python,   Map in JavaScript ,  unordered_map in C++  and  HashMap in Java ) Need to maintain sorted data along with search, insert and delete. We use a self balancing BST in these cases. 
+ When Strings are keys and we need operations like prefix search along with search, insert and delete. We use Trie in these cases. 
+ When we need operations like floor and ceiling along with search, insert and/or delete. We use Self Balancing BST in these cases.",
+Hashing,Components of Hashing,"There are majorly three components of hashing:
+
+Key: A Key can be anything string or integer which is fed as input in the hash function the technique that determines an index or location for storage of an item in a data structure.
+Hash Function: Receives the input key and returns the index of an element in an array called a hash table. The index is known as the hash index .
+Hash Table: Hash table is typically an array of lists. It stores values corresponding to the keys. Hash stores the data in an associative manner in an array where each data value has its own unique index",
+Hashing,How does Hashing work?,"Suppose we have a set of strings {“ab”, “cd”, “efg”} and we would like to store it in a table. Step 1:  We know that hash functions (which is some mathematical formula) are used to calculate the hash value which acts as the index of the data structure where the value will be stored.  
+ Step 2:  So, let’s assign  
+ 
+  “a” = 1,  
+  “b”=2, .. etc, to all alphabetical characters.  
+ 
+ 
+ Step 3:  Therefore, the numerical value by summation of all characters of the string: Step 4:  Now, assume that we have a table of size 7 to store these strings. The hash function that is used here is the sum of the characters in   key mod Table size   . We can compute the location of the string in the array by taking the   sum(string) mod 7   .  
+ Step 5:   So we will then store  
+ 
+  “ab” in 3 mod 7 = 3,  
+  “cd” in 7 mod 7 = 0, and  
+  “efg” in 18 mod 7 = 4.  The above technique enables us to calculate the location of a given string by using a simple hash function and rapidly find the value that is stored in that location. Therefore the idea of hashing seems like a great way to store (key, value) pairs of the data in a table.",
+Hashing,What is a Hash function?,"A   hash function   creates a mapping from an input key to an index in hash table, this is done through the use of mathematical formulas known as hash functions. For example:  Consider phone numbers as keys and a hash table of size 100. A simple example hash function can be to consider the last two digits of phone numbers so that we have valid array indexes as output. There are many hash functions that use numeric or alphanumeric keys. This article focuses on discussing   different hash functions   : A good hash function should have the following properties:",
+Hashing,What is Collision?,"If we consider the above example, the hash function we used is the sum of the letters, but if we examined the hash function closely then the problem can be easily visualised that for different strings same hash value is being generated by the hash function. For example: {“ab”, “ba”} both have the same hash value, and string {“cd”,”be”} also generate the same hash value, etc. This is known as   collision   and it creates problem in searching, insertion, deletion, and updating of value. The probability of a hash collision depends on the size of the algorithm, the distribution of hash values and the efficiency of Hash function.",
+Hashing,How to handle Collisions?,There are mainly two methods to handle collision:  Refer this to read in detail:  Collision Resolution Techniques . The   load factor   of the hash table can be defined as the number of items the hash table contains divided by the size of the hash table. Load factor is the decisive parameter that is used when we want to rehash the previous hash function or want to add more elements to the existing hash table. It helps us in determining the efficiency of the hash function i.e. it tells whether the hash function which we are using is distributing the keys uniformly or not in the hash table.,
+Hashing,What is Rehashing?,"As the name suggests,   rehashing   means hashing again. Basically, when the load factor increases to more than its predefined value (the default value of the load factor is 0.75), the complexity increases. So to overcome this, the size of the array is increased (doubled) and all the values are hashed again and stored in the new double-sized array to maintain a low load factor and low complexity.",
+Linked List,Understanding Node Structure,"In a singly linked list, each node consists of two parts: data and a pointer to the next node. This structure allows nodes to be dynamically linked together, forming a chain-like sequence. In this example, the Node class contains an integer data field ( data ) to store the information and a pointer to another Node ( next ) to establish the link to the next node in the list.","# Definition of a Node in a singly linked list
+class Node:
+    def __init__(self, data):
+       # Data part of the node
+        self.data = data   
+        self.next = None"
+Linked List,Operations on Singly Linked List,"Traversal Searching Length Insertion: Insert at the beginning Insert at the end Insert at a specific position Deletion: Delete from the beginning Delete from the end Delete a specific node Let's go through each of the operations mentioned above, one by one.",
+Linked List,Traversal of Singly Linked List,"Traversal involves visiting each node in the linked list and performing some operation on the data. A simple traversal function would print or process the data of each node. Step-by-step approach: Initialize a pointer current to the head of the list. Use a while loop to iterate through the list until the current pointer reaches NULL. Inside the loop, print the data of the current node and move the current pointer to the next node. Below is the function for traversal in singly Linked List:","# Python Function to traverse and print the elements of the linked list
+def traverse_linked_list(head):
+    # Start from the head of the linked list
+    current = head
+
+    # Traverse the linked list until reaching the end (None)
+    while current is not None:
+
+        # Print the data of the current node followed by a space
+        print(current.data),
+
+        # Move to the next node
+        current = current.next
+
+    print()  # Print a new line after traversing the linked list"
+Linked List,Searching in Singly Linked List,Searching in a Singly Linked List refers to the process of looking for a specific element or value within the elements of the linked list. Step-by-step approach: Below is the function for searching in singly linked list:,"# Python function to search for a value in the Linked List
+def search_linked_list(head, target):
+
+    # Traverse the Linked List
+    while head is not None:
+
+        # Check if the current node's data matches the target value
+        if head.data == target:
+
+            return True  # Value found
+        # Move to the next node
+        head = head.next
+
+    return False  # Value not found"
+Linked List,Length of Singly Linked List,"Finding Length in Singly Linked List refers to the process of determining the total number of nodes in a singly linked list. Step-by-step approach: Initialize a counter  length  to 0. Start from the head of the list, assign it to current. Traverse the list: Increment  length  for each node. Move to the next node ( current = current->next ). Return the final value of  length . Below is the function for finding length in Singly Linked List:","# Python function to find the length of the linked list
+def find_length(head):
+  
+    # Initialize a counter for the length
+    length = 0
+
+    # Start from the head of the list
+    current = head
+
+    # Traverse the list and increment the length for each
+    # node
+    while current is not None:
+        length += 1
+        current = current.next
+
+    # Return the final length of the linked list
+    return length"
+Linked List,Insertion in Singly Linked List,"Insertion is a fundamental operation in linked lists that involves adding a new node to the list. There are several scenarios for insertion: Step-by-step approach: Create a new node with the given value. Set the  next  pointer of the new node to the current head. Move the head to point to the new node. Return the new head of the linked list. Below is the function for insertion at the beginning of singly linked list: To insert a node at the end of the list, traverse the list until the last node is reached, and then link the new node to the current last node- Step-by-step approach: Create a new node with the given value. Check if the list is empty: If it is, make the new node the head and return. Traverse the list until the last node is reached. Link the new node to the current last node by setting the last node's next pointer to the new node. Below is the function for insertion at the end of singly linked list: To insert a node at a specific position, traverse the list to the desired position, link the new node to the next node, and update the links accordingly. We mainly find the node after which we need to insert the new node. If we encounter a NULL before reaching that node, it means that the given position is invalid. Below is the function for insertion at a specific position of the singly linked list:","# Python function to insert a new node at the beginning of the
+# linked list
+def insert_at_beginning(head, value):
+  
+    # Create a new node with the given value
+    new_node = Node(value)
+
+    # Set the next pointer of the new node to the current
+    # head
+    new_node.next = head
+
+    # Move the head to point to the new node
+    head = new_node
+
+    # Return the new head of the linked list
+    return head
+# Python function to insert a node at the end of the linked
+# list
+def insert_at_end(head, value):
+  
+    # Create a new node with the given value
+    new_node = Node(value)
+
+    # If the list is empty, make the new node the head
+    if head is None:
+        return new_node
+
+    # Traverse the list until the last node is reached
+    current = head
+    while current.next is not None:
+        current = current.next
+
+    # Link the new node to the current last node
+    current.next = new_node
+
+    return head
+# Function to insert a node at a specified position
+def insertPos(head, pos, data):
+    if pos < 1:
+        print(""Invalid position!"")
+        return head
+
+    # Special case for inserting at the head
+    if pos == 1:
+        new_node = Node(data)
+        new_node.next = head
+        return new_node
+
+    # Traverse the list to find the node before 
+    # the insertion point
+    prev = head
+    count = 1
+    while count < pos - 1 and prev is not None:
+        prev = prev.next
+        count += 1
+
+    # If position is greater than the number of nodes
+    if prev is None:
+        print(""Invalid position!"")
+        return head
+
+    # Insert the new node at the specified position
+    new_node = Node(data)
+    new_node.next = prev.next
+    prev.next = new_node
+
+    return head"
+Linked List,Deletion in Singly Linked List,"Deletion involves removing a node from the linked list. Similar to insertion, there are different scenarios for deletion: To delete the first node, update the head to point to the second node in the list. Steps-by-step approach: Check if the head is  NULL . If it is, return  NULL  (the list is empty). Store the current head node in a temporary variable  temp . Move the head pointer to the next node. Delete the temporary node. Return the new head of the linked list. Below is the function for deletion at the beginning of singly linked list: To delete the last node, traverse the list until the second-to-last node and update its next field to None. Step-by-step approach: Check if the head is  NULL . If it is, return NULL (the list is empty). Check if the head's  next  is  NULL  (only one node in the list). If true, delete the head and return  NULL . Traverse the list to find the second last node ( second_last ). Delete the last node (the node after  second_last ). Set the  next  pointer of the second last node to  NULL . Return the head of the linked list. Below is the function for deletion at the end of singly linked list: To delete a node at a specific position, traverse the list to the desired position, update the links to bypass the node to be deleted. Step-by-step approach: Check if the list is empty or the position is invalid, return if so. If the head needs to be deleted, update the head and delete the node. Traverse to the node before the position to be deleted. If the position is out of range, return. Store the node to be deleted. Update the links to bypass the node. Delete the stored node. Below is the function for deletion at a specific position of singly linked list: ","# Python Function to remove the first node
+# of the linked list
+def removeFirstNode(head):
+    if not head:
+        return None
+    temp = head
+
+    # Move the head pointer to the next node
+    head = head.next
+    temp = None
+    return head
+# Python Function to remove the last node of the linked list
+def removeLastNode(head):
+    # If the list is empty, return None
+    if head is None:
+        return None
+
+    # If the list has only one node, delete it and return None
+    if head.next is None:
+        head = None
+        return None
+
+    # Find the second last node
+    second_last = head
+    while second_last.next.next is not None:
+        second_last = second_last.next
+
+    # Remove the last node
+    second_last.next = None
+
+    # Return the modified list
+    return head
+# Python function to delete a node at a specific position
+def delete_at_position(head, position):
+    # If the list is empty or the position is invalid
+    if head is None or position < 1:
+        return head
+
+    # If the head needs to be deleted
+    if position == 1:
+        temp = head
+        head = head.next
+        temp = None
+        return head
+
+    # Traverse to the node before the position to be deleted
+    current = head
+    for i in range(1, position - 1):
+        if current is not None:
+            current = current.next
+
+    # If the position is out of range
+    if current is None or current.next is None:
+        return head
+
+    # Store the node to be deleted
+    temp = current.next
+
+    # Update the links to bypass the node to be deleted
+    current.next = current.next.next
+
+    # Delete the node
+    temp = None
+    return head"
+Linked List,What is a Doubly Linked List?,"A  doubly linked list  is a data structure that consists of a set of nodes, each of which contains a  value  and  two pointers , one pointing to the  previous node  in the list and one pointing to the  next node  in the list. This allows for efficient traversal of the list in  both directions , making it suitable for applications where frequent  insertions  and  deletions  are required.",
+Linked List,Representation of Doubly Linked List in Data Structure,"In a data structure, a doubly linked list is represented using nodes that have three fields:",
+Linked List,Node Definition,"Here is how a node in a Doubly Linked List is typically represented: Each node in a  Doubly Linked List  contains the  data  it holds, a pointer to the  next  node in the list, and a pointer to the  previous  node in the list. By linking these nodes together through the  next  and  prev  pointers, we can traverse the list in both directions (forward and backward), which is a key feature of a Doubly Linked List.","class Node:
+  
+    def __init__(self, data):
+        # To store the value or data.
+        self.data = data
+
+        # Reference to the previous node
+        self.prev = None
+
+        # Reference to the next node
+        self.next = None"
+Linked List,Operations on Doubly Linked List,"Traversal in Doubly Linked List Searching in Doubly Linked List Finding Length of Doubly Linked List Insertion in Doubly Linked List : Insertion at the beginning of Doubly Linked List Insertion at the end of the Doubly Linked List Insertion at a specific position in Doubly Linked List Deletion in Doubly Linked List : Deletion of a node at the beginning of Doubly Linked List Deletion of a node at the end of Doubly Linked List Deletion of a node at a specific position in Doubly Linked List Let's go through each of the operations mentioned above, one by one.",
+Linked List,Traversal in Doubly Linked List,"To Traverse the doubly list, we can use the following steps: a. Forward Traversal: Initialize a pointer to the head of the linked list. While the pointer is not null: Visit the data at the current node. Move the pointer to the next node. b. Backward Traversal: Initialize a pointer to the tail of the linked list. While the pointer is not null: Visit the data at the current node. Move the pointer to the previous node. Below are the implementation of the above approach:","# Define the Node class
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.prev = None
+        self.next = None
+
+# Function to traverse the doubly linked list 
+# in forward direction
+def forward_traversal(head):
+  
+    # Start traversal from the head of the list
+    curr = head
+    
+    # Continue until the current node is 
+    # null (end of the list)
+    while curr is not None:
+      
+        # Output data of the current node
+        print(curr.data, end="" "")
+        
+        # Move to the next node
+        curr = curr.next
+        
+    # Print newline after traversal
+    print()
+
+# Function to traverse the doubly linked 
+# list in backward direction
+def backward_traversal(tail):
+  
+    # Start traversal from the tail of the list
+    curr = tail
+    
+    # Continue until the current node 
+    # is null (end of the list)
+    while curr is not None:
+      
+        # Output data of the current node
+        print(curr.data, end="" "")
+        
+        # Move to the previous node
+        curr = curr.prev
+        
+    # Print newline after traversal
+    print()
+
+# Sample usage of the doubly linked list 
+# and traversal functions
+if __name__ == ""__main__"":
+  
+    # Create a doubly linked list with 3 nodes
+    head = Node(1)
+    second = Node(2)
+    third = Node(3)
+
+    head.next = second
+    second.prev = head
+    second.next = third
+    third.prev = second
+
+    print(""Forward Traversal:"")
+    forward_traversal(head)
+
+    print(""Backward Traversal:"")
+    backward_traversal(third)"
+Linked List,Finding Length of Doubly Linked List,"To find the length of doubly list, we can use the following steps: Start at the head of the list. Traverse through the list, counting each node visited. Return the total count of nodes as the length of the list. Below are the implementation of the above approach:","class Node:
+    def __init__(self, val):
+        self.data = val
+        self.prev = None
+        self.next = None
+
+# Function to find the length of 
+# a doubly linked list
+def find_length(head):
+    count = 0
+    cur = head
+    while cur is not None:
+        count += 1
+        cur = cur.next
+    return count
+
+# Driver code
+if __name__ == ""__main__"":
+  
+    # Create a doubly linked list 
+    # with 3 nodes
+    head = Node(1)
+    second = Node(2)
+    third = Node(3)
+
+    head.next = second
+    second.prev = head
+    second.next = third
+    third.prev = second
+
+    print(""Length of the doubly linked list: "" +
+          str(find_length(head)))"
+Linked List,Insertion at the Beginning in Doubly Linked List,"To insert a new node at the beginning of the doubly list, we can use the following steps: Create a new node, say  new_node  with the given data and set its previous pointer to null,  new_node->prev =   NULL . Set the next pointer of new_node to current head,  new_node->next = head. If the linked list is not empty, update the previous pointer of the current head to new_node,  head->prev = new_node . Return new_node as the head of the updated linked list. Below are the implementation of the above approach:","# Python Program to insert a node at the beginning 
+#of doubly linked list
+
+# Node structure for the doubly linked list
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.prev = None
+        self.next = None
+
+# Insert a node at the beginning
+def insertBegin(head, data):
+    
+    # Create a new node
+    new_node = Node(data)
+    
+    # Make next of it as head
+    new_node.next = head
+    
+    # Set previous of head as new node
+    if head is not None:
+        head.prev = new_node
+    
+    # Return new node as new head
+    return new_node
+
+# Print the doubly linked list
+def printList(head):
+    curr = head
+    while curr is not None:
+        print(curr.data, end="" "")
+        curr = curr.next
+    print()
+
+if __name__ == ""__main__"":
+  
+    # Create a hardcoded doubly linked list:
+    # 2 <-> 3 <-> 4
+    head = Node(2)
+    head.next = Node(3)
+    head.next.prev = head
+    head.next.next = Node(4)
+    head.next.next.prev = head.next
+
+    # Print the original list
+    print(""Original Linked List:"", end=' ')
+    printList(head)
+
+    # Insert a new node at the front of the list
+    head = insertBegin(head, 1)
+
+    # Print the updated list
+    print(""After inserting Node 1 at the front:"", end=' ')
+    printList(head)"
+Linked List,Insertion at the End of Doubly Linked List,"To insert a new node at the end of the doubly linked list, we can use the following steps: Allocate memory for a new node and assign the provided value to its data field. Initialize the next pointer of the new node to nullptr. If the list is empty: Set the previous pointer of the new node to nullptr. Update the head pointer to point to the new node. If the list is not empty: Traverse the list starting from the head to reach the last node. Set the next pointer of the last node to point to the new node. Set the previous pointer of the new node to point to the last node. Below are the implementation of the above approach:","# Python Program to insert a node at the end of 
+#doubly linked list
+
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+        self.prev = None
+
+# Function to insert a new node at the end of the 
+#doubly linked list
+def insert_end(head, new_data):
+      
+    # Create a new node
+    new_node = Node(new_data)
+    
+    # If the linked list is empty, set the new node
+    #as the head
+    if head is None:
+        head = new_node
+    else:
+        curr = head
+        while curr.next is not None:
+            curr = curr.next
+        
+        # Set the next of the last node to the new node
+        curr.next = new_node
+        
+        # Set the prev of the new node to the last node
+        new_node.prev = curr
+    
+    return head
+
+def print_list(head):
+    curr = head
+    while curr is not None:
+        print(curr.data, end="" "")
+        curr = curr.next
+    print()
+
+if __name__ == ""__main__"":
+  
+    # Create a hardcoded doubly linked list:
+    # 1 <-> 2 <-> 3
+    head = Node(1)
+    head.next = Node(2)
+    head.next.prev = head
+    head.next.next = Node(3)
+    head.next.next.prev = head.next
+
+    # Print the original list
+    print(""Original Linked List: "", end="""")
+    print_list(head)
+
+    # Insert a new node with data 4 at the end
+    print(""Inserting Node with data 4 at the end: "", end="""")
+    data = 4
+    head = insert_end(head, data)
+
+    # Print the updated list
+    print_list(head)"
+Linked List,Insertion at a Specific Position in Doubly Linked List,"To insert a node at a specific Position in doubly linked list, we can use the following steps: To insert a new node at a specific position, If position = 1, create a new node and make it the head of the linked list and return it. Otherwise, traverse the list to reach the node at position – 1, say  curr . If the position is valid, create a new node with given data, say  new_node . Update the next pointer of new node to the next of current node and prev pointer of new node to current node,  new_node->next = curr->next  and  new_node->prev = curr. Similarly, update next pointer of current node to the   new node,  curr->next = new_node . If the new node is not the last node, update prev pointer of new node’s next to the new node,  new_node->next->prev = new_node. Below is the implementation of the above approach:","# Python Program to insert a node at a given position
+
+class Node:
+    def __init__(self, new_data):
+        self.data = new_data
+        self.next = None
+        self.prev = None
+
+def insert_at_position(head, pos, new_data):
+  
+    # Create a new node
+    new_node = Node(new_data)
+
+    # Insertion at the beginning
+    if pos == 1:
+        new_node.next = head
+
+        # If the linked list is not empty, set the
+        #prev of head to new node
+        if head is not None:
+            head.prev = new_node
+
+        # Set the new node as the head of the linked list
+        head = new_node
+        return head
+
+    curr = head
+    
+    # Traverse the list to find the node before the 
+    #insertion point
+    for _ in range(1, pos - 1):
+        if curr is None:
+            print(""Position is out of bounds."")
+            return head
+        curr = curr.next
+
+    # If the position is out of bounds
+    if curr is None:
+        print(""Position is out of bounds."")
+        return head
+
+    # Set the prev of new node to curr
+    new_node.prev = curr
+
+    # Set the next of new node to next of curr
+    new_node.next = curr.next
+
+    # Update the next of current node to new node
+    curr.next = new_node
+
+    # If the new node is not the last node, update 
+    #prev of next node to new node
+    if new_node.next is not None:
+        new_node.next.prev = new_node
+
+    return head
+
+def print_list(head):
+    curr = head
+    while curr is not None:
+        print(curr.data, end="" "")
+        curr = curr.next
+    print()
+
+if __name__ == ""__main__"":
+  
+    # Create a hardcoded doubly linked list:
+    # 1 <-> 2 <-> 4
+    head = Node(1)
+    head.next = Node(2)
+    head.next.prev = head
+    head.next.next = Node(4)
+    head.next.next.prev = head.next
+
+    # Print the original list
+    print(""Original Linked List: "", end="""")
+    print_list(head)
+
+    # Insert new node with data 3 at position 3
+    print(""Inserting Node with data 3 at position 3: "", end="""")
+    data = 3
+    pos = 3
+    head = insert_at_position(head, pos, data)
+
+    # Print the updated list
+    print_list(head)"
+Linked List,Deletion at the Beginning of Doubly Linked List,"To delete a node at the beginning in doubly linked list, we can use the following steps: Check if the list is empty, there is nothing to delete. Return. Store the head pointer in a variable, say  temp . Update the head of linked list to the node next to the current head,  head = head->next . If the new head is not NULL, update the previous pointer of new head to NULL,  head->prev = NULL . Below is the implementation of the above approach:","# Python Program to delete a node from the 
+# beginning of Doubly Linked List
+
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.prev = None
+        self.next = None
+
+# Function to delete the first node (head) of the list
+# and return the second node as the new head
+def del_head(head):
+  
+    # If empty, return None
+    if head is None:
+        return None
+
+    # Store in temp for deletion later
+    temp = head
+
+    # Move head to the next node
+    head = head.next
+
+    # Set prev of the new head
+    if head is not None:
+        head.prev = None
+
+    # Return new head
+    return head
+
+def print_list(head):
+    curr = head
+    while curr is not None:
+        print(curr.data, end="" "")
+        curr = curr.next
+    print()
+    
+
+if __name__ == ""__main__"":
+  
+	# Create a hardcoded doubly linked list:
+    # 1 <-> 2 <-> 3
+    head = Node(1)
+    head.next = Node(2)
+    head.next.prev = head
+    head.next.next = Node(3)
+    head.next.next.prev = head.next
+
+    print(""Original Linked List: "", end="""")
+    print_list(head)
+
+    print(""After Deletion at the beginning: "", end="""")
+    head = del_head(head)
+
+    print_list(head)"
+Linked List,Deletion at the End of Doubly Linked List,"To delete a node at the end in doubly linked list, we can use the following steps: Check if the doubly linked list is empty. If it is empty, then there is nothing to delete. If the list is not empty, then move to the last node of the doubly linked list, say  curr . Update the second-to-last node's next pointer to NULL,  curr->prev->next = NULL . Free the memory allocated for the node that was deleted. Below is the implementation of the above approach:","# Python Program to delete a node from the end of 
+#Doubly Linked List
+
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.prev = None
+        self.next = None
+
+def del_last(head):
+  
+    # Corner cases
+    if head is None:
+        return None
+    if head.next is None:
+        return None
+
+    # Traverse to the last node
+    curr = head
+    while curr.next is not None:
+        curr = curr.next
+
+    # Update the previous node's next pointer
+    if curr.prev is not None:
+        curr.prev.next = None
+
+    # Return the updated head
+    return head
+
+def print_list(head):
+    curr = head
+    while curr is not None:
+        print(curr.data, end="" "")
+        curr = curr.next
+    print()
+
+if __name__ == ""__main__"":
+  
+    # Create a hardcoded doubly linked list:
+    # 1 <-> 2 <-> 3
+    head = Node(1)
+    head.next = Node(2)
+    head.next.prev = head
+    head.next.next = Node(3)
+    head.next.next.prev = head.next
+
+    print(""Original Linked List: "", end="""")
+    print_list(head)
+
+    print(""After Deletion at the end: "", end="""")
+    head = del_last(head)
+
+    print_list(head)"
+Linked List,Deletion at a Specific Position in Doubly Linked List,"To delete a node at a specific position in doubly linked list, we can use the following steps: Traverse to the node at the specified position, say  curr . If the position is valid, adjust the pointers to skip the node to be deleted. If curr is not the head of the linked list, update the next pointer of the node before curr to point to the node after curr,  curr->prev->next = curr-next . If curr is not the last node of the linked list, update the previous pointer of the node after curr to the node before curr,  curr->next->prev = curr->prev . Free the memory allocated for the deleted node. Below is the implementation of the above approach:","# Python Program to delete node at a specific position
+#in Doubly Linked List
+
+
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.prev = None
+        self.next = None
+
+
+# Function to delete a node at a specific position 
+#in the doubly linked list
+def del_pos(head, pos):
+    # If the list is empty
+    if head is None:
+        return head
+
+    curr = head
+
+    # Traverse to the node at the given position
+    for i in range(1, pos):
+        if curr is None:
+            return head
+        curr = curr.next
+
+    # If the position is out of range
+    if curr is None:
+        return head
+
+    # Update the previous node's next pointer
+    if curr.prev is not None:
+        curr.prev.next = curr.next
+
+    # Update the next node's prev pointer
+    if curr.next is not None:
+        curr.next.prev = curr.prev
+
+    # If the node to be deleted is the head node
+    if head == curr:
+        head = curr.next
+
+    # Return the updated head
+    return head
+
+
+def print_list(head):
+    curr = head
+    while curr is not None:
+        print(curr.data, end="" "")
+        curr = curr.next
+    print()
+
+
+if __name__ == ""__main__"":
+  
+    # Create a hardcoded doubly linked list:
+    # 1 <-> 2 <-> 3
+    head = Node(1)
+    head.next = Node(2)
+    head.next.prev = head
+    head.next.next = Node(3)
+    head.next.next.prev = head.next
+
+    print(""Original Linked List: "", end="""")
+    print_list(head)
+
+    print(""After Deletion at the position 2: "", end="""")
+    head = del_pos(head, 2)
+
+    print_list(head)"
+Linked List,Advantages of Doubly Linked List,"Efficient traversal in both directions:  Doubly linked lists allow for efficient traversal of the list in both directions, making it suitable for applications where frequent insertions and deletions are required. Easy insertion and deletion of nodes:  The presence of pointers to both the previous and next nodes makes it easy to insert or delete nodes from the list, without having to traverse the entire list. Can be used to implement a stack or queue:  Doubly linked lists can be used to implement both stacks and queues, which are common data structures used in programming.",
+Linked List,Disadvantages of Doubly Linked List,"More complex than singly linked lists:  Doubly linked lists are more complex than singly linked lists, as they require additional pointers for each node. More memory overhead:  Doubly linked lists require more memory overhead than singly linked lists, as each node stores two pointers instead of one.",
+Linked List,Applications of Doubly Linked List,Implementation of undo and redo functionality in text editors. Cache implementation where quick insertion and deletion of elements are required. Browser history management to navigate back and forth between visited pages. Music player applications to manage playlists and navigate through songs efficiently. Implementing data structures like  Deque  (double-ended queue) for efficient insertion and deletion at both ends. Practice Questions on Doubly Linked List MCQs on Linked List,
+Linked List,What is a Circular Linked List?,"A  circular linked list  is a special type of linked list where all the nodes are connected to form a circle. Unlike a regular linked list, which ends with a node pointing to  NULL , the last node in a circular linked list points back to the first node. This means that you can keep traversing the list without ever reaching a  NULL  value.",
+Linked List,Types of Circular Linked Lists,"We can create a circular linked list from both  singly linked lists  and  doubly linked lists . So, circular linked list are basically of two types: In  Circular Singly Linked List , each node has just one pointer called the “ next ” pointer. The next pointer of  last node  points back to the  first node  and this results in forming a circle. In this type of Linked list we can only move through the list in one direction. In  circular doubly linked   list,  each node has two pointers  prev  and  next,  similar to doubly linked list. The  prev  pointer points to the previous node and the  next  points to the next node. Here, in addition to the  last  node storing the address of the first node, the  first node  will also store the address of the  last node . Note:  In this article, we will use the circular singly linked list to explain the working of circular linked lists.",
+Linked List,Representation of a Circular Singly Linked List,"Let’s take a look on the structure of a circular linked list. Syntax to Declare a Circular Linked List in Different Languages: In the code above, each node has  data  and a  pointer  to the next node. When we create multiple nodes for a circular linked list, we only need to connect the last node back to the first one.","class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None"
+Linked List,Example of Creating a Circular Linked List,"Here’s an example of creating a circular linked list with three nodes (2, 3, 4): In the above code, we have created three nodes  first, second,  and  last  having values  2, 3,  and  4  respectively. After creating three nodes, we have connected these node in a series. Connect the first node “ first”  to “ second”  node by  s toring the address of “ second”  node   into  first’s  next Connect the second node “ second”  to “ second”  node by  s toring the address of “ third ” node into  second’s  next After connecting all the nodes, we reach the key characteristic of a circular linked list:  linking the last node back to the first node . Therefore, we store the address of the “ first ” node in the “ last ” node. For the insertion of a node at the beginning, we need to traverse the whole list. Also, for insertion at the end, the whole list has to be traversed. If instead of the start pointer, we take a pointer to the last node, then in both cases there won’t be any need to traverse the whole list. So insertion at the beginning or at the end takes constant time, irrespective of the length of the list.","# Initilize and allocate memory for nodes
+first = Node(2)
+second = Node(3)
+last = Node(4)
+
+# Connect nodes
+first.next = second
+second.next = last
+last.next = first"
+Linked List,Operations on the Circular Linked list:,We can do some operations on the circular linked list similar to the singly and doubly linked list which are: Insertion Insertion at the empty list Insertion at the beginning Insertion at the end  Insertion at the given position Deletion Delete the first node Delete the last node Delete the node from any position Searching Note:  We will be using the circular singly linked list to represent the working of the circular linked list.,
+Linked List,Insertion in the circular linked list:,"Insertion is a fundamental operation in linked lists that involves adding a new node to the list. The only extra step is connecting the last node to the first one. In the circular linked list mentioned below, we can insert nodes in four ways:","class Node:
+    def __init__(self, value):
+        self.data = value
+        self.next = self  # Point to itself
+
+def insertInEmptyList(last, data):
+    if last is not None:
+        return last
+    
+    # Create a new node
+    new_node = Node(data)
+    
+    # Update last to point to the new node
+    last = new_node
+    return last
+
+def printList(last):
+    if last is None:
+        return
+    
+    # Start from the head node
+    head = last.next
+    while True:
+        print(head.data, end="" "")
+        head = head.next
+        if head == last.next:
+            break
+    print()
+
+if __name__ == ""__main__"":
+    last = None
+
+    # Insert a node into the empty list
+    last = insertInEmptyList(last, 1)
+
+    # Print the list
+    print(""List after insertion: "", end="""")
+    printList(last)
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+# Function to insert a node at the beginning of the circular linked list
+def insert_at_beginning(last, value):
+    new_node = Node(value)
+
+    # If the list is empty, make the new node point to itself and set it as last
+    if last is None:
+        new_node.next = new_node
+        return new_node
+
+    # Insert the new node at the beginning
+    new_node.next = last.next
+    last.next = new_node
+
+    return last
+
+# Function to print the circular linked list
+def print_list(last):
+    if last is None:
+        return
+
+    head = last.next
+    while True:
+        print(head.data, end="" "")
+        head = head.next
+        if head == last.next:
+            break
+    print()
+
+# Create circular linked list: 2, 3, 4
+first = Node(2)
+first.next = Node(3)
+first.next.next = Node(4)
+last = first.next.next
+last.next = first
+
+print(""Original list: "", end="""")
+print_list(last)
+
+# Insert 5 at the beginning
+last = insert_at_beginning(last, 5)
+
+print(""List after inserting 5 at the beginning: "", end="""")
+print_list(last)
+class Node:
+    def __init__(self, value):
+        self.data = value
+        self.next = None
+
+# Function to insert a node at the end of a circular linked list
+
+
+def insert_end(tail, value):
+    new_node = Node(value)
+    if tail is None:
+        # If the list is empty, initialize
+        # it with the new node
+        tail = new_node
+        new_node.next = new_node
+    else:
+        # Insert new node after the current tail
+        # and update the tail pointer
+        new_node.next = tail.next
+        tail.next = new_node
+        tail = new_node
+    return tail
+
+# Function to print the circular linked list
+
+
+def print_list(last):
+    if last is None:
+        return
+
+    head = last.next
+    while True:
+        print(head.data, end="" "")
+        head = head.next
+        if head == last.next:
+            break
+    print()
+
+
+if __name__ == ""__main__"":
+    # Create circular linked list: 2, 3, 4
+    first = Node(2)
+    first.next = Node(3)
+    first.next.next = Node(4)
+
+    last = first.next.next
+    last.next = first
+
+    print(""Original list: "", end="""")
+    print_list(last)
+
+    # Insert elements at the end of the circular linked list
+    last = insert_end(last, 5)
+    last = insert_end(last, 6)
+
+    print(""List after inserting 5 and 6: "", end="""")
+    print_list(last)
+class Node:
+    def __init__(self, value):
+        self.data = value
+        self.next = None
+
+# Function to insert a node at a specific position in a circular linked list
+def insertAtPosition(last, data, pos):
+    if last is None:
+        # If the list is empty
+        if pos != 1:
+            print(""Invalid position!"")
+            return last
+        # Create a new node and make it point to itself
+        new_node = Node(data)
+        last = new_node
+        last.next = last
+        return last
+
+    # Create a new node with the given data
+    new_node = Node(data)
+
+    # curr will point to head initially
+    curr = last.next
+
+    if pos == 1:
+        # Insert at the beginning
+        new_node.next = curr
+        last.next = new_node
+        return last
+
+    # Traverse the list to find the insertion point
+    for i in range(1, pos - 1):
+        curr = curr.next
+
+        # If position is out of bounds
+        if curr == last.next:
+            print(""Invalid position!"")
+            return last
+
+    # Insert the new node at the desired position
+    new_node.next = curr.next
+    curr.next = new_node
+
+    # Update last if the new node is inserted at the end
+    if curr == last:
+        last = new_node
+
+    return last
+
+# Function to print the circular linked list
+def print_list(last):
+    if last is None:
+        return
+
+    head = last.next
+    while True:
+        print(head.data, end="" "")
+        head = head.next
+        if head == last.next:
+            break
+    print()
+
+if __name__ == ""__main__"":
+    # Create circular linked list: 2, 3, 4
+    first = Node(2)
+    first.next = Node(3)
+    first.next.next = Node(4)
+
+    last = first.next.next
+    last.next = first
+
+    print(""Original list: "", end="""")
+    print_list(last)
+
+    # Insert elements at specific positions
+    data = 5
+    pos = 2
+    last = insertAtPosition(last, data, pos)
+    print(""List after insertions: "", end="""")
+    print_list(last)"
+Linked List,Deletion from a Circular Linked List,Deletion involves removing a node from the linked list. The main difference is that we need to ensure the list remains circular after the deletion. We can delete a node in a circular linked list in three ways:,"class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+def deleteFirstNode(last):
+    if last is None:
+        # If the list is empty
+        print(""List is empty"")
+        return None
+
+    head = last.next
+
+    if head == last:
+        # If there is only one node in the list
+        last = None
+    else:
+        # More than one node in the list
+        last.next = head.next
+
+    return last
+
+def print_list(last):
+    if last is None:
+        return
+
+    head = last.next
+    while True:
+        print(head.data, end="" "")
+        head = head.next
+        if head == last.next:
+            break
+    print()
+
+# Create circular linked list: 2, 3, 4
+first = Node(2)
+first.next = Node(3)
+first.next.next = Node(4)
+
+last = first.next.next
+last.next = first
+
+print(""Original list: "", end="""")
+print_list(last)
+
+# Delete the first node
+last = deleteFirstNode(last)
+
+print(""List after deleting first node: "", end="""")
+print_list(last)
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+def deleteSpecificNode(last, key):
+    if last is None:
+        # If the list is empty
+        print(""List is empty, nothing to delete."")
+        return None
+
+    curr = last.next
+    prev = last
+
+    # If the node to be deleted is the only node in the list
+    if curr == last and curr.data == key:
+        last = None
+        return last
+
+    # If the node to be deleted is the first node
+    if curr.data == key:
+        last.next = curr.next
+        return last
+
+    # Traverse the list to find the node to be deleted
+    while curr != last and curr.data != key:
+        prev = curr
+        curr = curr.next
+
+    # If the node to be deleted is found
+    if curr.data == key:
+        prev.next = curr.next
+        if curr == last:
+            last = prev
+    else:
+        # If the node to be deleted is not found
+        print(f""Node with data {key} not found."")
+
+    return last
+
+def printList(last):
+    if last is None:
+        print(""List is Empty"")
+        return
+
+    head = last.next
+    while True:
+        print(head.data, end="" "")
+        head = head.next
+        if head == last.next:
+            break
+    print()
+
+# Create circular linked list: 2, 3, 4
+first = Node(2)
+first.next = Node(3)
+first.next.next = Node(4)
+
+last = first.next.next
+last.next = first
+
+print(""Original list: "", end="""")
+printList(last)
+
+# Delete a specific node
+key = 3
+last = deleteSpecificNode(last, key)
+
+print(f""List after deleting node {key}: "", end="""")
+printList(last)
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+def deleteLastNode(last):
+    if last is None:
+        # If the list is empty
+        print(""List is empty, nothing to delete."")
+        return None
+
+    head = last.next
+
+    # If there is only one node in the list
+    if head == last:
+        last = None
+        return last
+
+    # Traverse the list to find the second last node
+    curr = head
+    while curr.next != last:
+        curr = curr.next
+
+    # Update the second last node's next pointer to point to head
+    curr.next = head
+    last = curr
+
+    return last
+
+def printList(last):
+    if last is None:
+        return
+
+    head = last.next
+    while True:
+        print(head.data, end="" "")
+        head = head.next
+        if head == last.next:
+            break
+    print()
+
+# Create circular linked list: 2, 3, 4
+first = Node(2)
+first.next = Node(3)
+first.next.next = Node(4)
+
+last = first.next.next
+last.next = first
+
+print(""Original list: "", end="""")
+printList(last)
+
+# Delete the last node
+last = deleteLastNode(last)
+
+print(""List after deleting last node: "", end="""")
+printList(last)"
+Linked List,Searching in Circular Linked list,"Searching in a circular linked list is similar to searching in a regular linked list. We start at a given node and traverse the list until you either find the target value or return to the starting node. Since the list is circular, make sure to keep track of where you started to avoid an infinite loop.","class Node:
+    def __init__(self, value):
+        self.data = value
+        self.next = None
+
+def search(last, key):
+    if last is None:
+        # If the list is empty
+        return False
+
+    head = last.next
+    curr = head
+
+    # Traverse the list to find the key
+    while curr != last:
+        if curr.data == key:
+            # Key found
+            return True
+        curr = curr.next
+
+    # Check the last node
+    if last.data == key:
+        # Key found
+        return True
+    # Key not found
+    return False
+
+def print_list(last):
+    if last is None:
+        return
+
+    head = last.next
+    while True:
+        print(head.data, end="" "")
+        head = head.next
+        if head == last.next:
+            break
+    print()
+
+if __name__ == ""__main__"":
+    # Create circular linked list: 2, 3, 4
+    first = Node(2)
+    first.next = Node(3)
+    first.next.next = Node(4)
+
+    last = first.next.next
+    last.next = first
+
+    print(""Original list:"", end="" "")
+    print_list(last)
+
+    # Search for a specific value
+    key = 3
+    found = search(last, key)
+    if found:
+        print(f""Value {key} found in the list."")
+    else:
+        print(f""Value {key} not found in the list."")"
+Linked List,Advantages of Circular Linked Lists,"In circular linked list, the last node points to the first node. There are no null references, making traversal easier and reducing the chances of encountering null pointer exceptions. We can traverse the list from any node and return to it without needing to restart from the head, which is useful in applications requiring a circular iteration. Circular linked lists can easily implement circular queues, where the last element connects back to the first, allowing for efficient resource management. In a circular linked list, each node has a reference to the next node in the sequence. Although it doesn’t have a direct reference to the previous node like a doubly linked list, we can still find the previous node by traversing the list.",
+Linked List,Disadvantages of Circular Linked Lists,"Circular linked lists are more complex to implement than singly linked lists. Traversing a circular linked list without a clear stopping condition can lead to infinite loops if not handled carefully. Debugging can be more challenging due to the circular nature, as traditional methods of traversing linked lists may not apply.",
+Linked List,Applications of Circular Linked Lists,"It is used for time-sharing among different users, typically through a  Round-Robin scheduling mechanism. In multiplayer games, a circular linked list can be used to switch between players. After the last player’s turn, the list cycles back to the first player. Circular linked lists are often used in buffering applications, such as streaming data, where data is continuously produced and consumed. In media players, circular linked lists can manage playlists, this allowing users to loop through songs continuously. Browsers use circular linked lists to manage the cache. This allows you to navigate back through your browsing history efficiently by pressing the BACK button. Related Article: Circular Linked List meaning in DSA Singly Linked List Tutorial Doubly Linked List Tutorial",
+Stack,Representation of Stack Data Structure:,Stack follows LIFO (Last In First Out) Principle so the element which is pushed last is popped first.,
+Stack,Types of Stack:,"Fixed Size Stack   : As the name suggests, a fixed size stack has a fixed size and cannot grow or shrink dynamically. If the stack is full and an attempt is made to add an element to it, an overflow error occurs. If the stack is empty and an attempt is made to remove an element from it, an underflow error occurs.  
+ Dynamic Size Stack   : A dynamic size stack can grow or shrink dynamically. When the stack is full, it automatically increases its size to accommodate the new element, and when the stack is empty, it decreases its size. This type of stack is implemented using a linked list, as it allows for easy resizing of the stack.",
+Stack,Basic Operations on Stack:,"In order to make manipulations in a stack, there are certain operations provided to us. push()   to insert an element into the stack  
+  pop()   to remove an element from the stack  
+  top()   Returns the top element of the stack.  
+  isEmpty()   returns true if stack is empty else false.  
+  isFull()   returns true if the stack is full else false. To implement stack, we need to maintain reference to the top item. Adds an item to the stack. If the stack is full, then it is said to be an   Overflow condition. Algorithm for Push Operation: Before pushing the element to the stack, we check if the stack is   full   .  
+ If the stack is full   (top == capacity-1)   , then   Stack Overflows   and we cannot insert the element to the stack.  
+ Otherwise, we increment the value of top by 1   (top = top + 1)   and the new value is inserted at   top position   .  
+ The elements can be pushed into the stack till we reach the   capacity   of the stack. Removes an item from the stack. The items are popped in the reversed order in which they are pushed. If the stack is empty, then it is said to be an   Underflow  condition. Algorithm for Pop Operation: Before popping the element from the stack, we check if the stack is   empty   .  
+ If the stack is empty (top == -1), then   Stack Underflows   and we cannot remove any element from the stack.  
+ Otherwise, we store the value at top, decrement the value of top by 1   (top = top – 1)   and return the stored top value. Returns the top element of the stack. Algorithm for Top Operation: Before returning the top element from the stack, we check if the stack is empty.  
+ If the stack is empty (top == -1), we simply print “Stack is empty”.  
+ Otherwise, we return the element stored at   index = top   . Returns true if the stack is empty, else false. Algorithm for isEmpty Operation : Check for the value of   top   in stack.  
+ If   (top == -1) , then the stack is   empty   so return   true   .  
+ Otherwise, the stack is not empty so return   false   . Returns true if the stack is full, else false. Algorithm for isFull Operation: Check for the value of   top   in stack.  
+ If   (top == capacity-1),   then the stack is   full   so return   true .  
+ Otherwise, the stack is not full so return   false .",
+Stack,Implementation of Stack,"The basic operations that can be performed on a stack include push, pop, and peek. There are two ways to implement a stack – Implementation of Stack using Array 
+ Implementation of Stack using Linked List",
+Stack,Complexity Analysis of Operations on Stack Data Structure:,"Next Articles: Applications, Advantages and Disadvantages of Stack  
+ Implement a stack using singly linked list  
+ Basic Operations in Stack Data Structure with Implementations  
+ Top 50 Problems on Stack Data Structure asked in SDE Interviews  
+ Applications, Advantages and Disadvantages of Stack  
+ Stack for Competitive Programming",
+Stack,Implement Stack using Array:,Step-by-step approach:,
+Stack,Implement Stack Operations using Array:,"Here are the following operations of implement stack using array: Adds an item to the stack. If the stack is full, then it is said to be an  Overflow condition. Algorithm for Push Operation: Removes an item from the stack. The items are popped in the reversed order in which they are pushed. If the stack is empty, then it is said to be an  Underflow condition. Algorithm for Pop Operation:  Returns the top element of the stack. Algorithm for Top Operation: Returns true if the stack is empty, else false. Algorithm for isEmpty Operation  : Returns true if the stack is full, else false. Algorithm for isFull Operation: Below is the implementation of the above approach: Time Complexity : push : O(1) pop : O(1) peek : O(1) is_empty : O(1) is_full: O(1) Auxiliary Space : O(n), where n is the number of items in the stack.","# Python program for implementation of stack 
+
+# import maxsize from sys module 
+# Used to return -infinite when stack is empty 
+from sys import maxsize 
+
+# Function to create a stack. It initializes size of stack as 0 
+def createStack(): 
+    stack = [] 
+    return stack 
+
+# Stack is empty when stack size is 0 
+def isEmpty(stack): 
+    return len(stack) == 0
+
+# Function to add an item to stack. It increases size by 1 
+def push(stack, item): 
+    stack.append(item) 
+    print(item + "" pushed to stack "") 
+    
+# Function to remove an item from stack. It decreases size by 1 
+def pop(stack): 
+    if (isEmpty(stack)): 
+        return str(-maxsize -1) # return minus infinite 
+    
+    return stack.pop() 
+
+# Function to return the top from stack without removing it 
+def peek(stack): 
+    if (isEmpty(stack)): 
+        return str(-maxsize -1) # return minus infinite 
+    return stack[len(stack) - 1] 
+
+# Driver program to test above functions     
+stack = createStack() 
+push(stack, str(10)) 
+push(stack, str(20)) 
+push(stack, str(30)) 
+print(pop(stack) + "" popped from stack"")"
+Stack,Advantages of Array Implementation:,Easy to implement. Memory is saved as pointers are not involved.,
+Stack,Disadvantages of Array Implementation:,"It is not dynamic i.e., it doesn’t grow and shrink depending on needs at runtime. [But in case of dynamic sized arrays like vector in C++, list in Python, ArrayList in Java, stacks can grow and shrink with array implementation as well]. The total size of the stack must be defined beforehand.",
+Stack,Stack Operations:,push() :  Insert a new element into the stack i.e just insert a new element at the beginning of the linked list. pop() :  Return the top element of the Stack i.e simply delete the first element from the linked list. peek() :  Return the top element. display():  Print all elements in Stack.,
+Stack,Display Operation:,"Below is the implementation of the above operations Time Complexity:  O(1), for all push(), pop(), and peek(), as we are not performing any kind of traversal over the list. We perform all the operations through the current pointer only. Auxiliary Space:  O(N), where N is the size of the stack In this implementation, we define a Node class that represents a node in the linked list, and a Stack class that uses this node class to implement the stack. The head attribute of the Stack class points to the top of the stack (i.e., the first node in the linked list). To push an item onto the stack, we create a new node with the given item and set its next pointer to the current head of the stack. We then set the head of the stack to the new node, effectively making it the new top of the stack. To pop an item from the stack, we simply remove the first node from the linked list by setting the head of the stack to the next node in the list (i.e., the node pointed to by the next pointer of the current head). We return the data stored in the original head node, which is the item that was removed from the top of the stack. Dynamic memory allocation : The size of the stack can be increased or decreased dynamically by adding or removing nodes from the linked list, without the need to allocate a fixed amount of memory for the stack upfront. Efficient memory usage:  Since nodes in a singly linked list only have a next pointer and not a prev pointer, they use less memory than nodes in a doubly linked list. Easy implementation : Implementing a stack using a singly linked list is straightforward and can be done using just a few lines of code. Versatile : Singly linked lists can be used to implement other data structures such as queues, linked lists, and trees. In summary, implementing a stack using a singly linked list is a simple and efficient way to create a dynamic stack data structure in Python. Stacks are used in various real-world scenarios where a last-in, first-out (LIFO) data structure is required. Here are some examples of real-time applications of stacks: Function call stack : When a function is called in a program, the return address and all the function parameters are pushed onto the function call stack. The stack allows the function to execute and return to the caller function in the reverse order in which they were called. Undo/Redo operations:  In many applications, such as text editors, image editors, or web browsers, the undo and redo functionalities are implemented using a stack. Every time an action is performed, it is pushed onto the stack. When the user wants to undo the last action, the top element of the stack is popped and the action is reversed. Browser history:  Web browsers use stacks to keep track of the pages visited by the user. Every time a new page is visited, its URL is pushed onto the stack. When the user clicks the “Back” button, the last visited URL is popped from the stack and the user is directed to the previous page. Expression evaluation : Stacks are used in compilers and interpreters to evaluate expressions. When an expression is parsed, it is converted into postfix notation and pushed onto a stack. The postfix expression is then evaluated using the stack. Call stack in recursion:  When a recursive function is called, its call is pushed onto the stack. The function executes and calls itself, and each subsequent call is pushed onto the stack. When the recursion ends, the stack is popped, and the program returns to the previous function call. In summary, stacks are widely used in many applications where LIFO functionality is required, such as function calls, undo/redo operations, browser history, expression evaluation, and recursive function calls.","# Java program to implement a stack using singly linked
+# list
+
+# Class representing a node in the linked list
+class Node:
+    def __init__(self, new_data):
+        self.data = new_data
+        self.next = None
+
+# Class to implement stack using a singly linked list
+class Stack:
+    def __init__(self):
+
+        # head of the linked list
+        self.head = None
+
+    # Function to check if the stack is empty
+    def is_empty(self):
+
+        # If head is None, the stack is empty
+        return self.head is None
+
+    # Function to push an element onto the stack
+    def push(self, new_data):
+
+        # Create a new node with given data
+        new_node = Node(new_data)
+
+        # Check if memory allocation for the new node failed
+        if not new_node:
+            print(""\nStack Overflow"")
+            return
+
+        # Link the new node to the current top node
+        new_node.next = self.head
+
+        # Update the top to the new node
+        self.head = new_node
+
+    # Function to remove the top element from the stack
+    def pop(self):
+
+        # Check for stack underflow
+        if self.is_empty():
+            print(""\nStack Underflow"")
+        else:
+
+            # Assign the current top to a temporary variable
+            temp = self.head
+
+            # Update the top to the next node
+            self.head = self.head.next
+
+            # Deallocate the memory of the old top node
+            del temp
+
+    # Function to return the top element of the stack
+    def peek(self):
+
+        # If stack is not empty, return the top element
+        if not self.is_empty():
+            return self.head.data
+        else:
+            print(""\nStack is empty"")
+            return float('-inf')
+
+
+# Creating a stack
+st = Stack()
+
+# Push elements onto the stack
+st.push(11)
+st.push(22)
+st.push(33)
+st.push(44)
+
+# Print top element of the stack
+print(""Top element is"", st.peek())
+
+# removing two elemements from the top
+print(""Removing two elements..."");
+st.pop()
+st.pop()
+
+# Print top element of the stack
+print(""Top element is"", st.peek())"
+Insertion Sort Algorithm,Insertion Sort Algorithm,"Insertion sort is a simple sorting algorithm that works by iteratively inserting each element of an unsorted list into its correct position in a sorted portion of the list. It is like sorting playing cards in your hands. You split the cards into two groups: the sorted cards and the unsorted cards. Then, you pick a card from the unsorted group and put it in the right place in the sorted group.
+
+We start with second element of the array as first element in the array is assumed to be sorted.
+Compare second element with the first element and check if the second element is smaller then swap them.
+Move to the third element and compare it with the first two elements and put at its correct position
+Repeat until the entire array is sorted.
+","# Python program for implementation of Insertion Sort
+
+# Function to sort array using insertion sort
+def insertionSort(arr):
+    for i in range(1, len(arr)):
+        key = arr[i]
+        j = i - 1
+
+        # Move elements of arr[0..i-1], that are
+        # greater than key, to one position ahead
+        # of their current position
+        while j >= 0 and key < arr[j]:
+            arr[j + 1] = arr[j]
+            j -= 1
+        arr[j + 1] = key
+
+# A utility function to print array of size n
+def printArray(arr):
+    for i in range(len(arr)):
+        print(arr[i], end="" "")
+    print()
+
+# Driver method
+if __name__ == ""__main__"":
+    arr = [12, 11, 13, 5, 6]
+    insertionSort(arr)
+    printArray(arr)"
+Insertion Sort Algorithm,Complexity Analysis of Insertion Sort  :,"Best case:  O(n) , If the list is already sorted, where n is the number of elements in the list.   Average case:  O(n 2 ) , If the list is randomly ordered   Worst case:  O(n 2 ) , If the list is in reverse order Auxiliary Space:   O(1), Insertion sort requires   O(1)   additional space, making it a space-efficient sorting algorithm. Please refer  Complexity Analysis of Insertion Sort  for details.",
+Insertion Sort Algorithm,Advantages  of Insertion Sort:,"Simple and easy to implement.  Stable  sorting algorithm.   Efficient for small lists and nearly sorted lists.   Space-efficient as it is an in-place algorithm.  Adoptive. the  number of inversions  is directly proportional to number of swaps. For example, no swapping happens for a sorted array and it takes O(n) time only.",
+Insertion Sort Algorithm,Disadvantages  of Insertion Sort:,"Inefficient for large lists.   Not as efficient as other sorting algorithms (e.g., merge sort, quick sort) for most cases.",
+Insertion Sort Algorithm,Applications  of Insertion Sort:,"Insertion sort is commonly used in situations where: The list is small or nearly sorted.  Simplicity and stability are important.  Used as a subroutine in  Bucket Sort Can be useful when array is already almost sorted (very few  inversions ) Since Insertion sort is suitable for small sized arrays, it is used in  Hybrid Sorting algorithms  along with other efficient algorithms like Quick Sort and Merge Sort.  When the subarray size becomes small, we switch to insertion sort in these recursive algorithms. For example  IntroSort  and  TimSort  use insertions sort.",
+Merge Sort,Merge Sort,"Merge sort is a sorting algorithm that follows the divide-and-conquer approach. It works by recursively dividing the input array into smaller subarrays and sorting those subarrays then merging them back together to obtain the sorted array.
+
+In simple terms, we can say that the process of merge sort is to divide the array into two halves, sort each half, and then merge the sorted halves back together. This process is repeated until the entire array is sorted.",
+Merge Sort,How does Merge Sort work?,"Merge sort is a popular sorting algorithm known for its efficiency and stability. It follows the divide-and-conquer approach to sort a given array of elements.
+Here’s a step-by-step explanation of how merge sort works:
+
+Divide:  Divide the list or array recursively into two halves until it can no more be divided. 
+Conquer:  Each subarray is sorted individually using the merge sort algorithm. 
+Merge:  The sorted subarrays are merged back together in sorted order. The process continues until all elements from both subarrays have been merged. ","def merge(arr, left, mid, right):
+    n1 = mid - left + 1
+    n2 = right - mid
+
+    # Create temp arrays
+    L = [0] * n1
+    R = [0] * n2
+
+    # Copy data to temp arrays L[] and R[]
+    for i in range(n1):
+        L[i] = arr[left + i]
+    for j in range(n2):
+        R[j] = arr[mid + 1 + j]
+
+    i = 0  # Initial index of first subarray
+    j = 0  # Initial index of second subarray
+    k = left  # Initial index of merged subarray
+
+    # Merge the temp arrays back
+    # into arr[left..right]
+    while i < n1 and j < n2:
+        if L[i] <= R[j]:
+            arr[k] = L[i]
+            i += 1
+        else:
+            arr[k] = R[j]
+            j += 1
+        k += 1
+
+    # Copy the remaining elements of L[],
+    # if there are any
+    while i < n1:
+        arr[k] = L[i]
+        i += 1
+        k += 1
+
+    # Copy the remaining elements of R[], 
+    # if there are any
+    while j < n2:
+        arr[k] = R[j]
+        j += 1
+        k += 1
+
+def merge_sort(arr, left, right):
+    if left < right:
+        mid = (left + right) // 2
+
+        merge_sort(arr, left, mid)
+        merge_sort(arr, mid + 1, right)
+        merge(arr, left, mid, right)
+
+def print_list(arr):
+    for i in arr:
+        print(i, end="" "")
+    print()
+
+# Driver code
+if __name__ == ""__main__"":
+    arr = [12, 11, 13, 5, 6, 7]
+    print(""Given array is"")
+    print_list(arr)
+
+    merge_sort(arr, 0, len(arr) - 1)
+
+    print(""\nSorted array is"")
+    print_list(arr)"
+Merge Sort,Complexity Analysis of Merge Sort,"Time Complexity:
+Best Case: O(n log n), When the array is already sorted or nearly sorted.
+Average Case: O(n log n), When the array is randomly ordered.
+Worst Case: O(n log n), When the array is sorted in reverse order.
+Auxiliary Space: O(n), Additional space is required for the temporary array used during merging.",
+Merge Sort,Applications of Merge Sort,"Sorting large datasets
+External sorting (when the dataset is too large to fit in memory)
+Inversion counting
+Merge Sort and its variations are used in library methods of programming languages.
+Its variation TimSort is used in Python, Java Android and Swift. The main reason why it is preferred to sort non-primitive types is stability which is not there in QuickSort.
+Arrays.sort in Java uses QuickSort while Collections.sort uses MergeSort.
+It is a preferred algorithm for sorting Linked lists.
+It can be easily parallelized as we can independently sort subarrays and then merge.
+The merge function of merge sort to efficiently solve the problems like union and intersection of two sorted arrays.",
+Merge Sort,Advantages and Disadvantages of Merge Sort,"Advantages
+
+Stability : Merge sort is a stable sorting algorithm, which means it maintains the relative order of equal elements in the input array.
+Guaranteed worst-case performance: Merge sort has a worst-case time complexity of O(N logN) , which means it performs well even on large datasets.
+Simple to implement: The divide-and-conquer approach is straightforward.
+Naturally Parallel : We independently merge subarrays that makes it suitable for parallel processing.
+Disadvantages
+
+Space complexity: Merge sort requires additional memory to store the merged sub-arrays during the sorting process.
+Not in-place: Merge sort is not an in-place sorting algorithm, which means it requires additional memory to store the sorted data. This can be a disadvantage in applications where memory usage is a concern.
+Merge Sort is Slower than QuickSort in general as QuickSort is more cache friendly because it works in-place.",
+QuickSort,How does QuickSort Algorithm work?,"QuickSort works on the principle of  divide and conquer , breaking down the problem into smaller sub-problems. There are mainly three steps in the algorithm: Here’s a basic overview of how the QuickSort algorithm works. There are many different choices for picking pivots. Always pick the first (or last) element as a pivot . The below implementation picks the last element as pivot. The problem with this approach is it ends up in the worst case when array is already sorted.  Pick a random element as a pivot . This is a preferred approach because it does not have a pattern for which the worst case happens. Pick the median element is pivot. This is an ideal approach in terms of time complexity as  we can find median in linear time  and the partition function will always divide the input array into two halves. But it takes more time on average as median finding has high constants. The key process in  quickSort  is a  partition().  There are three common algorithms to partition. All these algorithms have O(n) time complexity.",
+QuickSort,Working of Partition Algorithm with Illustration,Let us understand the working of partition algorithm with the help of the following example:,
+QuickSort,Illustration of QuickSort Algorithm,"In the previous step, we looked at how the  partitioning  process rearranges the array based on the chosen  pivot . Next, we apply the same method recursively to the smaller sub-arrays on the  left  and  right  of the pivot. Each time, we select new pivots and partition the arrays again. This process continues until only one element is left, which is always sorted. Once every element is in its correct position, the entire array is sorted. Below image illustrates, how the recursive method calls for the smaller sub-arrays on the  left  and  right  of the  pivot : Quick Sort   is a crucial algorithm in the industry, but there are other sorting algorithms that may be more optimal in different cases.","# Partition function
+def partition(arr, low, high):
+    
+    # Choose the pivot
+    pivot = arr[high]
+    
+    # Index of smaller element and indicates 
+    # the right position of pivot found so far
+    i = low - 1
+    
+    # Traverse arr[low..high] and move all smaller
+    # elements to the left side. Elements from low to 
+    # i are smaller after every iteration
+    for j in range(low, high):
+        if arr[j] < pivot:
+            i += 1
+            swap(arr, i, j)
+    
+    # Move pivot after smaller elements and
+    # return its position
+    swap(arr, i + 1, high)
+    return i + 1
+
+# Swap function
+def swap(arr, i, j):
+    arr[i], arr[j] = arr[j], arr[i]
+
+# The QuickSort function implementation
+def quickSort(arr, low, high):
+    if low < high:
+        
+        # pi is the partition return index of pivot
+        pi = partition(arr, low, high)
+        
+        # Recursion calls for smaller elements
+        # and greater or equals elements
+        quickSort(arr, low, pi - 1)
+        quickSort(arr, pi + 1, high)
+
+# Main driver code
+if __name__ == ""__main__"":
+    arr = [10, 7, 8, 9, 1, 5]
+    n = len(arr)
+
+    quickSort(arr, 0, n - 1)
+    
+    for val in arr:
+        print(val, end="" "")"
+QuickSort,Complexity Analysis of Quick Sort,"Time Complexity: Best Case:  (Ω(n log n)), Occurs when the pivot element divides the array into two equal halves. Average Case  (θ(n log n)), On average, the pivot divides the array into two parts, but not necessarily equal. Worst Case:  (O(n²)), Occurs when the smallest or largest element is always chosen as the pivot (e.g., sorted arrays). Auxiliary Space:  O(n),   due to   recursive call stack Please refer  Time and Space Complexity Analysis of Quick Sort  for more details.",
+QuickSort,Advantages of Quick Sort,"It is a divide-and-conquer algorithm that makes it easier to solve problems.  It is efficient on large data sets.  It has a low overhead, as it only requires a small amount of memory to function.  It is Cache Friendly as we work on the same array to sort and do not copy data to any auxiliary array. Fastest general purpose algorithm for large data when stability is not required.  It is  tail recursive  and hence all the  tail call optimization  can be done.",
+QuickSort,Disadvantages of Quick Sort,"It has a worst-case time complexity of O(n 2 ), which occurs when the pivot is chosen poorly.   It is not a good choice for small data sets.   It is not a stable sort, meaning that if two elements have the same key, their relative order will not be preserved in the sorted output in case of quick sort, because here we are swapping elements according to the pivot’s position (without considering their original positions).",
+QuickSort,Applications of Quick Sort,"Efficient for sorting large datasets with O(n log n) average-case time complexity. Used in partitioning problems like finding the kth smallest element or dividing arrays by pivot. Integral to randomized algorithms, offering better performance than deterministic approaches. Applied in cryptography for generating random permutations and unpredictable encryption keys. Partitioning step can be parallelized for improved performance in multi-core or distributed systems. Important in theoretical computer science for analyzing average-case complexity and developing new techniques. Please refer  Application of Quicksort  for more details.",
+Bubble Sort,How does Bubble Sort Work?,Below is the implementation of the bubble sort. It can be optimized by stopping the algorithm if the inner loop didn’t cause any swap.,"# Optimized Python program for implementation of Bubble Sort
+def bubbleSort(arr):
+    n = len(arr)
+    
+    # Traverse through all array elements
+    for i in range(n):
+        swapped = False
+
+        # Last i elements are already in place
+        for j in range(0, n-i-1):
+
+            # Traverse the array from 0 to n-i-1
+            # Swap if the element found is greater
+            # than the next element
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+                swapped = True
+        if (swapped == False):
+            break
+
+# Driver code to test above
+if __name__ == ""__main__"":
+    arr = [64, 34, 25, 12, 22, 11, 90]
+
+    bubbleSort(arr)
+
+    print(""Sorted array:"")
+    for i in range(len(arr)):
+        print(""%d"" % arr[i], end="" "")"
+Bubble Sort,Complexity Analysis of Bubble Sort:,Time Complexity:  O(n 2 ) Auxiliary Space:  O(1) Please refer  Complexity Analysis of Bubble Sort  for details.,
+Bubble Sort,Advantages of Bubble Sort:,"Bubble sort is easy to understand and implement. It does not require any additional memory space. It is a stable sorting algorithm, meaning that elements with the same key value maintain their relative order in the sorted output.",
+Bubble Sort,Disadvantages of Bubble Sort:,Bubble sort has a time complexity of O(n 2 ) which makes it very slow for large data sets. Bubble sort has almost no or limited real world applications. It is mostly used in academics to teach different ways of sorting.,
+Bucket Sort,Bucket Sort Algorithm:,Create  n  empty buckets (Or lists) and do the following for every array element arr[i]. Insert arr[i] into bucket[n*array[i]] Sort individual buckets using insertion sort. Concatenate all sorted buckets.,
+Bucket Sort,How does Bucket Sort work?,"To apply bucket sort on the input array  [0.78, 0.17, 0.39, 0.26, 0.72, 0.94, 0.21, 0.12, 0.23, 0.68] , we follow these steps: Step 1:  Create an array of size 10, where each slot represents a bucket. Step 2:  Insert elements into the buckets from the input array based on their range. Inserting elements into the buckets: Take each element from the input array. Multiply the element by the size of the bucket array (10 in this case). For example, for element 0.23, we get 0.23 * 10 = 2.3. Convert the result to an integer, which gives us the bucket index. In this case, 2.3 is converted to the integer 2. Insert the element into the bucket corresponding to the calculated index. Repeat these steps for all elements in the input array. Step 3:  Sort the elements within each bucket. In this example, we use quicksort (or any stable sorting algorithm) to sort the elements within each bucket. Sorting the elements within each bucket: Apply a stable sorting algorithm (e.g., Bubble Sort, Merge Sort) to sort the elements within each bucket. The elements within each bucket are now sorted. Step 4:  Gather the elements from each bucket and put them back into the original array. Gathering elements from each bucket: Iterate through each bucket in order. Insert each individual element from the bucket into the original array. Once an element is copied, it is removed from the bucket. Repeat this process for all buckets until all elements have been gathered. Step 5:  The original array now contains the sorted elements. The final sorted array using bucket sort for the given input is [0.12, 0.17, 0.21, 0.23, 0.26, 0.39, 0.68, 0.72, 0.78, 0.94].",
+Bucket Sort,Implementation of Bucket Sort Algorithm:,Below is the implementation for the Bucket Sort:,"def insertion_sort(bucket):
+    for i in range(1, len(bucket)):
+        key = bucket[i]
+        j = i - 1
+        while j >= 0 and bucket[j] > key:
+            bucket[j + 1] = bucket[j]
+            j -= 1
+        bucket[j + 1] = key
+
+def bucket_sort(arr):
+    n = len(arr)
+    buckets = [[] for _ in range(n)]
+
+    # Put array elements in different buckets
+    for num in arr:
+        bi = int(n * num)
+        buckets[bi].append(num)
+
+    # Sort individual buckets using insertion sort
+    for bucket in buckets:
+        insertion_sort(bucket)
+
+    # Concatenate all buckets into arr[]
+    index = 0
+    for bucket in buckets:
+        for num in bucket:
+            arr[index] = num
+            index += 1
+
+arr = [0.897, 0.565, 0.656, 0.1234, 0.665, 0.3434]
+bucket_sort(arr)
+print(""Sorted array is:"")
+print("" "".join(map(str, arr)))"
+Bucket Sort,Complexity Analysis of Bucket Sort Algorithm:,"Worst Case Time Complexity:  O(n 2 )  The worst case happens when one bucket gets all the elements. In this case, we will be running insertion sort on all items which will make the time complexity as O(n 2 ).  We can reduce the worst case time complexity to O(n Log n) by using a O(n Log n) algorithm like Merge Sort or Heap Sort to sort the individual buckets, but that will improve the algorithm time for cases when buckets have small number of items as insertion sort works better for small arrays. Best Case Time Complexity :  O(n + k)  The best case happens when every bucket gets equal number of elements. In this case every call to insertion sort will take constant time as the number of items in every bucket would be constant (Assuming that k is linearly proportional to n). Auxiliary Space:  O(n+k)",
+Binary Search,What is Binary Search Algorithm?,Binary search  is a search algorithm used to find the position of a target value within a  sorted  array. It works by repeatedly dividing the search interval in half until the target value is found or the interval is empty. The search interval is halved by comparing the target element with the middle value of the search space.,
+Binary Search,Conditions to apply Binary Search Algorithm in a Data Structure,To apply Binary Search algorithm: The data structure must be sorted. Access to any element of the data structure should take constant time.,
+Binary Search,Binary Search Algorithm,"Below is the step-by-step algorithm for Binary Search: Divide the search space into two halves by  finding the middle index “mid” .  Compare the middle element of the search space with the  key .  If the  key  is found at middle element, the process is terminated. If the  key  is not found at middle element, choose which half will be used as the next search space. If the  key  is smaller than the middle element, then the  left  side is used for next search. If the  key  is larger than the middle element, then the  right  side is used for next search. This process is continued until the  key  is found or the total search space is exhausted.",
+Binary Search,How does Binary Search Algorithm work?,"To understand the working of binary search, consider the following illustration: Consider an array  arr[] = {2, 5, 8, 12, 16, 23, 38, 56, 72, 91} , and the  target = 23 .",
+Binary Search,How to Implement Binary Search Algorithm?,The  Binary Search Algorithm  can be implemented in the following two ways Iterative Binary Search Algorithm Recursive Binary Search Algorithm Given below are the pseudocodes for the approaches. Time Complexity:  O(log N) Auxiliary Space:  O(1),"# Python3 code to implement iterative Binary
+# Search.
+
+
+# It returns location of x in given array arr
+def binarySearch(arr, low, high, x):
+
+    while low <= high:
+
+        mid = low + (high - low) // 2
+
+        # Check if x is present at mid
+        if arr[mid] == x:
+            return mid
+
+        # If x is greater, ignore left half
+        elif arr[mid] < x:
+            low = mid + 1
+
+        # If x is smaller, ignore right half
+        else:
+            high = mid - 1
+
+    # If we reach here, then the element
+    # was not present
+    return -1
+
+
+# Driver Code
+if __name__ == '__main__':
+    arr = [2, 3, 4, 10, 40]
+    x = 10
+
+    # Function call
+    result = binarySearch(arr, 0, len(arr)-1, x)
+    if result != -1:
+        print(""Element is present at index"", result)
+    else:
+        print(""Element is not present in array"")
+# Python3 Program for recursive binary search.
+
+
+# Returns index of x in arr if present, else -1
+def binarySearch(arr, low, high, x):
+
+    # Check base case
+    if high >= low:
+
+        mid = low + (high - low) // 2
+
+        # If element is present at the middle itself
+        if arr[mid] == x:
+            return mid
+
+        # If element is smaller than mid, then it
+        # can only be present in left subarray
+        elif arr[mid] > x:
+            return binarySearch(arr, low, mid-1, x)
+
+        # Else the element can only be present
+        # in right subarray
+        else:
+            return binarySearch(arr, mid + 1, high, x)
+
+    # Element is not present in the array
+    else:
+        return -1
+
+
+# Driver Code
+if __name__ == '__main__':
+    arr = [2, 3, 4, 10, 40]
+    x = 10
+    
+    # Function call
+    result = binarySearch(arr, 0, len(arr)-1, x)
+    
+    if result != -1:
+        print(""Element is present at index"", result)
+    else:
+        print(""Element is not present in array"")"
+Binary Search,Complexity Analysis of Binary Search Algorithm,"Time Complexity:   Best Case: O(1) Average Case: O(log N) Worst Case: O(log N) Auxiliary Space:  O(1), If the recursive call stack is considered then the auxiliary space will be O(logN).",
+Binary Search,Applications of Binary Search Algorithm,"Binary search can be used as a building block for more complex algorithms used in machine learning, such as algorithms for training neural networks or finding the optimal hyperparameters for a model. It can be used for searching in computer graphics such as algorithms for ray tracing or texture mapping. It can be used for searching a database.",
+Binary Search,Advantages of Binary Search,"Binary search is faster than linear search, especially for large arrays. More efficient than other searching algorithms with a similar time complexity, such as interpolation search or exponential search. Binary search is well-suited for searching large datasets that are stored in external memory, such as on a hard drive or in the cloud.",
+Binary Search,Disadvantages of Binary Search,"The array should be sorted. Binary search requires that the data structure being searched be stored in contiguous memory locations.  Binary search requires that the elements of the array be comparable, meaning that they must be able to be ordered.",
+Binary Tree,Representation of Binary Tree,Each node in a Binary Tree has three parts: Data Pointer to the left child Pointer to the right child Syntax to declare a Node of Binary Tree in different languages:,"# A Python class that represents
+# an individual node in a Binary Tree
+class Node:
+    def __init__(self, key):
+        self.left = None
+        self.right = None
+        self.val = key"
+Binary Tree,Example for Creating a Binary Tree,"Here’s an example of creating a Binary Tree with four nodes (2, 3, 4, 5) In the above code, we have created four tree nodes  firstNode ,  secondNode ,  thirdNode  and  fourthNode  having values  2 ,  3 ,  4  and  5  respectively. After creating three nodes, we have connected these node to form the tree structure like mentioned in above image. Connect the  secondNode  to the left of  firstNode  by  firstNode->left = secondNode Connect the  thirdNode  to the right of  firstNode  by  firstNode->right = thirdNode Connect the  fourthNode  to the left of  secondNode  by  secondNode->left = fourthNode","class Node:
+    def __init__(self, d):
+        self.data = d
+        self.left = None
+        self.right = None
+
+# Initialize and allocate memory for tree nodes
+firstNode = Node(2)
+secondNode = Node(3)
+thirdNode = Node(4)
+fourthNode = Node(5)
+
+# Connect binary tree nodes
+firstNode.left = secondNode
+firstNode.right = thirdNode
+secondNode.left = fourthNode"
+Binary Tree,Terminologies in Binary Tree,"Nodes:  The fundamental part of a binary tree, where each node contains  data  and  link  to two child nodes. Root : The topmost node in a tree is known as the root node. It has no parent and serves as the starting point for all nodes in the tree. Parent Node : A node that has one or more child nodes. In a binary tree, each node can have at most two children. Child Node : A node that is a descendant of another node (its parent). Leaf Node : A node that does not have any children or both children are null. Internal Node : A node that has at least one child. This includes all nodes except the  root  and the  leaf  nodes. Depth of a Node : The number of edges from a specific node to the root node. The depth of the  root  node is zero. Height of a Binary Tree : The number of nodes from the deepest leaf node to the root node. The diagram below shows all these terms in a binary tree.",
+Binary Tree,Properties of Binary Tree,"The maximum number of nodes at level  L  of a binary tree is  2 L The maximum number of nodes in a binary tree of height  H  is  2 H  – 1 Total number of leaf nodes in a binary tree = total number of nodes with 2 children + 1 In a Binary Tree with  N  nodes, the minimum possible height or the minimum number of levels is  Log 2 (N+1) A Binary Tree with  L  leaves has at least  | Log2L |+ 1  levels Please refer  Properties of Binary Tree  for more details.",
+Binary Tree,Types of Binary Tree,Binary Tree can be classified into multiples types based on multiple factors: On the basis of Number of Children Full Binary Tree Degenerate Binary Tree Skewed Binary Trees On the basis of Completion of Levels  Complete Binary Tree Perfect Binary Tree Balanced Binary Tree On the basis of Node Values: Binary Search Tree AVL Tree Red Black Tree B Tree B+ Tree Segment Tree,
+Binary Tree,Operations On Binary Tree,"Following is a list of common operations that can be performed on a binary tree: Traversal in Binary Tree involves visiting all the nodes of the binary tree. Tree Traversal algorithms can be classified broadly into two categories,  DFS  and  BFS : Depth-First Search (DFS) algorithms:  DFS explores as far down a branch as possible before backtracking. It is implemented using recursion. The main traversal methods in DFS for binary trees are: Preorder Traversal (current-left-right):   Visits the  node  first, then  left subtree , then  right subtree. Inorder Traversal (left-current-right):   Visits  left subtree , then the  node , then the  right subtree . Postorder Traversal (left-right-current):  Visits  left subtree , then  right subtree , then the  node . Breadth-First Search (BFS) algorithms:  BFS explores all nodes at the present depth before moving on to nodes at the next depth level. It is typically implemented using a queue.   BFS in a binary tree is commonly referred to as   Level Order Traversal . Below is the implementation of traversals algorithm in binary tree: Inserting elements means add a new node into the binary tree. As we know that there is no such ordering of elements in the binary tree, So we do not have to worry about the ordering of node in the binary tree. We would first creates a  root node  in case of empty tree. Then subsequent insertions involve iteratively searching for an empty place at each level of the tree. When an empty  left  or  right  child is found then  new node  is inserted there. By convention, insertion always starts with the  left  child node. Searching  for a value in a binary tree means looking through the tree to find a node that has that value. Since binary trees do not have a specific order like binary search trees, we typically use any traversal method to search. The most common methods are  depth-first search (DFS)  and  breadth-first search (BFS) . In  DFS , we start from the  root  and explore the depth nodes first. In BFS, we explore all the nodes at the present depth level before moving on to the nodes at the next level. We continue this process until we either find the node with the desired value or reach the end of the tree. If the tree is empty or the value isn’t found after exploring all possibilities, we conclude that the value does not exist in the tree. Here is the implementation of searching in a binary tree using Depth-First Search (DFS) Deleting a node from a binary tree means removing a specific node while keeping the tree’s structure. First, we need to find the node that want to delete by traversing through the tree using any traversal method. Then replace the node’s value with the value of the last node in the tree (found by traversing to the rightmost leaf), and then delete that last node. This way, the tree structure won’t be effected. And remember to check for special cases, like trying to delete from an empty tree, to avoid any issues. Note:  There is no specific rule of deletion but we always make sure that during deletion the binary tree proper should be preserved.","class Node:
+    def __init__(self, data):
+        self.data = data
+        self.left = None
+        self.right = None
+
+# In-order DFS: Left, Root, Right
+def in_order_dfs(node):
+    if node is None:
+        return
+    in_order_dfs(node.left)
+    print(node.data, end=' ')
+    in_order_dfs(node.right)
+
+# Pre-order DFS: Root, Left, Right
+def pre_order_dfs(node):
+    if node is None:
+        return
+    print(node.data, end=' ')
+    pre_order_dfs(node.left)
+    pre_order_dfs(node.right)
+
+# Post-order DFS: Left, Right, Root
+def post_order_dfs(node):
+    if node is None:
+        return
+    post_order_dfs(node.left)
+    post_order_dfs(node.right)
+    print(node.data, end=' ')
+
+# BFS: Level order traversal
+def bfs(root):
+    if root is None:
+        return
+    queue = [root]
+    while queue:
+        node = queue.pop(0)
+        print(node.data, end=' ')
+        if node.left:
+            queue.append(node.left)
+        if node.right:
+            queue.append(node.right)
+
+if __name__ == ""__main__"":
+    # Creating the tree
+    root = Node(2)
+    root.left = Node(3)
+    root.right = Node(4)
+    root.left.left = Node(5)
+
+    print(""In-order DFS: "", end='')
+    in_order_dfs(root)
+    print(""\nPre-order DFS: "", end='')
+    pre_order_dfs(root)
+    print(""\nPost-order DFS: "", end='')
+    post_order_dfs(root)
+    print(""\nLevel order: "", end='')
+    bfs(root)
+from collections import deque
+
+class Node:
+    def __init__(self, d):
+        self.data = d
+        self.left = None
+        self.right = None
+
+# Function to insert a new node in the binary tree
+def insert(root, key):
+    if root is None:
+        return Node(key)
+
+    # Create a queue for level order traversal
+    queue = deque([root])
+
+    while queue:
+        temp = queue.popleft()
+
+        # If left child is empty, insert the new node here
+        if temp.left is None:
+            temp.left = Node(key)
+            break
+        else:
+            queue.append(temp.left)
+
+        # If right child is empty, insert the new node here
+        if temp.right is None:
+            temp.right = Node(key)
+            break
+        else:
+            queue.append(temp.right)
+
+    return root
+
+# In-order traversal
+def inorder(root):
+    if root is None:
+        return
+    inorder(root.left)
+    print(root.data, end="" "")
+    inorder(root.right)
+
+if __name__ == ""__main__"":
+    root = Node(2)
+    root.left = Node(3)
+    root.right = Node(4)
+    root.left.left = Node(5)
+
+    print(""Inorder traversal before insertion: "", end="""")
+    inorder(root)
+    print()
+
+    key = 6
+    root = insert(root, key)
+
+    print(""Inorder traversal after insertion: "", end="""")
+    inorder(root)
+    print()
+class Node:
+    def __init__(self, d):
+        self.data = d
+        self.left = None
+        self.right = None
+
+# Function to search for a value in the binary tree using DFS
+def searchDFS(root, value):
+    # Base case: If the tree is empty or we've reached a leaf node
+    if root is None:
+        return False
+    # If the node's data is equal to the value we are searching for
+    if root.data == value:
+        return True
+    # Recursively search in the left and right subtrees
+    left_res = searchDFS(root.left, value)
+    right_res = searchDFS(root.right, value)
+
+    return left_res or right_res
+
+if __name__ == ""__main__"":
+    root = Node(2)
+    root.left = Node(3)
+    root.right = Node(4)
+    root.left.left = Node(5)
+    root.left.right = Node(6)
+
+    value = 6
+    if searchDFS(root, value):
+        print(f""{value} is found in the binary tree"")
+    else:
+        print(f""{value} is not found in the binary tree"")
+from collections import deque
+
+class Node:
+    def __init__(self, d):
+        self.data = d
+        self.left = None
+        self.right = None
+
+# Function to delete a node from the binary tree
+def deleteNode(root, val):
+    if root is None:
+        return None
+
+    # Use a queue to perform BFS
+    queue = deque([root])
+    target = None
+
+    # Find the target node
+    while queue:
+        curr = queue.popleft()
+
+        if curr.data == val:
+            target = curr
+            break
+        if curr.left:
+            queue.append(curr.left)
+        if curr.right:
+            queue.append(curr.right)
+
+    if target is None:
+        return root
+
+    # Find the deepest rightmost node and its parent
+    last_node = None
+    last_parent = None
+    queue = deque([(root, None)])
+
+    while queue:
+        curr, parent = queue.popleft()
+        last_node = curr
+        last_parent = parent
+
+        if curr.left:
+            queue.append((curr.left, curr))
+        if curr.right:
+            queue.append((curr.right, curr))
+
+    # Replace target's value with the last node's value
+    target.data = last_node.data
+
+    # Remove the last node
+    if last_parent:
+        if last_parent.left == last_node:
+            last_parent.left = None
+        else:
+            last_parent.right = None
+    else:
+        return None
+    return root
+
+# In-order traversal
+def inorder(root):
+    if root is None:
+        return
+    inorder(root.left)
+    print(root.data, end="" "")
+    inorder(root.right)
+
+if __name__ == ""__main__"":
+    root = Node(2)
+    root.left = Node(3)
+    root.right = Node(4)
+    root.left.left = Node(5)
+    root.left.right = Node(6)
+
+    print(""Original tree (in-order): "", end="""")
+    inorder(root)
+    print()
+
+    val_to_del = 3
+    root = deleteNode(root, val_to_del)
+
+    print(f""Tree after deleting {val_to_del} (in-order): "", end="""")
+    inorder(root)
+    print()"
+Binary Tree,Auxiliary Operations On Binary Tree,Finding the height of the tree Find level of a node in a Binary tree Finding the size of the entire tree,
+Binary Tree,Complexity Analysis of Binary Tree Operations,Here’s the complexity analysis for specific binary tree operations: Note:  We can use  Morris Traversal   to traverse all the nodes of the binary tree in O(n) time complexity but with O(1) auxiliary space.,
+Binary Tree,Advantages of Binary Tree,"Efficient Search:  Binary Search Trees  (a variation of Binary Tree) are efficient when searching for a specific element, as each node has at most two child nodes when compared to linked list and arrays Memory Efficient:  Binary trees require lesser memory as compared to other tree data structures, therefore memory-efficient. Binary trees are relatively easy to implement and understand as each node has at most two children, left child and right child.",
+Binary Tree,Disadvantages of Binary Tree,"Limited structure:  Binary trees are limited to two child nodes per node, which can limit their usefulness in certain applications. For example, if a tree requires more than two child nodes per node, a different tree structure may be more suitable. Unbalanced trees:  Unbalanced binary trees, where one subtree is significantly larger than the other, can lead to inefficient search operations. This can occur if the tree is not properly balanced or if data is inserted in a non-random order. Space inefficiency:  Binary trees can be space inefficient when compared to other data structures like arrays and linked list. This is because each node requires two child references or pointers, which can be a significant amount of memory overhead for large trees. Slow performance in worst-case scenarios:  In the worst-case scenario, a binary tree can become degenerate or skewed, meaning that each node has only one child. In this case, search operations in  Binary Search Tree  (a variation of Binary Tree) can degrade to O(n) time complexity, where n is the number of nodes in the tree.",
+Binary Tree,Applications of Binary Tree,"Binary Tree can be used to  represent hierarchical data . Huffman Coding trees are used in  data compression algorithms . Priority Queue  is another application of binary tree that is used for searching maximum or minimum in O(1) time complexity. Useful for indexing segmented at the database is useful in storing cache in the system, Binary trees can be used to implement decision trees, a type of machine learning algorithm used for classification and regression analysis.",
+DFS,DFS Traversal of a Graph vs Tree:,"In the graph, there might be cycles and disconnectivity. Unlike the graph, the tree does not contain a cycle and are always connected. So DFS of a tree is relatively easier. We can simply begin from a node, then traverse its adjacent (or children) without caring about cycles. And if we begin from a single node (root), and traverse this way, it is guaranteed that we traverse the whole tree as there is no dis-connectivity, Examples: Below are the Tree traversals through DFS using recursion:",
+DFS,1. Inorder Traversal (Practice):,"Follow the below steps to solve the problem: Traverse the left subtree, i.e., call Inorder(left-subtree) Visit the root Traverse the right subtree, i.e., call Inorder(right-subtree) Below is the implementation of the above algorithm: Time Complexity:  O(N) Auxiliary Space:  O(log N) In the case of binary search trees (BST), Inorder traversal gives nodes in non-decreasing order. To get nodes of BST in non-increasing order, a variation of Inorder traversal where Inorder traversal is reversed can be used",
+DFS,2. Preorder Traversal (Practice):,"Follow the below steps to solve the problem: Visit the root Traverse the left subtree, i.e., call Preorder(left-subtree) Traverse the right subtree, i.e., call Preorder(right-subtree) Below is the implementation of the above algorithm: Time Complexity:  O(N) Auxiliary Space:  O(log N) Preorder traversal is used to create a copy of the tree. Preorder traversal is also used to get prefix expressions of an expression tree.",
+DFS,3. Postorder Traversal (Practice):,"Follow the below steps to solve the problem: Traverse the left subtree, i.e., call Postorder(left-subtree) Traverse the right subtree, i.e., call Postorder(right-subtree) Visit the root Below is the implementation of the above algorithm: Time Complexity:  O(N) Auxiliary Space:  O(log N) Postorder traversal is used to delete the tree. Please see  the question for the deletion of the tree  for details. Postorder traversal is also useful to get the postfix expression of an expression tree",
+DFS,Implementing all traversals using DFS:,Time Complexity:  O(N) Auxiliary Space:  O(log N) Related Article: Please see  this post for Breadth First Traversal.,
+Backtracking,What is Backtracking?,"Backtracking is a problem-solving algorithmic technique that involves finding a solution incrementally by trying  different options  and  undoing  them if they lead to a  dead end . It is commonly used in situations where you need to explore multiple possibilities to solve a problem, like searching for a path in a maze or solving puzzles like Sudoku. When a dead end is reached, the algorithm backtracks to the previous decision point and explores a different path until a solution is found or all possibilities have been exhausted. Candidate:  A candidate is a potential choice or element that can be added to the current solution. 
+ Solution:  The solution is a valid and complete configuration that satisfies all problem constraints. 
+ Partial Solution:  A partial solution is an intermediate or incomplete configuration being constructed during the backtracking process. 
+ Decision Space:  The decision space is the set of all possible candidates or choices at each decision point. 
+ Decision Point:  A decision point is a specific step in the algorithm where a candidate is chosen and added to the partial solution. 
+ Feasible Solution:  A feasible solution is a partial or complete solution that adheres to all constraints. 
+ Dead End:  A dead end occurs when a partial solution cannot be extended without violating constraints. 
+ Backtrack:  Backtracking involves undoing previous decisions and returning to a prior decision point. 
+ Search Space:  The search space includes all possible combinations of candidates and choices. 
+ Optimal Solution:  In optimization problems, the optimal solution is the best possible solution.",
+Backtracking,Types of Backtracking Problems,"Problems associated with backtracking can be categorized into 3 categories: Decision Problems:  Here, we search for a feasible solution. 
+ Optimization Problems:  For this type, we search for the best solution. 
+ Enumeration Problems:  We find set of all possible feasible solutions to the problems of this type.",
+Backtracking,Determining Backtracking Problems:,"Generally every constraint satisfaction problem can be solved using backtracking but, Is it optimal to use backtracking every time? Turns out  NO , there are a vast number of problem that can be solved using  Greedy  or  Dynamic programming  in logarithmic or polynomial time complexity which is far better than exponential complexity of Backtracking. However many problems still exists that can only be solved using Backtracking.",
+Backtracking,Pseudocode for Backtracking,"The best way to implement backtracking is through recursion, and all backtracking code can be summarised as per the given Pseudocode:",
+Backtracking,Complexity Analysis of Backtracking,"Since backtracking algorithm is purely brute force therefore in terms of time complexity, it performs very poorly. Generally backtracking can be seen having below mentioned time complexities: Exponential (O(K^N))  
+ Factorial (O(N!)) These complexities are due to the fact that at each state we have multiple choices due to which the number of paths increases and sub-trees expand rapidly.",
+Backtracking,How Backtracking is different from Recursion?,"Recursion and Backtracking are related concepts in computer science and programming, but they are not the same thing. Let’s explore the key differences between them:",
+Backtracking,Applications of Backtracking,"Creating smart bots to play Board Games such as Chess. 
+ Solving mazes and puzzles such as N-Queen problem.  
+ Network Routing and Congestion Control. 
+ Decryption 
+ Text Justification",
+Graph,Representations of Graph,"Here are the two most common ways to represent a graph : For simplicity, we are going to consider only  unweighted graphs  in this post.",
+Graph,Adjacency Matrix Representation,"An adjacency matrix is a way of representing a graph as a matrix of boolean (0’s and 1’s) Let’s assume there are  n  vertices in the graph So, create a 2D matrix  adjMat[n][n]  having dimension n x n. The below figure shows an undirected graph. Initially, the entire Matrix is ​​initialized to  0 . If there is an edge from source to destination, we insert  1  to both cases ( adjMat[destination]  and  adjMat [ destination])  because we can go either way. The below figure shows a directed graph. Initially, the entire Matrix is ​​initialized to  0 . If there is an edge from source to destination, we insert  1  for that particular  adjMat[destination] .","def add_edge(mat, i, j):
+  
+    # Add an edge between two vertices
+    mat[i][j] = 1  # Graph is 
+    mat[j][i] = 1  # Undirected
+
+def display_matrix(mat):
+  
+    # Display the adjacency matrix
+    for row in mat:
+        print("" "".join(map(str, row)))  
+
+# Main function to run the program
+if __name__ == ""__main__"":
+    V = 4  # Number of vertices
+    mat = [[0] * V for _ in range(V)]  
+
+    # Add edges to the graph
+    add_edge(mat, 0, 1)
+    add_edge(mat, 0, 2)
+    add_edge(mat, 1, 2)
+    add_edge(mat, 2, 3)
+
+    # Optionally, initialize matrix directly
+    """"""
+    mat = [
+        [0, 1, 0, 0],
+        [1, 0, 1, 0],
+        [0, 1, 0, 1],
+        [0, 0, 1, 0]
+    ]
+    """"""
+
+    # Display adjacency matrix
+    print(""Adjacency Matrix:"")
+    display_matrix(mat)"
+Graph,Adjacency List Representation,"An array of Lists is used to store edges between two vertices. The size of array is equal to the number of  vertices (i.e, n) . Each index in this array represents a specific vertex in the graph. The entry at the index i of the array contains a linked list containing the vertices that are adjacent to vertex  i . Let’s assume there are  n  vertices in the graph So, create an  array of list  of size  n  as  adjList[n]. The below undirected graph has 3 vertices. So, an array of list will be created of size 3, where each indices represent the vertices. Now, vertex 0 has two neighbours (i.e, 1 and 2). So, insert vertex 1 and 2 at indices 0 of array. Similarly, For vertex 1, it has two neighbour (i.e, 2 and 0) So, insert vertices 2 and 0 at indices 1 of array. Similarly, for vertex 2, insert its neighbours in array of list. The below directed graph has 3 vertices. So, an array of list will be created of size 3, where each indices represent the vertices. Now, vertex 0 has no neighbours. For vertex 1, it has two neighbour (i.e, 0 and 2) So, insert vertices 0 and 2 at indices 1 of array. Similarly, for vertex 2, insert its neighbours in array of list.","def add_edge(adj, i, j):
+    adj[i].append(j)
+    adj[j].append(i)  # Undirected
+
+def display_adj_list(adj):
+    for i in range(len(adj)):
+        print(f""{i}: "", end="""")
+        for j in adj[i]:
+            print(j, end="" "")
+        print()
+
+# Create a graph with 4 vertices and no edges
+V = 4
+adj = [[] for _ in range(V)]
+
+# Now add edges one by one
+add_edge(adj, 0, 1)
+add_edge(adj, 0, 2)
+add_edge(adj, 1, 2)
+add_edge(adj, 2, 3)
+
+print(""Adjacency List Representation:"")
+display_adj_list(adj)"
+Graph,BFS from a Given Source:,"The algorithm starts from a given source and explores all reachable vertices from the given source. It is similar to the   Breadth-First Traversal of a tree . Like tree, we begin with the given source (in tree, we begin with root) and traverse vertices level by level using a queue data structure.  The only catch here is that, unlike    trees,  graphs    may contain cycles, so we may come to the same node again. To avoid processing a node more than once, we use a  boolean   visited  array. Initialization:   Enqueue the given source vertex into a queue and mark it as visited. This algorithm ensures that all nodes in the graph are visited in a breadth-first manner, starting from the starting node. Time Complexity:   O(V+E), where V is the number of nodes and E is the number of edges.   Auxiliary Space:   O(V)","from collections import deque
+
+# BFS from given source s
+def bfs(adj, s):
+  
+    # Create a queue for BFS
+    q = deque()
+    
+    # Initially mark all the vertices as not visited
+    # When we push a vertex into the q, we mark it as 
+    # visited
+    visited = [False] * len(adj);
+
+    # Mark the source node as visited and enqueue it
+    visited[s] = True
+    q.append(s)
+
+    # Iterate over the queue
+    while q:
+      
+        # Dequeue a vertex from queue and print it
+        curr = q.popleft()
+        print(curr, end="" "")
+
+        # Get all adjacent vertices of the dequeued 
+        # vertex. If an adjacent has not been visited, 
+        # mark it visited and enqueue it
+        for x in adj[curr]:
+            if not visited[x]:
+                visited[x] = True
+                q.append(x)
+
+# Function to add an edge to the graph
+def add_edge(adj, u, v):
+    adj[u].append(v)
+    adj[v].append(u)
+
+# Example usage
+if __name__ == ""__main__"":
+  
+    # Number of vertices in the graph
+    V = 5
+
+    # Adjacency list representation of the graph
+    adj = [[] for _ in range(V)]
+
+    # Add edges to the graph
+    add_edge(adj, 0, 1)
+    add_edge(adj, 0, 2)
+    add_edge(adj, 1, 3)
+    add_edge(adj, 1, 4)
+    add_edge(adj, 2, 4)
+
+    # Perform BFS traversal starting from vertex 0
+    print(""BFS starting from 0: "")
+    bfs(adj, 0)"
+Graph,BFS of the whole Graph which Maybe Disconnected,"The above implementation takes a source as an input and prints only those vertices that are reachable from the source and  would not print all vertices in case of disconnected graph. Let us now  talk about the algorithm that prints all vertices without any source and  the graph maybe disconnected. The idea is simple, instead of calling BFS for a single vertex, we call the above implemented BFS for all all non-visited vertices one by one.","from collections import deque
+
+# BFS from given source s
+def bfs(adj, s, visited):
+  
+    q = deque() # Create a queue for BFS
+
+    # Mark the source node as visited and enqueue it
+    visited[s] = True
+    q.append(s)
+
+    # Iterate over the queue
+    while q:
+        curr = q.popleft() # Dequeue a vertex
+        print(curr, end="" "")
+
+        # Get all adjacent vertices of curr
+        for x in adj[curr]:
+            if not visited[x]:
+                visited[x] = True # Mark as visited
+                q.append(x) # Enqueue it
+
+# Function to add an edge to the graph
+def add_edge(adj, u, v):
+    adj[u].append(v)
+    adj[v].append(u) # Undirected graph
+
+# Perform BFS for the entire graph
+def bfs_disconnected(adj):
+    visited = [False] * len(adj) # Not visited
+
+    for i in range(len(adj)):
+        if not visited[i]:
+            bfs(adj, i, visited)
+
+# Example usage
+V = 6 # Number of vertices
+adj = [[] for _ in range(V)] # Adjacency list
+
+# Add edges to the graph
+add_edge(adj, 0, 1)
+add_edge(adj, 0, 2)
+add_edge(adj, 3, 4)
+add_edge(adj, 4, 5)
+
+# Perform BFS traversal for the entire graph
+bfs_disconnected(adj)"
+Graph,Complexity Analysis of Breadth-First Search (BFS) Algorithm:,"BFS explores all the vertices and edges in the graph. In the worst case, it visits every vertex and edge once. Therefore, the time complexity of BFS is O(V + E), where V and E are the number of vertices and edges in the given graph. BFS uses a queue to keep track of the vertices that need to be visited. In the worst case, the queue can contain all the vertices in the graph. Therefore, the space complexity of BFS is O(V).",
+Graph,Applications of BFS in Graphs:,"BFS has various applications in graph theory and computer science, including: Shortest Path Finding:   BFS can be used to find the shortest path between two nodes in an unweighted graph. By keeping track of the parent of each node during the traversal, the shortest path can be reconstructed.   Cycle Detection:   BFS can be used to detect cycles in a graph. If a node is visited twice during the traversal, it indicates the presence of a cycle.   Connected Components:   BFS can be used to identify connected components in a graph. Each connected component is a set of nodes that can be reached from each other.   Topological Sorting:   BFS can be used to perform topological sorting on a directed acyclic graph (DAG). Topological sorting arranges the nodes in a linear order such that for any edge (u, v), u appears before v in the order.   Level Order Traversal of Binary Trees:   BFS can be used to perform a level order traversal of a binary tree. This traversal visits all nodes at the same level before moving to the next level.   Network Routing:   BFS can be used to find the shortest path between two nodes in a network, making it useful for routing data packets in network protocols.",
+Graph,FAQs on Breadth First Search (BFS) for a Graph:,Related Articles: Recent Articles on BFS   Depth First Traversal   Applications of Breadth First Traversal   Applications of Depth First Search   Time and Space Complexity of Breadth First Search (BFS),
+Graph,DFS from a Given Source of Undirected Graph:,"The algorithm starts from a given source and explores all reachable vertices from the given source. It is similar to  Preorder Tree Traversal  where we visit the root, then recur for its children. In a graph, there might be loops. So we use an extra visited array to make sure that we do not process a vertex again. Let us understand the working of   Depth First Search   with the help of the following illustration: for the  source as 0 . Below is the implementation of the above approach: Time complexity:  O(V + E), where V is the number of vertices and E is the number of edges in the graph. Auxiliary Space:  O(V + E), since an extra visited array of size V is required, And stack size for recursive calls to DFSRec function. Please refer  Complexity Analysis of Depth First Search:  for details.","def dfs_rec(adj, visited, s):
+    # Mark the current vertex as visited
+    visited[s] = True
+
+    # Print the current vertex
+    print(s, end="" "")
+
+    # Recursively visit all adjacent vertices
+    # that are not visited yet
+    for i in adj[s]:
+        if not visited[i]:
+            dfs_rec(adj, visited, i)
+
+
+def dfs(adj, s):
+    visited = [False] * len(adj)
+    # Call the recursive DFS function
+    dfs_rec(adj, visited, s)
+
+def add_edge(adj, s, t):
+    # Add edge from vertex s to t
+    adj[s].append(t)
+    # Due to undirected Graph
+    adj[t].append(s)
+    
+if __name__ == ""__main__"":
+    V = 5
+
+    # Create an adjacency list for the graph
+    adj = [[] for _ in range(V)]
+
+    # Define the edges of the graph
+    edges = [[1, 2], [1, 0], [2, 0], [2, 3], [2, 4]]
+
+    # Populate the adjacency list with edges
+    for e in edges:
+        add_edge(adj, e[0], e[1])
+
+    source = 1
+    print(""DFS from source:"", source)
+    dfs(adj, source)"
+Graph,DFS for Complete Traversal of Disconnected Undirected Graph,"The above implementation takes a source as an input and prints only those vertices that are reachable from the source and would not print all vertices in case of disconnected graph. Let us now talk about the algorithm that prints all vertices without any source and the graph maybe disconnected. The idea is simple, instead of calling DFS for a single vertex, we call the above implemented DFS for all all non-visited vertices one by one. Time complexity:  O(V + E). Note that the time complexity is same here because we visit every vertex at most once and every edge is traversed at most once (in directed) and twice in undirected. Auxiliary Space:  O(V + E), since an extra visited array of size V is required, And stack size for recursive calls to DFSRec function. Related Articles: Depth First Search or DFS on Directed Graph Breadth First Search or BFS for a Graph","class Graph:
+    def __init__(self, vertices):
+        # Adjacency list
+        self.adj = [[] for _ in range(vertices)]  
+
+    def add_edge(self, s, t):
+        self.adj[s].append(t)  
+        self.adj[t].append(s) 
+
+    def dfs_rec(self, visited, s):
+        visited[s] = True 
+        print(s, end="" "") 
+
+        # Recursively visit all adjacent vertices
+        # that are not visited yet
+        for i in self.adj[s]:
+            if not visited[i]:
+                self.dfs_rec(visited, i)
+
+    def dfs(self):
+        visited = [False] * len(self.adj) 
+
+        # Loop through all vertices to handle disconnected
+        # graph
+        for i in range(len(self.adj)):
+            if not visited[i]:
+                  # Perform DFS from unvisited vertex
+                self.dfs_rec(visited, i)
+
+
+if __name__ == ""__main__"":
+    V = 6  # Number of vertices
+    graph = Graph(V)
+
+    # Define the edges of the graph
+    edges = [(1, 2), (2, 0), (0, 3), (4, 5)]
+
+    # Populate the adjacency list with edges
+    for edge in edges:
+        graph.add_edge(edge[0], edge[1])
+
+    print(""Complete DFS of the graph:"")
+    graph.dfs()  # Perform DFS"
+Graph,Detect Cycle in a Directed Graph using  DFS:,"The problem can be solved based on the following idea: To keep track of vertices that are in recursion call stack, we use a boolean array where we use vertex number as an index. Whenever we begin recursive call for a vertex, we mark its entry as true and whenever the recursion call is about to end, we mark false. Illustration: Below is the graph showing how to detect cycle in a graph using DFS: Below is the implementation of the above approach: Time Complexity:  O(V + E), the Time Complexity of this method is the same as the time complexity of   DFS traversal   which is O(V+E).  Auxiliary Space:  O(V). To store the visited and recursion stack O(V) space is needed. In the below article, another O(V + E) method is discussed :  Detect Cycle in a direct graph using colors","def is_cyc_util(adj, u, visited, rec_stack):
+  
+    if not visited[u]:
+      
+        # Mark the current node as visited
+        # and part of recursion stack
+        visited[u] = True
+        rec_stack[u] = True
+
+        # Recur for all the vertices 
+        # adjacent to this vertex
+        for x in adj[u]:
+            if not visited[x] and is_cyc_util(adj, x, visited, rec_stack):
+                return True
+            elif rec_stack[x]:
+                return True
+
+    # Remove the vertex from recursion stack
+    rec_stack[u] = False
+    return False
+
+def is_cyclic(adj, V):
+    visited = [False] * V
+    rec_stack = [False] * V
+
+    # Call the recursive helper function to
+    # detect cycle in different DFS trees
+    for i in range(V):
+        if not visited[i] and is_cyc_util(adj, i, visited, rec_stack):
+            return True
+
+    return False
+
+# Driver function
+if __name__ == ""__main__"":
+    V = 4
+    adj = [[] for _ in range(V)]
+
+    # Adding edges to the graph
+    adj[0].append(1)
+    adj[0].append(2)
+    adj[1].append(2)
+    adj[2].append(0)
+    adj[2].append(3)
+    adj[3].append(3)
+
+    # Function call
+    if is_cyclic(adj, V):
+        print(""Contains Cycle"")
+    else:
+        print(""No Cycle"")"
+Graph,Detect Cycle in a Directed Graph using  Topological Sorting:,"Below is the implementation of the above approach: Time Complexity:   O(V + E), the time complexity of this method is the same as the time complexity of BFS traversal which is O(V+E).  Auxiliary Space:   O(V)","from collections import deque
+
+# Function to add an edge to the adjacency list
+def add_edge(adj, u, v):
+    adj[u].append(v)
+
+# Function to detect cycle in a directed graph
+def is_cyclic(V, adj):
+  
+    # Stores in-degree of each vertex
+    in_degree = [0] * V
+    
+    # Queue to store vertices with 0 in-degree
+    q = deque()
+    
+    visited = 0  # Count of visited vertices
+
+    # Calculate in-degree of each vertex
+    for u in range(V):
+        for v in adj[u]:
+            in_degree[v] += 1
+
+    # Enqueue vertices with 0 in-degree
+    for u in range(V):
+        if in_degree[u] == 0:
+            q.append(u)
+
+    # BFS traversal
+    while q:
+        u = q.popleft()
+        visited += 1
+
+        # Reduce in-degree of adjacent vertices
+        for v in adj[u]:
+            in_degree[v] -= 1
+            
+            # If in-degree becomes 0, enqueue it
+            if in_degree[v] == 0:
+                q.append(v)
+
+    # If not all vertices are visited, cycle
+    return visited != V
+
+# Driver function
+if __name__ == ""__main__"":
+    V = 6
+    adj = [[] for _ in range(V)]
+
+    # Adding edges to the graph
+    add_edge(adj, 0, 1)
+    add_edge(adj, 0, 2)
+    add_edge(adj, 1, 3)
+    add_edge(adj, 4, 1)
+    add_edge(adj, 4, 5)
+    add_edge(adj, 5, 3)
+
+    # Function call to check for cycles
+    if is_cyclic(V, adj):
+        print(""Contains cycle"")
+    else:
+        print(""No Cycle"")"
+Graph,1. Adjacency List for Directed graph:,"Consider an Directed and Unweighted graph  G  with 3  vertices  and  3 edges . For the graph G, the adjacency list would look like: ","# Function to add an edge between two vertices
+def addEdge(adj, u, v):
+    adj[u].append(v)
+
+
+def displayAdjList(adj):
+    for i in range(len(adj)):
+        print(f""{i}: "", end="""")
+        for j in adj[i]:
+            print(f""{j} "", end="""")
+        print()
+
+
+def main():
+  
+    # Create a graph with 3 vertices and 3 edges
+    V = 3
+    adj = [[] for _ in range(V)]
+
+    # Now add edges one by one
+    addEdge(adj, 1, 0)
+    addEdge(adj, 1, 2)
+    addEdge(adj, 2, 0)
+
+    print(""Adjacency List Representation:"")
+    displayAdjList(adj)
+
+
+if __name__ == ""__main__"":
+    main()"
+Graph,2. Adjacency List for Undirected graph:,"Consider an Undirected and Unweighted graph  G  with 3  vertices  and  3 edges . For the graph G, the adjacency list would look like: ","# Function to add an edge between two vertices
+def addEdge(adj, u, v):
+    adj[u].append(v)
+    adj[v].append(u)
+
+def displayAdjList(adj):
+    for i in range(len(adj)):
+        print(f""{i}: "", end="""")
+        for j in adj[i]:
+            print(f""{j} "", end="""")
+        print()
+
+
+def main():
+  
+    # Create a graph with 3 vertices and 3 edges
+    V = 3
+    adj = [[] for _ in range(V)]
+
+    # Now add edges one by one
+    addEdge(adj, 1, 0)
+    addEdge(adj, 1, 2)
+    addEdge(adj, 2, 0)
+
+    print(""Adjacency List Representation:"")
+    displayAdjList(adj)
+
+
+if __name__ == ""__main__"":
+    main()"
+Graph,3. Adjacency List for Directed and Weighted graph:,"Consider an Directed and Weighted graph  G  with 3  vertices  and  3 edges . For the graph G, the adjacency list would look like: ","# Function to add an edge between two vertices
+def addEdge(adj, u, v, w):
+    adj[u].append((v, w))
+
+def displayAdjList(adj):
+    for i in range(len(adj)):
+        print(f""{i}: "", end="""")
+        for j in adj[i]:
+            print(f""{{{j[0]}, {j[1]}}} "", end="""")
+        print()
+
+def main():
+  
+    # Create a graph with 3 vertices and 3 edges
+    V = 3
+    adj = [[] for _ in range(V)]
+
+    # Now add edges one by one
+    addEdge(adj, 1, 0, 4)
+    addEdge(adj, 1, 2, 3)
+    addEdge(adj, 2, 0, 1)
+
+    print(""Adjacency List Representation:"")
+    displayAdjList(adj)
+
+if __name__ == ""__main__"":
+    main()"
+Graph,4. Adjacency List for Undirected and Weighted graph:,"Consider an Undirected and Weighted graph  G  with 3  vertices  and  3 edges . For the graph G, the adjacency list would look like: ","# Function to add an edge between two vertices
+def addEdge(adj, u, v, w):
+    adj[u].append((v, w))
+    adj[v].append((u, w))
+
+def displayAdjList(adj):
+    for i in range(len(adj)):
+        print(f""{i}: "", end="""")
+        for j in adj[i]:
+            print(f""{{{j[0]}, {j[1]}}} "", end="""")
+        print()
+
+def main():
+  
+    # Create a graph with 3 vertices and 3 edges
+    V = 3
+    adj = [[] for _ in range(V)]
+
+    # Now add edges one by one
+    addEdge(adj, 1, 0, 4)
+    addEdge(adj, 1, 2, 3)
+    addEdge(adj, 2, 0, 1)
+
+    print(""Adjacency List Representation:"")
+    displayAdjList(adj)
+
+if __name__ == ""__main__"":
+    main()"
+Graph,Characteristics of the Adjacency List:,"An adjacency list representation uses a list of lists. We store all adjacent of every node together. The size of the list is determined by the number of vertices in the graph. All adjacent of a vertex are easily available. To find all adjacent, we need only O(n) time where is the number of adjacent vertices.",
+Graph,Applications of the Adjacency List:,"Graph algorithms : Many graph algorithms like  Dijkstra’s algorithm ,  Breadth First Search , and  Depth First Search  perform faster for adjacency lists to represent graphs. Adjacency List representation is the most commonly used representation of graph as it allows easy traversal of all edges.",
+Graph,Advantages of using an Adjacency list:,"An adjacency list is simple and easy to understand. Requires less space compared to adjacency matrix for sparse graphs. Easy to traverse through all edges of a graph. Adding an vertex is easier compared to adjacency matrix representation. Most of the graph algorithms are implemented faster with this representation. For example, BFS and DFS implementations take OIV x V) time, but with Adjacency List representation, we get these in linear time. Similarly Prim’s and Dijskstra’s algorithms are implemented faster with Adjacency List representation.",
+Graph,Disadvantages of using an Adjacency list:,Checking if there is an edge between two vertices is costly as we have traverse the adjacency list. Not suitable for dense graphs. Adjacency Matrix meaning and definition in DSA Add and Remove Edge in Adjacency List representation of a Graph Convert Adjacency Matrix to Adjacency List representation of Graph Convert Adjacency List to Adjacency Matrix representation of a Graph Comparison between Adjacency List and Adjacency Matrix representation of Graph,
+Rabin-Karp Algorithm,Rabin-Karp Algorithm:,"In the  Naive String Matching  algorithm, we check whether every substring of the text of the pattern’s size is equal to the pattern or not one by one.",
+Rabin-Karp Algorithm,How is Hash Value calculated in Rabin-Karp?,"Hash value  is used to efficiently check for potential matches between a  pattern  and substrings of a larger  text . The hash value is calculated using a  rolling hash function , which allows you to update the hash value for a new substring by efficiently removing the contribution of the old character and adding the contribution of the new character. This makes it possible to slide the pattern over the  text  and calculate the hash value for each substring without recalculating the entire hash from scratch. Here’s how the hash value is typically calculated in Rabin-Karp: Step 1:  Choose a suitable  base  and a  modulus : Select a prime number ‘ p ‘ as the modulus. This choice helps avoid overflow issues and ensures a good distribution of hash values. Choose a base ‘ b ‘ (usually a prime number as well), which is often the size of the character set (e.g., 256 for ASCII characters). Step 2:  Initialize the hash value: Set an initial hash value ‘ hash ‘ to  0 . Step 3:  Calculate the initial hash value for the  pattern : Iterate over each character in the  pattern  from  left  to  right . For each character  ‘c’  at position  ‘i’ , calculate its contribution to the hash value as  ‘c * (b pattern_length – i – 1 ) % p’  and add it to ‘ hash ‘. This gives you the hash value for the entire  pattern . Step 4:  Slide the pattern over the  text : Start by calculating the hash value for the first substring of the  text  that is the same length as the  pattern . Step 5:  Update the hash value for each subsequent substring: To slide the  pattern  one position to the right, you remove the contribution of the leftmost character and add the contribution of the new character on the right. The formula for updating the hash value when moving from position  ‘i’  to  ‘i+1’  is: Step 6:  Compare hash values: When the hash value of a substring in the  text  matches the hash value of the  pattern , it’s a  potential match . If the hash values match, we should perform a character-by-character comparison to confirm the match, as  hash collisions  can occur. Below is the Illustration of above algorithm:  Step-by-step approach: Initially calculate the hash value of the pattern. Start iterating from the starting of the string: Calculate the hash value of the current substring having length  m . If the hash value of the current substring and the pattern are same check if the substring is same as the pattern. If they are same, store the starting index as a valid answer. Otherwise, continue for the next substrings. Return the starting indices as the required answer. Below is the implementation of the above approach: Time Complexity: The average and best-case running time of the Rabin-Karp algorithm is O(n+m), but its worst-case time is O(nm). The worst case of the Rabin-Karp algorithm occurs when all characters of pattern and text are the same as the hash values of all the substrings of T[] match with the hash value of P[]. Auxiliary Space:  O(1)","# Following program is the python implementation of
+# Rabin Karp Algorithm given in CLRS book
+
+# d is the number of characters in the input alphabet
+d = 256
+
+# pat  -> pattern
+# txt  -> text
+# q    -> A prime number
+
+
+def search(pat, txt, q):
+    M = len(pat)
+    N = len(txt)
+    i = 0
+    j = 0
+    p = 0    # hash value for pattern
+    t = 0    # hash value for txt
+    h = 1
+
+    # The value of h would be ""pow(d, M-1)%q""
+    for i in range(M-1):
+        h = (h*d) % q
+
+    # Calculate the hash value of pattern and first window
+    # of text
+    for i in range(M):
+        p = (d*p + ord(pat[i])) % q
+        t = (d*t + ord(txt[i])) % q
+
+    # Slide the pattern over text one by one
+    for i in range(N-M+1):
+        # Check the hash values of current window of text and
+        # pattern if the hash values match then only check
+        # for characters one by one
+        if p == t:
+            # Check for characters one by one
+            for j in range(M):
+                if txt[i+j] != pat[j]:
+                    break
+                else:
+                    j += 1
+
+            # if p == t and pat[0...M-1] = txt[i, i+1, ...i+M-1]
+            if j == M:
+                print(""Pattern found at index "" + str(i))
+
+        # Calculate hash value for next window of text: Remove
+        # leading digit, add trailing digit
+        if i < N-M:
+            t = (d*(t-ord(txt[i])*h) + ord(txt[i+M])) % q
+
+            # We might get negative values of t, converting it to
+            # positive
+            if t < 0:
+                t = t+q
+
+
+# Driver Code
+if __name__ == '__main__':
+    txt = ""GEEKS FOR GEEKS""
+    pat = ""GEEK""
+
+    # A prime number
+    q = 101
+
+    # Function Call
+    search(pat, txt, q)
+
+# This code is contributed by Bhavya Jain"
+Rabin-Karp Algorithm,Limitations of Rabin-Karp Algorithm,"Spurious Hit:  When the hash value of the pattern matches with the hash value of a window of the text but the window is not the actual pattern then it is called a  spurious hit . Spurious hit increases the time complexity of the algorithm. In order to minimize spurious hit, we use good  hash function . It greatly reduces the spurious hit. Related Posts:   Searching for Patterns | Set 1 (Naive Pattern Searching)   Searching for Patterns | Set 2 (KMP Algorithm) ",

@@ -1,0 +1,1718 @@
+[
+  {
+    "main_topic": "Array",
+    "subtopic": "Basic terminologies of Array",
+    "question": "_____ terminologies of Array **Description:** Array Index:  In an array, elements are identified by their indexes",
+    "options": [
+      "Loop",
+      "Basic",
+      "Queue",
+      "Tree"
+    ],
+    "answer": "Basic"
+  },
+  {
+    "main_topic": "Array",
+    "subtopic": "Basic terminologies of Array",
+    "question": "_____ index starts from 0",
+    "options": [
+      "Loop",
+      "Graph",
+      "List",
+      "Array"
+    ],
+    "answer": "Array"
+  },
+  {
+    "main_topic": "Array",
+    "subtopic": "Basic terminologies of Array",
+    "question": "_____ element:  Elements are items stored in an array and can be accessed by their index",
+    "options": [
+      "Stack",
+      "Graph",
+      "Array",
+      "Loop"
+    ],
+    "answer": "Array"
+  },
+  {
+    "main_topic": "Array",
+    "subtopic": "Basic terminologies of Array",
+    "question": "_____ Length:  The length of an array is determined by the number of elements it can contain",
+    "options": [
+      "Array",
+      "Search",
+      "List",
+      "Loop"
+    ],
+    "answer": "Array"
+  },
+  {
+    "main_topic": "Array",
+    "subtopic": "Memory representation of Array",
+    "question": "_____ representation of Array **Description:** In an array, all the elements are stored in contiguous memory locations",
+    "options": [
+      "Tree",
+      "Stack",
+      "Memory",
+      "List"
+    ],
+    "answer": "Memory"
+  },
+  {
+    "main_topic": "Array",
+    "subtopic": "Memory representation of Array",
+    "question": "_____ if we initialize an array, the elements will be allocated sequentially in memory",
+    "options": [
+      "Queue",
+      "Loop",
+      "Stack",
+      "So,"
+    ],
+    "answer": "So,"
+  },
+  {
+    "main_topic": "Array",
+    "subtopic": "Memory representation of Array",
+    "question": "_____ allows for efficient access and manipulation of elements",
+    "options": [
+      "This",
+      "Queue",
+      "Tree",
+      "Search"
+    ],
+    "answer": "This"
+  },
+  {
+    "main_topic": "Array",
+    "subtopic": "Declaration of Array",
+    "question": "_____ of Array **Description:** Arrays can be declared in various ways in different languages",
+    "options": [
+      "Declaration",
+      "Loop",
+      "Search",
+      "Queue"
+    ],
+    "answer": "Declaration"
+  },
+  {
+    "main_topic": "Array",
+    "subtopic": "Declaration of Array",
+    "question": "_____ better illustration, below are some language-specific array declarations: # In Python, all types of lists are created same way arr = []",
+    "options": [
+      "Stack",
+      "List",
+      "Tree",
+      "For"
+    ],
+    "answer": "For"
+  },
+  {
+    "main_topic": "Array",
+    "subtopic": "Initialization of Array",
+    "question": "_____ of Array **Description:** Arrays can be initialized in different ways in different languages",
+    "options": [
+      "Tree",
+      "Stack",
+      "Initialization",
+      "Queue"
+    ],
+    "answer": "Initialization"
+  },
+  {
+    "main_topic": "Backtracking",
+    "subtopic": "What is Backtracking?",
+    "question": "_____ is Backtracking? **Description:** Backtracking is a problem-solving algorithmic technique that involves finding a solution incrementally by trying  different options  and  undoing  them if they lead to a  dead end",
+    "options": [
+      "Loop",
+      "What",
+      "List",
+      "Queue"
+    ],
+    "answer": "What"
+  },
+  {
+    "main_topic": "Backtracking",
+    "subtopic": "What is Backtracking?",
+    "question": "_____ is commonly used in situations where you need to explore multiple possibilities to solve a problem, like searching for a path in a maze or solving puzzles like Sudoku",
+    "options": [
+      "Stack",
+      "Tree",
+      "Loop",
+      "It"
+    ],
+    "answer": "It"
+  },
+  {
+    "main_topic": "Backtracking",
+    "subtopic": "What is Backtracking?",
+    "question": "_____ a dead end is reached, the algorithm backtracks to the previous decision point and explores a different path until a solution is found or all possibilities have been exhausted",
+    "options": [
+      "Graph",
+      "Loop",
+      "When",
+      "Stack"
+    ],
+    "answer": "When"
+  },
+  {
+    "main_topic": "Backtracking",
+    "subtopic": "What is Backtracking?",
+    "question": "_____  A candidate is a potential choice or element that can be added to the current solution",
+    "options": [
+      "Tree",
+      "Candidate:",
+      "Graph",
+      "Loop"
+    ],
+    "answer": "Candidate:"
+  },
+  {
+    "main_topic": "Backtracking",
+    "subtopic": "What is Backtracking?",
+    "question": "_____  The solution is a valid and complete configuration that satisfies all problem constraints",
+    "options": [
+      "Solution:",
+      "Search",
+      "Loop",
+      "Queue"
+    ],
+    "answer": "Solution:"
+  },
+  {
+    "main_topic": "Backtracking",
+    "subtopic": "What is Backtracking?",
+    "question": "_____ Solution:  A partial solution is an intermediate or incomplete configuration being constructed during the backtracking process",
+    "options": [
+      "Loop",
+      "Search",
+      "List",
+      "Partial"
+    ],
+    "answer": "Partial"
+  },
+  {
+    "main_topic": "Backtracking",
+    "subtopic": "What is Backtracking?",
+    "question": "_____ Space:  The decision space is the set of all possible candidates or choices at each decision point",
+    "options": [
+      "Graph",
+      "Stack",
+      "Tree",
+      "Decision"
+    ],
+    "answer": "Decision"
+  },
+  {
+    "main_topic": "Backtracking",
+    "subtopic": "What is Backtracking?",
+    "question": "_____ Point:  A decision point is a specific step in the algorithm where a candidate is chosen and added to the partial solution",
+    "options": [
+      "Decision",
+      "Loop",
+      "Stack",
+      "Graph"
+    ],
+    "answer": "Decision"
+  },
+  {
+    "main_topic": "Backtracking",
+    "subtopic": "What is Backtracking?",
+    "question": "_____ Solution:  A feasible solution is a partial or complete solution that adheres to all constraints",
+    "options": [
+      "Graph",
+      "List",
+      "Feasible",
+      "Stack"
+    ],
+    "answer": "Feasible"
+  },
+  {
+    "main_topic": "Backtracking",
+    "subtopic": "What is Backtracking?",
+    "question": "_____ End:  A dead end occurs when a partial solution cannot be extended without violating constraints",
+    "options": [
+      "Stack",
+      "Tree",
+      "Dead",
+      "Queue"
+    ],
+    "answer": "Dead"
+  },
+  {
+    "main_topic": "Binary Search",
+    "subtopic": "What is Binary Search Algorithm?",
+    "question": "_____ is Binary Search Algorithm? **Description:** Binary search  is a search algorithm used to find the position of a target value within a  sorted  array",
+    "options": [
+      "Graph",
+      "Queue",
+      "What",
+      "Tree"
+    ],
+    "answer": "What"
+  },
+  {
+    "main_topic": "Binary Search",
+    "subtopic": "What is Binary Search Algorithm?",
+    "question": "_____ works by repeatedly dividing the search interval in half until the target value is found or the interval is empty",
+    "options": [
+      "List",
+      "Stack",
+      "It",
+      "Search"
+    ],
+    "answer": "It"
+  },
+  {
+    "main_topic": "Binary Search",
+    "subtopic": "What is Binary Search Algorithm?",
+    "question": "_____ search interval is halved by comparing the target element with the middle value of the search space",
+    "options": [
+      "Graph",
+      "The",
+      "List",
+      "Stack"
+    ],
+    "answer": "The"
+  },
+  {
+    "main_topic": "Binary Search",
+    "subtopic": "Conditions to apply Binary Search Algorithm in a Data Structure",
+    "question": "_____ to apply Binary Search Algorithm in a Data Structure **Description:** To apply Binary Search algorithm: The data structure must be sorted",
+    "options": [
+      "Conditions",
+      "Graph",
+      "List",
+      "Stack"
+    ],
+    "answer": "Conditions"
+  },
+  {
+    "main_topic": "Binary Search",
+    "subtopic": "Conditions to apply Binary Search Algorithm in a Data Structure",
+    "question": "_____ to any element of the data structure should take constant time",
+    "options": [
+      "Access",
+      "Loop",
+      "List",
+      "Search"
+    ],
+    "answer": "Access"
+  },
+  {
+    "main_topic": "Binary Search",
+    "subtopic": "Binary Search Algorithm",
+    "question": "_____ Search Algorithm **Description:** Below is the step-by-step algorithm for _____ Search: Divide the search space into two halves by  finding the middle index \u201cmid\u201d",
+    "options": [
+      "Graph",
+      "Queue",
+      "List",
+      "Binary"
+    ],
+    "answer": "Binary"
+  },
+  {
+    "main_topic": "Binary Search",
+    "subtopic": "Binary Search Algorithm",
+    "question": "_____ the middle element of the search space with the  key",
+    "options": [
+      "Compare",
+      "Search",
+      "Queue",
+      "Tree"
+    ],
+    "answer": "Compare"
+  },
+  {
+    "main_topic": "Binary Search",
+    "subtopic": "Binary Search Algorithm",
+    "question": "_____ the  key  is found at middle element, the process is terminated",
+    "options": [
+      "If",
+      "Stack",
+      "Graph",
+      "List"
+    ],
+    "answer": "If"
+  },
+  {
+    "main_topic": "Binary Search",
+    "subtopic": "Binary Search Algorithm",
+    "question": "_____ the  key  is not found at middle element, choose which half will be used as the next search space",
+    "options": [
+      "Search",
+      "Queue",
+      "Graph",
+      "If"
+    ],
+    "answer": "If"
+  },
+  {
+    "main_topic": "Binary Search",
+    "subtopic": "Binary Search Algorithm",
+    "question": "_____ the  key  is smaller than the middle element, then the  left  side is used for next search",
+    "options": [
+      "Queue",
+      "Search",
+      "If",
+      "Loop"
+    ],
+    "answer": "If"
+  },
+  {
+    "main_topic": "Binary Tree",
+    "subtopic": "Representation of Binary Tree",
+    "question": "_____ of Binary Tree **Description:** Each node in a Binary Tree has three parts: Data Pointer to the left child Pointer to the right child Syntax to declare a Node of Binary Tree in different languages: # A Python class that represents # an individual node in a Binary Tree class Node:     def __init__(self, key):         self",
+    "options": [
+      "List",
+      "Stack",
+      "Representation",
+      "Loop"
+    ],
+    "answer": "Representation"
+  },
+  {
+    "main_topic": "Binary Tree",
+    "subtopic": "Example for Creating a Binary Tree",
+    "question": "_____ for Creating a Binary Tree **Description:** Here\u2019s an example of creating a Binary Tree with four nodes (2, 3, 4, 5) In the above code, we have created four tree nodes  firstNode ,  secondNode ,  thirdNode  and  fourthNode  having values  2 ,  3 ,  4  and  5  respectively",
+    "options": [
+      "Tree",
+      "Queue",
+      "Graph",
+      "Example"
+    ],
+    "answer": "Example"
+  },
+  {
+    "main_topic": "Binary Tree",
+    "subtopic": "Example for Creating a Binary Tree",
+    "question": "_____ creating three nodes, we have connected these node to form the tree structure like mentioned in above image",
+    "options": [
+      "Graph",
+      "List",
+      "After",
+      "Tree"
+    ],
+    "answer": "After"
+  },
+  {
+    "main_topic": "Binary Tree",
+    "subtopic": "Example for Creating a Binary Tree",
+    "question": "_____ the  secondNode  to the left of  firstNode  by  firstNode->left = secondNode _____ the  thirdNode  to the right of  firstNode  by  firstNode->right = thirdNode _____ the  fourthNode  to the left of  secondNode  by  secondNode->left = fourthNode class Node:     def __init__(self, d):         self",
+    "options": [
+      "List",
+      "Connect",
+      "Graph",
+      "Stack"
+    ],
+    "answer": "Connect"
+  },
+  {
+    "main_topic": "Binary Tree",
+    "subtopic": "Example for Creating a Binary Tree",
+    "question": "_____ = None  # Initialize and allocate memory for tree nodes firstNode = Node(2) secondNode = Node(3) thirdNode = Node(4) fourthNode = Node(5)  # Connect binary tree nodes firstNode",
+    "options": [
+      "Loop",
+      "Stack",
+      "right",
+      "List"
+    ],
+    "answer": "right"
+  },
+  {
+    "main_topic": "Bubble Sort",
+    "subtopic": "How does Bubble Sort Work?",
+    "question": "_____ does Bubble Sort Work? **Description:** Below is the implementation of the bubble sort",
+    "options": [
+      "List",
+      "Search",
+      "Stack",
+      "How"
+    ],
+    "answer": "How"
+  },
+  {
+    "main_topic": "Bubble Sort",
+    "subtopic": "How does Bubble Sort Work?",
+    "question": "_____ can be optimized by stopping the algorithm if the inner loop didn\u2019t cause any swap",
+    "options": [
+      "It",
+      "List",
+      "Loop",
+      "Stack"
+    ],
+    "answer": "It"
+  },
+  {
+    "main_topic": "Bubble Sort",
+    "subtopic": "How does Bubble Sort Work?",
+    "question": "_____ Optimized Python program for implementation of Bubble Sort def bubbleSort(arr):     n = len(arr)          _____ Traverse through all array elements     for i in range(n):         swapped = False          _____ Last i elements are already in place         for j in range(0, n-i-1):              _____ Traverse the array from 0 to n-i-1             _____ Swap if the element found is greater             _____ than the next element             if arr[j] > arr[j+1]:                 arr[j], arr[j+1] = arr[j+1], arr[j]                 swapped = True         if (swapped == False):             break  _____ Driver code to test above if __name__ == \"__main__\":     arr = [64, 34, 25, 12, 22, 11, 90]      bubbleSort(arr)      print(\"Sorted array:\")     for i in range(len(arr)):         print(\"%d\" % arr[i], end=\" \")",
+    "options": [
+      "Tree",
+      "Graph",
+      "Queue",
+      "#"
+    ],
+    "answer": "#"
+  },
+  {
+    "main_topic": "Bubble Sort",
+    "subtopic": "Complexity Analysis of Bubble Sort:",
+    "question": "_____ Analysis of Bubble Sort: **Description:** Time _____:  O(n 2 ) Auxiliary Space:  O(1) Please refer  _____ Analysis of Bubble Sort  for details",
+    "options": [
+      "Queue",
+      "Loop",
+      "Stack",
+      "Complexity"
+    ],
+    "answer": "Complexity"
+  },
+  {
+    "main_topic": "Bubble Sort",
+    "subtopic": "Advantages of Bubble Sort:",
+    "question": "_____ of Bubble Sort: **Description:** Bubble sort is easy to understand and implement",
+    "options": [
+      "Loop",
+      "Stack",
+      "Search",
+      "Advantages"
+    ],
+    "answer": "Advantages"
+  },
+  {
+    "main_topic": "Bubble Sort",
+    "subtopic": "Advantages of Bubble Sort:",
+    "question": "_____ does not require any additional memory space",
+    "options": [
+      "List",
+      "Stack",
+      "Graph",
+      "It"
+    ],
+    "answer": "It"
+  },
+  {
+    "main_topic": "Bubble Sort",
+    "subtopic": "Advantages of Bubble Sort:",
+    "question": "_____ is a stable sorting algorithm, meaning that elements with the same key value maintain their relative order in the sorted output",
+    "options": [
+      "Search",
+      "It",
+      "Queue",
+      "Stack"
+    ],
+    "answer": "It"
+  },
+  {
+    "main_topic": "Bubble Sort",
+    "subtopic": "Disadvantages of Bubble Sort:",
+    "question": "_____ of Bubble Sort: **Description:** Bubble sort has a time complexity of O(n 2 ) which makes it very slow for large data sets",
+    "options": [
+      "Disadvantages",
+      "Stack",
+      "Tree",
+      "List"
+    ],
+    "answer": "Disadvantages"
+  },
+  {
+    "main_topic": "Bubble Sort",
+    "subtopic": "Disadvantages of Bubble Sort:",
+    "question": "_____ sort has almost no or limited real world applications",
+    "options": [
+      "List",
+      "Bubble",
+      "Tree",
+      "Graph"
+    ],
+    "answer": "Bubble"
+  },
+  {
+    "main_topic": "Bubble Sort",
+    "subtopic": "Disadvantages of Bubble Sort:",
+    "question": "_____ is mostly used in academics to teach different ways of sorting",
+    "options": [
+      "Loop",
+      "Queue",
+      "It",
+      "List"
+    ],
+    "answer": "It"
+  },
+  {
+    "main_topic": "Bucket Sort",
+    "subtopic": "Bucket Sort Algorithm:",
+    "question": "_____ Sort Algorithm: **Description:** Create  n  empty buckets (Or lists) and do the following for every array element arr[i]",
+    "options": [
+      "Search",
+      "Graph",
+      "Queue",
+      "Bucket"
+    ],
+    "answer": "Bucket"
+  },
+  {
+    "main_topic": "Bucket Sort",
+    "subtopic": "Bucket Sort Algorithm:",
+    "question": "_____ arr[i] into bucket[n*array[i]] Sort individual buckets using insertion sort",
+    "options": [
+      "List",
+      "Graph",
+      "Stack",
+      "Insert"
+    ],
+    "answer": "Insert"
+  },
+  {
+    "main_topic": "Bucket Sort",
+    "subtopic": "How does Bucket Sort work?",
+    "question": "_____ does Bucket Sort work? **Description:** To apply bucket sort on the input array  [0",
+    "options": [
+      "List",
+      "Graph",
+      "How",
+      "Loop"
+    ],
+    "answer": "How"
+  },
+  {
+    "main_topic": "Bucket Sort",
+    "subtopic": "How does Bucket Sort work?",
+    "question": "_____ , we follow these steps: Step 1:  Create an array of size 10, where each slot represents a bucket",
+    "options": [
+      "68]",
+      "Loop",
+      "Stack",
+      "Queue"
+    ],
+    "answer": "68]"
+  },
+  {
+    "main_topic": "Bucket Sort",
+    "subtopic": "How does Bucket Sort work?",
+    "question": "_____ 2:  Insert elements into the buckets from the input array based on their range",
+    "options": [
+      "Queue",
+      "Tree",
+      "Step",
+      "Graph"
+    ],
+    "answer": "Step"
+  },
+  {
+    "main_topic": "Bucket Sort",
+    "subtopic": "How does Bucket Sort work?",
+    "question": "_____ elements into the buckets: Take each element from the input array",
+    "options": [
+      "Tree",
+      "Graph",
+      "Search",
+      "Inserting"
+    ],
+    "answer": "Inserting"
+  },
+  {
+    "main_topic": "Bucket Sort",
+    "subtopic": "How does Bucket Sort work?",
+    "question": "_____ the element by the size of the bucket array (10 in this case)",
+    "options": [
+      "Multiply",
+      "Search",
+      "Tree",
+      "Graph"
+    ],
+    "answer": "Multiply"
+  },
+  {
+    "main_topic": "Bucket Sort",
+    "subtopic": "How does Bucket Sort work?",
+    "question": "_____ example, for element 0",
+    "options": [
+      "List",
+      "Search",
+      "For",
+      "Graph"
+    ],
+    "answer": "For"
+  },
+  {
+    "main_topic": "Bucket Sort",
+    "subtopic": "How does Bucket Sort work?",
+    "question": "_____ the result to an integer, which gives us the bucket index",
+    "options": [
+      "Stack",
+      "Search",
+      "Convert",
+      "List"
+    ],
+    "answer": "Convert"
+  },
+  {
+    "main_topic": "DFS",
+    "subtopic": "DFS Traversal of a Graph vs Tree:",
+    "question": "_____ Traversal of a Graph vs Tree: **Description:** In the graph, there might be cycles and disconnectivity",
+    "options": [
+      "DFS",
+      "Loop",
+      "Graph",
+      "List"
+    ],
+    "answer": "DFS"
+  },
+  {
+    "main_topic": "DFS",
+    "subtopic": "DFS Traversal of a Graph vs Tree:",
+    "question": "_____ the graph, the tree does not contain a cycle and are always connected",
+    "options": [
+      "Tree",
+      "Unlike",
+      "Search",
+      "Loop"
+    ],
+    "answer": "Unlike"
+  },
+  {
+    "main_topic": "DFS",
+    "subtopic": "DFS Traversal of a Graph vs Tree:",
+    "question": "_____ DFS of a tree is relatively easier",
+    "options": [
+      "Search",
+      "So",
+      "List",
+      "Stack"
+    ],
+    "answer": "So"
+  },
+  {
+    "main_topic": "DFS",
+    "subtopic": "DFS Traversal of a Graph vs Tree:",
+    "question": "_____ can simply begin from a node, then traverse its adjacent (or children) without caring about cycles",
+    "options": [
+      "Loop",
+      "We",
+      "Graph",
+      "Queue"
+    ],
+    "answer": "We"
+  },
+  {
+    "main_topic": "DFS",
+    "subtopic": "DFS Traversal of a Graph vs Tree:",
+    "question": "_____ if we begin from a single node (root), and traverse this way, it is guaranteed that we traverse the whole tree as there is no dis-connectivity, Examples: Below are the Tree traversals through DFS using recursion:",
+    "options": [
+      "Tree",
+      "Search",
+      "And",
+      "Stack"
+    ],
+    "answer": "And"
+  },
+  {
+    "main_topic": "DFS",
+    "subtopic": "1. Inorder Traversal (Practice):",
+    "question": "_____ Traversal (Practice): **Description:** Follow the below steps to solve the problem: Traverse the left subtree, i",
+    "options": [
+      "List",
+      "Queue",
+      "Tree",
+      "Inorder"
+    ],
+    "answer": "Inorder"
+  },
+  {
+    "main_topic": "DFS",
+    "subtopic": "1. Inorder Traversal (Practice):",
+    "question": "_____ call Inorder(left-subtree) Visit the root Traverse the right subtree_____ i",
+    "options": [
+      "Graph",
+      "Loop",
+      ",",
+      "Queue"
+    ],
+    "answer": ","
+  },
+  {
+    "main_topic": "DFS",
+    "subtopic": "1. Inorder Traversal (Practice):",
+    "question": "_____ call Inorder(right-subtree) Below is the implementation of the above algorithm: Time Complexity:  O(N) Auxiliary Space:  O(log N) In the case of binary search trees (BST)_____ Inorder traversal gives nodes in non-decreasing order",
+    "options": [
+      ",",
+      "Search",
+      "Graph",
+      "Stack"
+    ],
+    "answer": ","
+  },
+  {
+    "main_topic": "DFS",
+    "subtopic": "1. Inorder Traversal (Practice):",
+    "question": "_____ get nodes of BST in non-increasing order, a variation of Inorder traversal where Inorder traversal is reversed can be used",
+    "options": [
+      "List",
+      "Tree",
+      "Stack",
+      "To"
+    ],
+    "answer": "To"
+  },
+  {
+    "main_topic": "DFS",
+    "subtopic": "2. Preorder Traversal (Practice):",
+    "question": "_____ Traversal (Practice): **Description:** Follow the below steps to solve the problem: Visit the root Traverse the left subtree, i",
+    "options": [
+      "Queue",
+      "Loop",
+      "Preorder",
+      "Tree"
+    ],
+    "answer": "Preorder"
+  },
+  {
+    "main_topic": "Graph",
+    "subtopic": "Representations of Graph",
+    "question": "_____ of Graph **Description:** Here are the two most common ways to represent a graph : For simplicity, we are going to consider only  unweighted graphs  in this post",
+    "options": [
+      "Graph",
+      "List",
+      "Search",
+      "Representations"
+    ],
+    "answer": "Representations"
+  },
+  {
+    "main_topic": "Graph",
+    "subtopic": "Adjacency Matrix Representation",
+    "question": "_____ Matrix Representation **Description:** An adjacency matrix is a way of representing a graph as a matrix of boolean (0\u2019s and 1\u2019s) Let\u2019s assume there are  n  vertices in the graph So, create a 2D matrix  adjMat[n][n]  having dimension n x n",
+    "options": [
+      "Loop",
+      "Adjacency",
+      "Stack",
+      "Tree"
+    ],
+    "answer": "Adjacency"
+  },
+  {
+    "main_topic": "Graph",
+    "subtopic": "Adjacency Matrix Representation",
+    "question": "_____ below figure shows an undirected graph",
+    "options": [
+      "Loop",
+      "Stack",
+      "Search",
+      "The"
+    ],
+    "answer": "The"
+  },
+  {
+    "main_topic": "Graph",
+    "subtopic": "Adjacency Matrix Representation",
+    "question": "_____ the entire Matrix is \u200b\u200binitialized to  0",
+    "options": [
+      "List",
+      "Stack",
+      "Initially,",
+      "Loop"
+    ],
+    "answer": "Initially,"
+  },
+  {
+    "main_topic": "Graph",
+    "subtopic": "Adjacency Matrix Representation",
+    "question": "_____ there is an edge from source to destination, we insert  1  to both cases ( adjMat[destination]  and  adjMat [ destination])  because we can go either way",
+    "options": [
+      "Queue",
+      "Search",
+      "Stack",
+      "If"
+    ],
+    "answer": "If"
+  },
+  {
+    "main_topic": "Graph",
+    "subtopic": "Adjacency Matrix Representation",
+    "question": "_____ below figure shows a directed graph",
+    "options": [
+      "Tree",
+      "Search",
+      "The",
+      "Graph"
+    ],
+    "answer": "The"
+  },
+  {
+    "main_topic": "Graph",
+    "subtopic": "Adjacency Matrix Representation",
+    "question": "_____ the entire Matrix is \u200b\u200binitialized to  0",
+    "options": [
+      "Stack",
+      "Initially,",
+      "Loop",
+      "List"
+    ],
+    "answer": "Initially,"
+  },
+  {
+    "main_topic": "Graph",
+    "subtopic": "Adjacency Matrix Representation",
+    "question": "_____ there is an edge from source to destination, we insert  1  for that particular  adjMat[destination]",
+    "options": [
+      "Search",
+      "If",
+      "List",
+      "Tree"
+    ],
+    "answer": "If"
+  },
+  {
+    "main_topic": "Graph",
+    "subtopic": "Adjacency Matrix Representation",
+    "question": "_____ add_edge(mat, i, j):        # Add an edge between two vertices     mat[i][j] = 1  # Graph is      mat[j][i] = 1  # Undirected  _____ display_matrix(mat):        # Display the adjacency matrix     for row in mat:         print(\" \"",
+    "options": [
+      "def",
+      "Tree",
+      "Loop",
+      "Queue"
+    ],
+    "answer": "def"
+  },
+  {
+    "main_topic": "Graph",
+    "subtopic": "Adjacency Matrix Representation",
+    "question": "_____ row)))    # Main function to run the program if __name__ == \"__main__\":     V = 4  # Number of vertices     mat = [[0] * V for _ in range(V)]        # Add edges to the graph     add_edge(mat, 0, 1)     add_edge(mat, 0, 2)     add_edge(mat, 1, 2)     add_edge(mat, 2, 3)      # Optionally, initialize matrix directly     \"\"\"     mat = [         [0, 1, 0, 0],         [1, 0, 1, 0],         [0, 1, 0, 1],         [0, 0, 1, 0]     ]     \"\"\"      # Display adjacency matrix     print(\"Adjacency Matrix:\")     display_matrix(mat)",
+    "options": [
+      "join(map(str,",
+      "Loop",
+      "Search",
+      "Tree"
+    ],
+    "answer": "join(map(str,"
+  },
+  {
+    "main_topic": "Hashing",
+    "subtopic": "Hash Data Structure Overview",
+    "question": "_____ Data Structure Overview **Description:** It is one of the most widely used data structure after arrays",
+    "options": [
+      "Graph",
+      "List",
+      "Hash",
+      "Loop"
+    ],
+    "answer": "Hash"
+  },
+  {
+    "main_topic": "Hashing",
+    "subtopic": "Hash Data Structure Overview",
+    "question": "_____ mainly supports search, insert and delete in O(1) time on average which is more efficient than other popular data structures like arrays, Linked List and  Self Balancing BST",
+    "options": [
+      "It",
+      "Search",
+      "Tree",
+      "Queue"
+    ],
+    "answer": "It"
+  },
+  {
+    "main_topic": "Hashing",
+    "subtopic": "Hash Data Structure Overview",
+    "question": "_____ use hashing for dictionaries, frequency counting, maintaining data for quick access by key, etc",
+    "options": [
+      "We",
+      "Loop",
+      "Search",
+      "List"
+    ],
+    "answer": "We"
+  },
+  {
+    "main_topic": "Hashing",
+    "subtopic": "Hash Data Structure Overview",
+    "question": "_____ World Applications include Database Indexing, Cryptography, Caches, Symbol Table and Dictionaries",
+    "options": [
+      "Real",
+      "Stack",
+      "Search",
+      "Graph"
+    ],
+    "answer": "Real"
+  },
+  {
+    "main_topic": "Hashing",
+    "subtopic": "Hash Data Structure Overview",
+    "question": "_____ are mainly two forms of hash typically implemented in programming languages",
+    "options": [
+      "List",
+      "There",
+      "Stack",
+      "Tree"
+    ],
+    "answer": "There"
+  },
+  {
+    "main_topic": "Hashing",
+    "subtopic": "Hash Data Structure Overview",
+    "question": "_____ Set  :  Collection of unique keys (Implemented as  Set in Python ,  Set in JavaScrtipt ,  unordered_set in C++  and  _____Set in Java",
+    "options": [
+      "List",
+      "Tree",
+      "Stack",
+      "Hash"
+    ],
+    "answer": "Hash"
+  },
+  {
+    "main_topic": "Hashing",
+    "subtopic": "Hash Data Structure Overview",
+    "question": "_____ Map  : Collection of key value pairs with keys being unique (Implemented as  dictionary in Python,   Map in JavaScript ,  unordered_map in C++  and  _____Map in Java ) Need to maintain sorted data along with search, insert and delete",
+    "options": [
+      "Stack",
+      "Hash",
+      "Graph",
+      "Search"
+    ],
+    "answer": "Hash"
+  },
+  {
+    "main_topic": "Hashing",
+    "subtopic": "Hash Data Structure Overview",
+    "question": "_____ use a self balancing BST in these cases",
+    "options": [
+      "List",
+      "We",
+      "Stack",
+      "Search"
+    ],
+    "answer": "We"
+  },
+  {
+    "main_topic": "Hashing",
+    "subtopic": "Hash Data Structure Overview",
+    "question": "_____ Strings are keys and we need operations like prefix search along with search, insert and delete",
+    "options": [
+      "When",
+      "Search",
+      "Queue",
+      "Graph"
+    ],
+    "answer": "When"
+  },
+  {
+    "main_topic": "Hashing",
+    "subtopic": "Hash Data Structure Overview",
+    "question": "_____ use Trie in these cases",
+    "options": [
+      "Queue",
+      "We",
+      "Loop",
+      "Tree"
+    ],
+    "answer": "We"
+  },
+  {
+    "main_topic": "Insertion Sort Algorithm",
+    "subtopic": "Insertion Sort Algorithm",
+    "question": "_____ Sort Algorithm **Description:** _____ sort is a simple sorting algorithm that works by iteratively inserting each element of an unsorted list into its correct position in a sorted portion of the list",
+    "options": [
+      "Loop",
+      "Search",
+      "Queue",
+      "Insertion"
+    ],
+    "answer": "Insertion"
+  },
+  {
+    "main_topic": "Insertion Sort Algorithm",
+    "subtopic": "Insertion Sort Algorithm",
+    "question": "_____ is like sorting playing cards in your hands",
+    "options": [
+      "Graph",
+      "Loop",
+      "It",
+      "Queue"
+    ],
+    "answer": "It"
+  },
+  {
+    "main_topic": "Insertion Sort Algorithm",
+    "subtopic": "Insertion Sort Algorithm",
+    "question": "_____ split the cards into two groups: the sorted cards and the unsorted cards",
+    "options": [
+      "Graph",
+      "Stack",
+      "Tree",
+      "You"
+    ],
+    "answer": "You"
+  },
+  {
+    "main_topic": "Insertion Sort Algorithm",
+    "subtopic": "Insertion Sort Algorithm",
+    "question": "_____ you pick a card from the unsorted group and put it in the right place in the sorted group",
+    "options": [
+      "Loop",
+      "List",
+      "Stack",
+      "Then,"
+    ],
+    "answer": "Then,"
+  },
+  {
+    "main_topic": "Insertion Sort Algorithm",
+    "subtopic": "Insertion Sort Algorithm",
+    "question": "_____ start with second element of the array as first element in the array is assumed to be sorted",
+    "options": [
+      "Tree",
+      "We",
+      "Stack",
+      "List"
+    ],
+    "answer": "We"
+  },
+  {
+    "main_topic": "Insertion Sort Algorithm",
+    "subtopic": "Insertion Sort Algorithm",
+    "question": "_____ second element with the first element and check if the second element is smaller then swap them",
+    "options": [
+      "Compare",
+      "Queue",
+      "Tree",
+      "Search"
+    ],
+    "answer": "Compare"
+  },
+  {
+    "main_topic": "Insertion Sort Algorithm",
+    "subtopic": "Insertion Sort Algorithm",
+    "question": "_____ to the third element and compare it with the first two elements and put at its correct position Repeat until the entire array is sorted",
+    "options": [
+      "Move",
+      "Queue",
+      "Loop",
+      "List"
+    ],
+    "answer": "Move"
+  },
+  {
+    "main_topic": "Insertion Sort Algorithm",
+    "subtopic": "Insertion Sort Algorithm",
+    "question": "_____ Python program for implementation of Insertion Sort  _____ Function to sort array using insertion sort def insertionSort(arr):     for i in range(1, len(arr)):         key = arr[i]         j = i - 1          _____ Move elements of arr[0",
+    "options": [
+      "Search",
+      "Graph",
+      "Tree",
+      "#"
+    ],
+    "answer": "#"
+  },
+  {
+    "main_topic": "Insertion Sort Algorithm",
+    "subtopic": "Insertion Sort Algorithm",
+    "question": "_____ that are         # greater than key, to one position ahead         # of their current position         while j >= 0 and key < arr[j]:             arr[j + 1] = arr[j]             j -= 1         arr[j + 1] = key  # A utility function to print array of size n def printArray(arr):     for i in range(len(arr)):         print(arr[i], end=\" \")     print()  # Driver method if __name__ == \"__main__\":     arr = [12, 11, 13, 5, 6]     insertionSort(arr)     printArray(arr)",
+    "options": [
+      "i-1],",
+      "Loop",
+      "Stack",
+      "Tree"
+    ],
+    "answer": "i-1],"
+  },
+  {
+    "main_topic": "Insertion Sort Algorithm",
+    "subtopic": "Complexity Analysis of Insertion Sort  :",
+    "question": "_____ Analysis of Insertion Sort  : **Description:** Best case:  O(n) , If the list is already sorted, where n is the number of elements in the list",
+    "options": [
+      "Queue",
+      "Complexity",
+      "Loop",
+      "Graph"
+    ],
+    "answer": "Complexity"
+  },
+  {
+    "main_topic": "Linked List",
+    "subtopic": "Understanding Node Structure",
+    "question": "_____ Node Structure **Description:** In a singly linked list, each node consists of two parts: data and a pointer to the next node",
+    "options": [
+      "Queue",
+      "Stack",
+      "Understanding",
+      "Graph"
+    ],
+    "answer": "Understanding"
+  },
+  {
+    "main_topic": "Linked List",
+    "subtopic": "Understanding Node Structure",
+    "question": "_____ structure allows nodes to be dynamically linked together, forming a chain-like sequence",
+    "options": [
+      "List",
+      "Tree",
+      "Graph",
+      "This"
+    ],
+    "answer": "This"
+  },
+  {
+    "main_topic": "Linked List",
+    "subtopic": "Understanding Node Structure",
+    "question": "_____ this example, the Node class contains an integer data field ( data ) to store the information and a pointer to another Node ( next ) to establish the link to the next node in the list",
+    "options": [
+      "Search",
+      "Graph",
+      "In",
+      "Stack"
+    ],
+    "answer": "In"
+  },
+  {
+    "main_topic": "Linked List",
+    "subtopic": "Understanding Node Structure",
+    "question": "_____ Definition of a Node in a singly linked list class Node:     def __init__(self, data):        _____ Data part of the node         self",
+    "options": [
+      "Tree",
+      "#",
+      "Search",
+      "Stack"
+    ],
+    "answer": "#"
+  },
+  {
+    "main_topic": "Linked List",
+    "subtopic": "Operations on Singly Linked List",
+    "question": "_____ on Singly Linked List **Description:** Traversal Searching Length Insertion: Insert at the beginning Insert at the end Insert at a specific position Deletion: Delete from the beginning Delete from the end Delete a specific node Let's go through each of the operations mentioned above, one by one",
+    "options": [
+      "Tree",
+      "List",
+      "Search",
+      "Operations"
+    ],
+    "answer": "Operations"
+  },
+  {
+    "main_topic": "Linked List",
+    "subtopic": "Traversal of Singly Linked List",
+    "question": "_____ of Singly Linked List **Description:** _____ involves visiting each node in the linked list and performing some operation on the data",
+    "options": [
+      "Traversal",
+      "Search",
+      "List",
+      "Graph"
+    ],
+    "answer": "Traversal"
+  },
+  {
+    "main_topic": "Linked List",
+    "subtopic": "Traversal of Singly Linked List",
+    "question": "_____ simple traversal function would print or process the data of each node",
+    "options": [
+      "Loop",
+      "List",
+      "A",
+      "Search"
+    ],
+    "answer": "A"
+  },
+  {
+    "main_topic": "Linked List",
+    "subtopic": "Traversal of Singly Linked List",
+    "question": "_____ approach: Initialize a pointer current to the head of the list",
+    "options": [
+      "Tree",
+      "Loop",
+      "Graph",
+      "Step-by-step"
+    ],
+    "answer": "Step-by-step"
+  },
+  {
+    "main_topic": "Linked List",
+    "subtopic": "Traversal of Singly Linked List",
+    "question": "_____ a while loop to iterate through the list until the current pointer reaches NULL",
+    "options": [
+      "Graph",
+      "Stack",
+      "Loop",
+      "Use"
+    ],
+    "answer": "Use"
+  },
+  {
+    "main_topic": "Merge Sort",
+    "subtopic": "Merge Sort",
+    "question": "_____ Sort **Description:** _____ sort is a sorting algorithm that follows the divide-and-conquer approach",
+    "options": [
+      "Merge",
+      "Loop",
+      "Queue",
+      "Search"
+    ],
+    "answer": "Merge"
+  },
+  {
+    "main_topic": "Merge Sort",
+    "subtopic": "Merge Sort",
+    "question": "_____ works by recursively dividing the input array into smaller subarrays and sorting those subarrays then merging them back together to obtain the sorted array",
+    "options": [
+      "It",
+      "Loop",
+      "Queue",
+      "Graph"
+    ],
+    "answer": "It"
+  },
+  {
+    "main_topic": "Merge Sort",
+    "subtopic": "Merge Sort",
+    "question": "_____ simple terms, we can say that the process of merge sort is to divide the array into two halves, sort each half, and then merge the sorted halves back together",
+    "options": [
+      "Queue",
+      "Search",
+      "In",
+      "Tree"
+    ],
+    "answer": "In"
+  },
+  {
+    "main_topic": "Merge Sort",
+    "subtopic": "Merge Sort",
+    "question": "_____ process is repeated until the entire array is sorted",
+    "options": [
+      "Queue",
+      "Stack",
+      "This",
+      "List"
+    ],
+    "answer": "This"
+  },
+  {
+    "main_topic": "Merge Sort",
+    "subtopic": "How does Merge Sort work?",
+    "question": "_____ does Merge Sort work? **Description:** Merge sort is a popular sorting algorithm known for its efficiency and stability",
+    "options": [
+      "List",
+      "Graph",
+      "How",
+      "Stack"
+    ],
+    "answer": "How"
+  },
+  {
+    "main_topic": "Merge Sort",
+    "subtopic": "How does Merge Sort work?",
+    "question": "_____ follows the divide-and-conquer approach to sort a given array of elements",
+    "options": [
+      "Graph",
+      "Tree",
+      "It",
+      "Search"
+    ],
+    "answer": "It"
+  },
+  {
+    "main_topic": "Merge Sort",
+    "subtopic": "How does Merge Sort work?",
+    "question": "_____ a step-by-step explanation of how merge sort works:  Divide:  Divide the list or array recursively into two halves until it can no more be divided",
+    "options": [
+      "Search",
+      "Queue",
+      "Here\u2019s",
+      "List"
+    ],
+    "answer": "Here\u2019s"
+  },
+  {
+    "main_topic": "Merge Sort",
+    "subtopic": "How does Merge Sort work?",
+    "question": "_____  Each subarray is sorted individually using the merge sort algorithm",
+    "options": [
+      "Queue",
+      "Conquer:",
+      "Stack",
+      "Search"
+    ],
+    "answer": "Conquer:"
+  },
+  {
+    "main_topic": "Merge Sort",
+    "subtopic": "How does Merge Sort work?",
+    "question": "_____  The sorted subarrays are merged back together in sorted order",
+    "options": [
+      "List",
+      "Merge:",
+      "Graph",
+      "Tree"
+    ],
+    "answer": "Merge:"
+  },
+  {
+    "main_topic": "Merge Sort",
+    "subtopic": "How does Merge Sort work?",
+    "question": "_____ process continues until all elements from both subarrays have been merged",
+    "options": [
+      "Loop",
+      "Queue",
+      "The",
+      "Tree"
+    ],
+    "answer": "The"
+  },
+  {
+    "main_topic": "QuickSort",
+    "subtopic": "How does QuickSort Algorithm work?",
+    "question": "_____ does QuickSort Algorithm work? **Description:** QuickSort works on the principle of  divide and conquer , breaking down the problem into smaller sub-problems",
+    "options": [
+      "Search",
+      "Queue",
+      "How",
+      "Graph"
+    ],
+    "answer": "How"
+  },
+  {
+    "main_topic": "QuickSort",
+    "subtopic": "How does QuickSort Algorithm work?",
+    "question": "_____ are mainly three steps in the algorithm: Here\u2019s a basic overview of how the QuickSort algorithm works",
+    "options": [
+      "There",
+      "Loop",
+      "Search",
+      "Tree"
+    ],
+    "answer": "There"
+  },
+  {
+    "main_topic": "QuickSort",
+    "subtopic": "How does QuickSort Algorithm work?",
+    "question": "_____ are many different choices for picking pivots",
+    "options": [
+      "Stack",
+      "Tree",
+      "Loop",
+      "There"
+    ],
+    "answer": "There"
+  },
+  {
+    "main_topic": "QuickSort",
+    "subtopic": "How does QuickSort Algorithm work?",
+    "question": "_____ pick the first (or last) element as a pivot",
+    "options": [
+      "List",
+      "Graph",
+      "Always",
+      "Loop"
+    ],
+    "answer": "Always"
+  },
+  {
+    "main_topic": "QuickSort",
+    "subtopic": "How does QuickSort Algorithm work?",
+    "question": "_____ below implementation picks the last element as pivot",
+    "options": [
+      "Stack",
+      "The",
+      "Loop",
+      "Queue"
+    ],
+    "answer": "The"
+  },
+  {
+    "main_topic": "QuickSort",
+    "subtopic": "How does QuickSort Algorithm work?",
+    "question": "_____ problem with this approach is it ends up in the worst case when array is already sorted",
+    "options": [
+      "Stack",
+      "Loop",
+      "Queue",
+      "The"
+    ],
+    "answer": "The"
+  },
+  {
+    "main_topic": "QuickSort",
+    "subtopic": "How does QuickSort Algorithm work?",
+    "question": "_____ a random element as a pivot",
+    "options": [
+      "Tree",
+      "Pick",
+      "Loop",
+      "Stack"
+    ],
+    "answer": "Pick"
+  },
+  {
+    "main_topic": "QuickSort",
+    "subtopic": "How does QuickSort Algorithm work?",
+    "question": "_____ is a preferred approach because it does not have a pattern for which the worst case happens",
+    "options": [
+      "Queue",
+      "Loop",
+      "Stack",
+      "This"
+    ],
+    "answer": "This"
+  },
+  {
+    "main_topic": "QuickSort",
+    "subtopic": "How does QuickSort Algorithm work?",
+    "question": "_____ the median element is pivot",
+    "options": [
+      "Loop",
+      "List",
+      "Pick",
+      "Stack"
+    ],
+    "answer": "Pick"
+  },
+  {
+    "main_topic": "QuickSort",
+    "subtopic": "How does QuickSort Algorithm work?",
+    "question": "_____ is an ideal approach in terms of time complexity as  we can find median in linear time  and the partition function will always divide the input array into two halves",
+    "options": [
+      "This",
+      "Search",
+      "Graph",
+      "List"
+    ],
+    "answer": "This"
+  },
+  {
+    "main_topic": "Rabin-Karp Algorithm",
+    "subtopic": "Rabin-Karp Algorithm:",
+    "question": "_____ Algorithm: **Description:** In the  Naive String Matching  algorithm, we check whether every substring of the text of the pattern\u2019s size is equal to the pattern or not one by one",
+    "options": [
+      "Graph",
+      "Tree",
+      "Rabin-Karp",
+      "Stack"
+    ],
+    "answer": "Rabin-Karp"
+  },
+  {
+    "main_topic": "Rabin-Karp Algorithm",
+    "subtopic": "How is Hash Value calculated in Rabin-Karp?",
+    "question": "_____ is Hash Value calculated in Rabin-Karp? **Description:** Hash value  is used to efficiently check for potential matches between a  pattern  and substrings of a larger  text",
+    "options": [
+      "Stack",
+      "How",
+      "Loop",
+      "List"
+    ],
+    "answer": "How"
+  },
+  {
+    "main_topic": "Rabin-Karp Algorithm",
+    "subtopic": "How is Hash Value calculated in Rabin-Karp?",
+    "question": "_____ hash value is calculated using a  rolling hash function , which allows you to update the hash value for a new substring by efficiently removing the contribution of the old character and adding the contribution of the new character",
+    "options": [
+      "Queue",
+      "Graph",
+      "The",
+      "Stack"
+    ],
+    "answer": "The"
+  },
+  {
+    "main_topic": "Rabin-Karp Algorithm",
+    "subtopic": "How is Hash Value calculated in Rabin-Karp?",
+    "question": "_____ makes it possible to slide the pattern over the  text  and calculate the hash value for each substring without recalculating the entire hash from scratch",
+    "options": [
+      "Stack",
+      "List",
+      "This",
+      "Tree"
+    ],
+    "answer": "This"
+  },
+  {
+    "main_topic": "Rabin-Karp Algorithm",
+    "subtopic": "How is Hash Value calculated in Rabin-Karp?",
+    "question": "_____ how the hash value is typically calculated in Rabin-Karp: Step 1:  Choose a suitable  base  and a  modulus : Select a prime number \u2018 p \u2018 as the modulus",
+    "options": [
+      "Here\u2019s",
+      "Stack",
+      "Tree",
+      "Queue"
+    ],
+    "answer": "Here\u2019s"
+  },
+  {
+    "main_topic": "Rabin-Karp Algorithm",
+    "subtopic": "How is Hash Value calculated in Rabin-Karp?",
+    "question": "_____ choice helps avoid overflow issues and ensures a good distribution of hash values",
+    "options": [
+      "Stack",
+      "Loop",
+      "This",
+      "Tree"
+    ],
+    "answer": "This"
+  },
+  {
+    "main_topic": "Rabin-Karp Algorithm",
+    "subtopic": "How is Hash Value calculated in Rabin-Karp?",
+    "question": "_____ a base \u2018 b \u2018 (usually a prime number as well), which is often the size of the character set (e",
+    "options": [
+      "Graph",
+      "Choose",
+      "Loop",
+      "List"
+    ],
+    "answer": "Choose"
+  },
+  {
+    "main_topic": "Rabin-Karp Algorithm",
+    "subtopic": "How is Hash Value calculated in Rabin-Karp?",
+    "question": "_____ 256 for ASCII characters)",
+    "options": [
+      ",",
+      "Queue",
+      "Search",
+      "Stack"
+    ],
+    "answer": ","
+  },
+  {
+    "main_topic": "Rabin-Karp Algorithm",
+    "subtopic": "How is Hash Value calculated in Rabin-Karp?",
+    "question": "_____ 2:  Initialize the hash value: Set an initial hash value \u2018 hash \u2018 to  0",
+    "options": [
+      "List",
+      "Tree",
+      "Graph",
+      "Step"
+    ],
+    "answer": "Step"
+  },
+  {
+    "main_topic": "Rabin-Karp Algorithm",
+    "subtopic": "How is Hash Value calculated in Rabin-Karp?",
+    "question": "_____ 3:  Calculate the initial hash value for the  pattern : Iterate over each character in the  pattern  from  left  to  right",
+    "options": [
+      "Graph",
+      "Step",
+      "Stack",
+      "Loop"
+    ],
+    "answer": "Step"
+  },
+  {
+    "main_topic": "Stack",
+    "subtopic": "Representation of Stack Data Structure:",
+    "question": "_____ of Stack Data Structure: **Description:** Stack follows LIFO (Last In First Out) Principle so the element which is pushed last is popped first",
+    "options": [
+      "Representation",
+      "List",
+      "Stack",
+      "Tree"
+    ],
+    "answer": "Representation"
+  },
+  {
+    "main_topic": "Stack",
+    "subtopic": "Types of Stack:",
+    "question": "_____ of Stack: **Description:** Fixed Size Stack   : As the name suggests, a fixed size stack has a fixed size and cannot grow or shrink dynamically",
+    "options": [
+      "List",
+      "Tree",
+      "Loop",
+      "Types"
+    ],
+    "answer": "Types"
+  },
+  {
+    "main_topic": "Stack",
+    "subtopic": "Types of Stack:",
+    "question": "_____ the stack is full and an attempt is made to add an element to it, an overflow error occurs",
+    "options": [
+      "Search",
+      "Graph",
+      "If",
+      "List"
+    ],
+    "answer": "If"
+  },
+  {
+    "main_topic": "Stack",
+    "subtopic": "Types of Stack:",
+    "question": "_____ the stack is empty and an attempt is made to remove an element from it, an underflow error occurs",
+    "options": [
+      "Loop",
+      "List",
+      "If",
+      "Search"
+    ],
+    "answer": "If"
+  },
+  {
+    "main_topic": "Stack",
+    "subtopic": "Types of Stack:",
+    "question": "_____ Size Stack   : A dynamic size stack can grow or shrink dynamically",
+    "options": [
+      "Loop",
+      "Search",
+      "List",
+      "Dynamic"
+    ],
+    "answer": "Dynamic"
+  },
+  {
+    "main_topic": "Stack",
+    "subtopic": "Types of Stack:",
+    "question": "_____ the stack is full, it automatically increases its size to accommodate the new element, and when the stack is empty, it decreases its size",
+    "options": [
+      "Tree",
+      "When",
+      "Loop",
+      "List"
+    ],
+    "answer": "When"
+  },
+  {
+    "main_topic": "Stack",
+    "subtopic": "Types of Stack:",
+    "question": "_____ type of stack is implemented using a linked list, as it allows for easy resizing of the stack",
+    "options": [
+      "This",
+      "Tree",
+      "Queue",
+      "List"
+    ],
+    "answer": "This"
+  },
+  {
+    "main_topic": "Stack",
+    "subtopic": "Basic Operations on Stack:",
+    "question": "_____ Operations on Stack: **Description:** In order to make manipulations in a stack, there are certain operations provided to us",
+    "options": [
+      "Search",
+      "List",
+      "Stack",
+      "Basic"
+    ],
+    "answer": "Basic"
+  },
+  {
+    "main_topic": "Stack",
+    "subtopic": "Basic Operations on Stack:",
+    "question": "_____   to insert an element into the stack     pop()   to remove an element from the stack     top()   Returns the top element of the stack",
+    "options": [
+      "Tree",
+      "push()",
+      "List",
+      "Search"
+    ],
+    "answer": "push()"
+  },
+  {
+    "main_topic": "Stack",
+    "subtopic": "Basic Operations on Stack:",
+    "question": "_____   returns true if stack is empty else false",
+    "options": [
+      "List",
+      "isEmpty()",
+      "Stack",
+      "Loop"
+    ],
+    "answer": "isEmpty()"
+  }
+]

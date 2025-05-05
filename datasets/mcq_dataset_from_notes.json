@@ -1,0 +1,1658 @@
+[
+  {
+    "main_topic":"Array",
+    "subtopic":"Basic terminologies of Array",
+    "question":"_____ terminologies of Array **Description:** Array Index:  In an array, elements are identified by their indexes",
+    "options":[
+      "Stack",
+      "Graph",
+      "Basic",
+      "Tree"
+    ],
+    "answer":"Basic"
+  },
+  {
+    "main_topic":"Array",
+    "subtopic":"Memory representation of Array",
+    "question":"_____ representation of Array **Description:** In an array, all the elements are stored in contiguous memory locations",
+    "options":[
+      "Memory",
+      "Stack",
+      "Queue",
+      "Graph"
+    ],
+    "answer":"Memory"
+  },
+  {
+    "main_topic":"Array",
+    "subtopic":"Declaration of Array",
+    "question":"_____ of Array **Description:** Arrays can be declared in various ways in different languages",
+    "options":[
+      "Declaration",
+      "Stack",
+      "Graph",
+      "Queue"
+    ],
+    "answer":"Declaration"
+  },
+  {
+    "main_topic":"Array",
+    "subtopic":"Initialization of Array",
+    "question":"_____ of Array **Description:** Arrays can be initialized in different ways in different languages",
+    "options":[
+      "Stack",
+      "Tree",
+      "Queue",
+      "Initialization"
+    ],
+    "answer":"Initialization"
+  },
+  {
+    "main_topic":"Array",
+    "subtopic":"Why do we Need Arrays?",
+    "question":"_____ do we Need Arrays? **Description:** Assume there is a class of five students and if we have to keep records of their marks in examination then, we can do this by declaring five variables individual and keeping track of records but what if the number of students becomes very large, it would be challenging to manipulate and maintain the data",
+    "options":[
+      "Tree",
+      "Graph",
+      "Why",
+      "Queue"
+    ],
+    "answer":"Why"
+  },
+  {
+    "main_topic":"Array",
+    "subtopic":"Types of Arrays",
+    "question":"_____ can have 2-D arrays, 3-D arrays, 4-D arrays and so on",
+    "options":[
+      "We",
+      "Graph",
+      "Stack",
+      "Queue"
+    ],
+    "answer":"We"
+  },
+  {
+    "main_topic":"Array",
+    "subtopic":"Operations on Array",
+    "question":"_____ else:    print(\"Element Not Found\")  # Output the modified list print(arr)  # Output: [10, 20, 30, 50] # Function to implement search operation def find_element(arr, n, key):     for i in range(n):         if arr[i] == key:             return i     return -1",
+    "options":[
+      "remove(key)",
+      "Queue",
+      "Tree",
+      "Graph"
+    ],
+    "answer":"remove(key)"
+  },
+  {
+    "main_topic":"Backtracking",
+    "subtopic":"What is Backtracking?",
+    "question":"_____  The solution is a valid and complete configuration that satisfies all problem constraints",
+    "options":[
+      "Solution:",
+      "Stack",
+      "Graph",
+      "Queue"
+    ],
+    "answer":"Solution:"
+  },
+  {
+    "main_topic":"Backtracking",
+    "subtopic":"Types of Backtracking Problems",
+    "question":"_____ Problems:  For this type, we search for the best solution",
+    "options":[
+      "Tree",
+      "Stack",
+      "Optimization",
+      "Graph"
+    ],
+    "answer":"Optimization"
+  },
+  {
+    "main_topic":"Backtracking",
+    "subtopic":"Determining Backtracking Problems:",
+    "question":"_____ Backtracking Problems: **Description:** Generally every constraint satisfaction problem can be solved using backtracking but, Is it optimal to use backtracking every time? Turns out  NO , there are a vast number of problem that can be solved using  Greedy  or  Dynamic programming  in logarithmic or polynomial time complexity which is far better than exponential complexity of Backtracking",
+    "options":[
+      "Queue",
+      "Graph",
+      "Stack",
+      "Determining"
+    ],
+    "answer":"Determining"
+  },
+  {
+    "main_topic":"Backtracking",
+    "subtopic":"Pseudocode for Backtracking",
+    "question":"_____ for Backtracking **Description:** The best way to implement backtracking is through recursion, and all backtracking code can be summarised as per the given _____:",
+    "options":[
+      "Queue",
+      "Tree",
+      "Stack",
+      "Pseudocode"
+    ],
+    "answer":"Pseudocode"
+  },
+  {
+    "main_topic":"Backtracking",
+    "subtopic":"Complexity Analysis of Backtracking",
+    "question":"_____ backtracking can be seen having below mentioned time complexities: Exponential (O(K^N))    Factorial (O(N!)) These complexities are due to the fact that at each state we have multiple choices due to which the number of paths increases and sub-trees expand rapidly",
+    "options":[
+      "Stack",
+      "Tree",
+      "Generally",
+      "Graph"
+    ],
+    "answer":"Generally"
+  },
+  {
+    "main_topic":"Backtracking",
+    "subtopic":"How Backtracking is different from Recursion?",
+    "question":"_____ explore the key differences between them:",
+    "options":[
+      "Graph",
+      "Let\u2019s",
+      "Stack",
+      "Tree"
+    ],
+    "answer":"Let\u2019s"
+  },
+  {
+    "main_topic":"Backtracking",
+    "subtopic":"Applications of Backtracking",
+    "question":"_____ of Backtracking **Description:** Creating smart bots to play Board Games such as Chess",
+    "options":[
+      "Stack",
+      "Queue",
+      "Applications",
+      "Tree"
+    ],
+    "answer":"Applications"
+  },
+  {
+    "main_topic":"Binary Search",
+    "subtopic":"What is Binary Search Algorithm?",
+    "question":"_____ search interval is halved by comparing the target element with the middle value of the search space",
+    "options":[
+      "Queue",
+      "Tree",
+      "Graph",
+      "The"
+    ],
+    "answer":"The"
+  },
+  {
+    "main_topic":"Binary Search",
+    "subtopic":"Conditions to apply Binary Search Algorithm in a Data Structure",
+    "question":"_____ to apply Binary Search Algorithm in a Data Structure **Description:** To apply Binary Search algorithm: The data structure must be sorted",
+    "options":[
+      "Conditions",
+      "Tree",
+      "Queue",
+      "Graph"
+    ],
+    "answer":"Conditions"
+  },
+  {
+    "main_topic":"Binary Search",
+    "subtopic":"Binary Search Algorithm",
+    "question":"_____ the  key  is smaller than the middle element, then the  left  side is used for next search",
+    "options":[
+      "Tree",
+      "If",
+      "Queue",
+      "Stack"
+    ],
+    "answer":"If"
+  },
+  {
+    "main_topic":"Binary Search",
+    "subtopic":"How does Binary Search Algorithm work?",
+    "question":"_____ does Binary Search Algorithm work? **Description:** To understand the working of binary search, consider the following illustration: Consider an array  arr[] = {2, 5, 8, 12, 16, 23, 38, 56, 72, 91} , and the  target = 23",
+    "options":[
+      "Tree",
+      "Queue",
+      "Graph",
+      "How"
+    ],
+    "answer":"How"
+  },
+  {
+    "main_topic":"Binary Search",
+    "subtopic":"How to Implement Binary Search Algorithm?",
+    "question":"_____ to Implement Binary Search Algorithm? **Description:** The  Binary Search Algorithm  can be implemented in the following two ways Iterative Binary Search Algorithm Recursive Binary Search Algorithm Given below are the pseudocodes for the approaches",
+    "options":[
+      "Graph",
+      "How",
+      "Tree",
+      "Queue"
+    ],
+    "answer":"How"
+  },
+  {
+    "main_topic":"Binary Search",
+    "subtopic":"Complexity Analysis of Binary Search Algorithm",
+    "question":"_____ Analysis of Binary Search Algorithm **Description:** Time _____: \u00a0 Best Case: O(1) Average Case: O(log N) Worst Case: O(log N) Auxiliary Space:  O(1), If the recursive call stack is considered then the auxiliary space will be O(logN)",
+    "options":[
+      "Stack",
+      "Complexity",
+      "Queue",
+      "Graph"
+    ],
+    "answer":"Complexity"
+  },
+  {
+    "main_topic":"Binary Search",
+    "subtopic":"Applications of Binary Search Algorithm",
+    "question":"_____ can be used for searching in computer graphics such as algorithms for ray tracing or texture mapping",
+    "options":[
+      "Stack",
+      "It",
+      "Graph",
+      "Queue"
+    ],
+    "answer":"It"
+  },
+  {
+    "main_topic":"Binary Search",
+    "subtopic":"Advantages of Binary Search",
+    "question":"_____ of Binary Search **Description:** Binary search is faster than linear search, especially for large arrays",
+    "options":[
+      "Tree",
+      "Graph",
+      "Advantages",
+      "Queue"
+    ],
+    "answer":"Advantages"
+  },
+  {
+    "main_topic":"Binary Search",
+    "subtopic":"Disadvantages of Binary Search",
+    "question":"_____ search requires that the elements of the array be comparable, meaning that they must be able to be ordered",
+    "options":[
+      "Graph",
+      "Binary",
+      "Tree",
+      "Stack"
+    ],
+    "answer":"Binary"
+  },
+  {
+    "main_topic":"Binary Tree",
+    "subtopic":"Representation of Binary Tree",
+    "question":"_____ = None         self",
+    "options":[
+      "Stack",
+      "Graph",
+      "left",
+      "Queue"
+    ],
+    "answer":"left"
+  },
+  {
+    "main_topic":"Binary Tree",
+    "subtopic":"Example for Creating a Binary Tree",
+    "question":"_____ for Creating a Binary Tree **Description:** Here\u2019s an example of creating a Binary Tree with four nodes (2, 3, 4, 5) In the above code, we have created four tree nodes  firstNode ,  secondNode ,  thirdNode  and  fourthNode  having values  2 ,  3 ,  4  and  5  respectively",
+    "options":[
+      "Queue",
+      "Example",
+      "Stack",
+      "Tree"
+    ],
+    "answer":"Example"
+  },
+  {
+    "main_topic":"Binary Tree",
+    "subtopic":"Terminologies in Binary Tree",
+    "question":"_____ has no parent and serves as the starting point for all nodes in the tree",
+    "options":[
+      "Graph",
+      "It",
+      "Stack",
+      "Queue"
+    ],
+    "answer":"It"
+  },
+  {
+    "main_topic":"Binary Tree",
+    "subtopic":"Properties of Binary Tree",
+    "question":"_____ of Binary Tree **Description:** The maximum number of nodes at level  L  of a binary tree is  2 L The maximum number of nodes in a binary tree of height  H  is  2 H  \u2013 1 Total number of leaf nodes in a binary tree = total\u00a0number\u00a0of\u00a0nodes\u00a0with\u00a02\u00a0children + 1 In a Binary Tree with  N  nodes, the minimum possible height or the minimum number of levels is  Log 2 (N+1) A Binary Tree with  L  leaves has at least  | Log2L |+ 1  levels Please refer  _____ of Binary Tree  for more details",
+    "options":[
+      "Properties",
+      "Graph",
+      "Tree",
+      "Queue"
+    ],
+    "answer":"Properties"
+  },
+  {
+    "main_topic":"Binary Tree",
+    "subtopic":"Types of Binary Tree",
+    "question":"_____ of Binary Tree **Description:** Binary Tree can be classified into multiples types based on multiple factors: On the basis of Number of Children Full Binary Tree Degenerate Binary Tree Skewed Binary Trees On the basis of Completion of Levels  Complete Binary Tree Perfect Binary Tree Balanced Binary Tree On the basis of Node Values: Binary Search Tree AVL Tree Red Black Tree B Tree B+ Tree Segment Tree",
+    "options":[
+      "Stack",
+      "Types",
+      "Tree",
+      "Queue"
+    ],
+    "answer":"Types"
+  },
+  {
+    "main_topic":"Binary Tree",
+    "subtopic":"Operations On Binary Tree",
+    "question":"_____ = Node(4)     root",
+    "options":[
+      "Tree",
+      "Queue",
+      "Stack",
+      "right"
+    ],
+    "answer":"right"
+  },
+  {
+    "main_topic":"Binary Tree",
+    "subtopic":"Auxiliary Operations On Binary Tree",
+    "question":"_____ Operations On Binary Tree **Description:** Finding the height of the tree Find level of a node in a Binary tree Finding the size of the entire tree",
+    "options":[
+      "Stack",
+      "Graph",
+      "Auxiliary",
+      "Tree"
+    ],
+    "answer":"Auxiliary"
+  },
+  {
+    "main_topic":"Binary Tree",
+    "subtopic":"Complexity Analysis of Binary Tree Operations",
+    "question":"_____ Analysis of Binary Tree Operations **Description:** Here\u2019s the complexity analysis for specific binary tree operations: Note:  We can use  Morris Traversal   to traverse all the nodes of the binary tree in O(n) time complexity but with O(1) auxiliary space",
+    "options":[
+      "Graph",
+      "Complexity",
+      "Queue",
+      "Tree"
+    ],
+    "answer":"Complexity"
+  },
+  {
+    "main_topic":"Binary Tree",
+    "subtopic":"Advantages of Binary Tree",
+    "question":"_____ of Binary Tree **Description:** Efficient Search:  Binary Search Trees  (a variation of Binary Tree) are efficient when searching for a specific element, as each node has at most two child nodes when compared to linked list and arrays Memory Efficient:  Binary trees require lesser memory as compared to other tree data structures, therefore memory-efficient",
+    "options":[
+      "Advantages",
+      "Graph",
+      "Stack",
+      "Tree"
+    ],
+    "answer":"Advantages"
+  },
+  {
+    "main_topic":"Binary Tree",
+    "subtopic":"Disadvantages of Binary Tree",
+    "question":"_____ example, if a tree requires more than two child nodes per node, a different tree structure may be more suitable",
+    "options":[
+      "Queue",
+      "Tree",
+      "Graph",
+      "For"
+    ],
+    "answer":"For"
+  },
+  {
+    "main_topic":"Binary Tree",
+    "subtopic":"Applications of Binary Tree",
+    "question":"_____ of Binary Tree **Description:** Binary Tree can be used to  represent hierarchical data",
+    "options":[
+      "Queue",
+      "Applications",
+      "Tree",
+      "Stack"
+    ],
+    "answer":"Applications"
+  },
+  {
+    "main_topic":"Bubble Sort",
+    "subtopic":"How does Bubble Sort Work?",
+    "question":"_____ does Bubble Sort Work? **Description:** Below is the implementation of the bubble sort",
+    "options":[
+      "Stack",
+      "Tree",
+      "How",
+      "Graph"
+    ],
+    "answer":"How"
+  },
+  {
+    "main_topic":"Bubble Sort",
+    "subtopic":"Complexity Analysis of Bubble Sort:",
+    "question":"_____ Analysis of Bubble Sort: **Description:** Time _____:  O(n 2 ) Auxiliary Space:  O(1) Please refer  _____ Analysis of Bubble Sort  for details",
+    "options":[
+      "Complexity",
+      "Stack",
+      "Graph",
+      "Queue"
+    ],
+    "answer":"Complexity"
+  },
+  {
+    "main_topic":"Bubble Sort",
+    "subtopic":"Advantages of Bubble Sort:",
+    "question":"_____ of Bubble Sort: **Description:** Bubble sort is easy to understand and implement",
+    "options":[
+      "Graph",
+      "Tree",
+      "Queue",
+      "Advantages"
+    ],
+    "answer":"Advantages"
+  },
+  {
+    "main_topic":"Bubble Sort",
+    "subtopic":"Disadvantages of Bubble Sort:",
+    "question":"_____ is mostly used in academics to teach different ways of sorting",
+    "options":[
+      "It",
+      "Tree",
+      "Queue",
+      "Graph"
+    ],
+    "answer":"It"
+  },
+  {
+    "main_topic":"Bucket Sort",
+    "subtopic":"Bucket Sort Algorithm:",
+    "question":"_____ all sorted buckets",
+    "options":[
+      "Queue",
+      "Graph",
+      "Concatenate",
+      "Tree"
+    ],
+    "answer":"Concatenate"
+  },
+  {
+    "main_topic":"Bucket Sort",
+    "subtopic":"How does Bucket Sort work?",
+    "question":"_____ elements into the buckets: Take each element from the input array",
+    "options":[
+      "Stack",
+      "Inserting",
+      "Queue",
+      "Graph"
+    ],
+    "answer":"Inserting"
+  },
+  {
+    "main_topic":"Bucket Sort",
+    "subtopic":"Implementation of Bucket Sort Algorithm:",
+    "question":"_____ of Bucket Sort Algorithm: **Description:** Below is the implementation for the Bucket Sort: def insertion_sort(bucket):     for i in range(1, len(bucket)):         key = bucket[i]         j = i - 1         while j >= 0 and bucket[j] > key:             bucket[j + 1] = bucket[j]             j -= 1         bucket[j + 1] = key  def bucket_sort(arr):     n = len(arr)     buckets = [[] for _ in range(n)]      # Put array elements in different buckets     for num in arr:         bi = int(n * num)         buckets[bi]",
+    "options":[
+      "Graph",
+      "Queue",
+      "Tree",
+      "Implementation"
+    ],
+    "answer":"Implementation"
+  },
+  {
+    "main_topic":"Bucket Sort",
+    "subtopic":"Complexity Analysis of Bucket Sort Algorithm:",
+    "question":"_____ Analysis of Bucket Sort Algorithm: **Description:** Worst Case Time _____:  O(n 2 )  The worst case happens when one bucket gets all the elements",
+    "options":[
+      "Graph",
+      "Queue",
+      "Complexity",
+      "Stack"
+    ],
+    "answer":"Complexity"
+  },
+  {
+    "main_topic":"DFS",
+    "subtopic":"DFS Traversal of a Graph vs Tree:",
+    "question":"_____ DFS of a tree is relatively easier",
+    "options":[
+      "So",
+      "Graph",
+      "Queue",
+      "Tree"
+    ],
+    "answer":"So"
+  },
+  {
+    "main_topic":"DFS",
+    "subtopic":"1. Inorder Traversal (Practice):",
+    "question":"_____ call Inorder(right-subtree) Below is the implementation of the above algorithm: Time Complexity:  O(N) Auxiliary Space:  O(log N) In the case of binary search trees (BST)_____ Inorder traversal gives nodes in non-decreasing order",
+    "options":[
+      "Queue",
+      ",",
+      "Graph",
+      "Tree"
+    ],
+    "answer":","
+  },
+  {
+    "main_topic":"DFS",
+    "subtopic":"2. Preorder Traversal (Practice):",
+    "question":"_____ traversal is also used to get prefix expressions of an expression tree",
+    "options":[
+      "Graph",
+      "Stack",
+      "Preorder",
+      "Tree"
+    ],
+    "answer":"Preorder"
+  },
+  {
+    "main_topic":"DFS",
+    "subtopic":"3. Postorder Traversal (Practice):",
+    "question":"_____ call Postorder(left-subtree) Traverse the right subtree_____ i",
+    "options":[
+      "Graph",
+      "Stack",
+      ",",
+      "Queue"
+    ],
+    "answer":","
+  },
+  {
+    "main_topic":"DFS",
+    "subtopic":"Implementing all traversals using DFS:",
+    "question":"_____ all traversals using DFS: **Description:** Time Complexity:  O(N) Auxiliary Space:  O(log N) Related Article: Please see  this post for Breadth First Traversal",
+    "options":[
+      "Implementing",
+      "Tree",
+      "Queue",
+      "Stack"
+    ],
+    "answer":"Implementing"
+  },
+  {
+    "main_topic":"Graph",
+    "subtopic":"Representations of Graph",
+    "question":"_____ of Graph **Description:** Here are the two most common ways to represent a graph : For simplicity, we are going to consider only  unweighted graphs  in this post",
+    "options":[
+      "Queue",
+      "Representations",
+      "Graph",
+      "Stack"
+    ],
+    "answer":"Representations"
+  },
+  {
+    "main_topic":"Graph",
+    "subtopic":"Adjacency Matrix Representation",
+    "question":"_____ there is an edge from source to destination, we insert  1  for that particular  adjMat[destination]",
+    "options":[
+      "Queue",
+      "Graph",
+      "Stack",
+      "If"
+    ],
+    "answer":"If"
+  },
+  {
+    "main_topic":"Graph",
+    "subtopic":"Adjacency List Representation",
+    "question":"_____ below directed graph has 3 vertices",
+    "options":[
+      "Tree",
+      "Queue",
+      "Graph",
+      "The"
+    ],
+    "answer":"The"
+  },
+  {
+    "main_topic":"Graph",
+    "subtopic":"BFS from a Given Source:",
+    "question":"_____      # Iterate over the queue     while q:                # Dequeue a vertex from queue and print it         curr = q",
+    "options":[
+      "Graph",
+      "Tree",
+      "append(s)",
+      "Queue"
+    ],
+    "answer":"append(s)"
+  },
+  {
+    "main_topic":"Graph",
+    "subtopic":"BFS of the whole Graph which Maybe Disconnected",
+    "question":"_____      # Iterate over the queue     while q:         curr = q",
+    "options":[
+      "Queue",
+      "Graph",
+      "append(s)",
+      "Tree"
+    ],
+    "answer":"append(s)"
+  },
+  {
+    "main_topic":"Graph",
+    "subtopic":"Complexity Analysis of Breadth-First Search (BFS) Algorithm:",
+    "question":"_____ the space complexity of BFS is O(V)",
+    "options":[
+      "Stack",
+      "Therefore,",
+      "Graph",
+      "Queue"
+    ],
+    "answer":"Therefore,"
+  },
+  {
+    "main_topic":"Graph",
+    "subtopic":"Applications of BFS in Graphs:",
+    "question":"_____ Order Traversal of Binary Trees:   BFS can be used to perform a level order traversal of a binary tree",
+    "options":[
+      "Level",
+      "Graph",
+      "Stack",
+      "Tree"
+    ],
+    "answer":"Level"
+  },
+  {
+    "main_topic":"Graph",
+    "subtopic":"FAQs on Breadth First Search (BFS) for a Graph:",
+    "question":"_____ on Breadth First Search (BFS) for a Graph: **Description:** Related Articles: Recent Articles on BFS   Depth First Traversal   Applications of Breadth First Traversal   Applications of Depth First Search   Time and Space Complexity of Breadth First Search (BFS)",
+    "options":[
+      "Tree",
+      "FAQs",
+      "Graph",
+      "Stack"
+    ],
+    "answer":"FAQs"
+  },
+  {
+    "main_topic":"Graph",
+    "subtopic":"DFS from a Given Source of Undirected Graph:",
+    "question":"_____ from a Given Source of Undirected Graph: **Description:** The algorithm starts from a given source and explores all reachable vertices from the given source",
+    "options":[
+      "Tree",
+      "Queue",
+      "Graph",
+      "DFS"
+    ],
+    "answer":"DFS"
+  },
+  {
+    "main_topic":"Graph",
+    "subtopic":"DFS for Complete Traversal of Disconnected Undirected Graph",
+    "question":"_____ Articles: Depth First Search or DFS on Directed Graph Breadth First Search or BFS for a Graph class Graph:     def __init__(self, vertices):         # Adjacency list         self",
+    "options":[
+      "Queue",
+      "Tree",
+      "Stack",
+      "Related"
+    ],
+    "answer":"Related"
+  },
+  {
+    "main_topic":"Graph",
+    "subtopic":"Detect Cycle in a Directed Graph using  DFS:",
+    "question":"_____ Space:  O(V)",
+    "options":[
+      "Graph",
+      "Tree",
+      "Auxiliary",
+      "Stack"
+    ],
+    "answer":"Auxiliary"
+  },
+  {
+    "main_topic":"Graph",
+    "subtopic":"Detect Cycle in a Directed Graph using  Topological Sorting:",
+    "question":"_____ Cycle in a Directed Graph using  Topological Sorting: **Description:** Below is the implementation of the above approach: Time Complexity:   O(V + E), the time complexity of this method is the same as the time complexity of BFS traversal which is O(V+E)",
+    "options":[
+      "Detect",
+      "Tree",
+      "Queue",
+      "Graph"
+    ],
+    "answer":"Detect"
+  },
+  {
+    "main_topic":"Graph",
+    "subtopic":"1. Adjacency List for Directed graph:",
+    "question":"_____ the graph G, the adjacency list would look like:  # Function to add an edge between two vertices def addEdge(adj, u, v):     adj[u]",
+    "options":[
+      "For",
+      "Tree",
+      "Stack",
+      "Graph"
+    ],
+    "answer":"For"
+  },
+  {
+    "main_topic":"Graph",
+    "subtopic":"2. Adjacency List for Undirected graph:",
+    "question":"_____ List for Undirected graph: **Description:** Consider an Undirected and Unweighted graph\u00a0 G\u00a0 with\u00a03  vertices \u00a0and\u00a0 3 edges",
+    "options":[
+      "Adjacency",
+      "Graph",
+      "Tree",
+      "Queue"
+    ],
+    "answer":"Adjacency"
+  },
+  {
+    "main_topic":"Graph",
+    "subtopic":"3. Adjacency List for Directed and Weighted graph:",
+    "question":"_____ the graph G, the adjacency list would look like:  # Function to add an edge between two vertices def addEdge(adj, u, v, w):     adj[u]",
+    "options":[
+      "For",
+      "Tree",
+      "Stack",
+      "Graph"
+    ],
+    "answer":"For"
+  },
+  {
+    "main_topic":"Graph",
+    "subtopic":"4. Adjacency List for Undirected and Weighted graph:",
+    "question":"_____ List for Undirected and Weighted graph: **Description:** Consider an Undirected and Weighted graph\u00a0 G\u00a0 with\u00a03  vertices \u00a0and\u00a0 3 edges",
+    "options":[
+      "Stack",
+      "Adjacency",
+      "Tree",
+      "Queue"
+    ],
+    "answer":"Adjacency"
+  },
+  {
+    "main_topic":"Graph",
+    "subtopic":"Characteristics of the Adjacency List:",
+    "question":"_____ find all adjacent, we need only O(n) time where is the number of adjacent vertices",
+    "options":[
+      "To",
+      "Stack",
+      "Graph",
+      "Queue"
+    ],
+    "answer":"To"
+  },
+  {
+    "main_topic":"Graph",
+    "subtopic":"Applications of the Adjacency List:",
+    "question":"_____ List representation is the most commonly used representation of graph as it allows easy traversal of all edges",
+    "options":[
+      "Adjacency",
+      "Tree",
+      "Graph",
+      "Stack"
+    ],
+    "answer":"Adjacency"
+  },
+  {
+    "main_topic":"Graph",
+    "subtopic":"Advantages of using an Adjacency list:",
+    "question":"_____ of the graph algorithms are implemented faster with this representation",
+    "options":[
+      "Most",
+      "Queue",
+      "Tree",
+      "Stack"
+    ],
+    "answer":"Most"
+  },
+  {
+    "main_topic":"Graph",
+    "subtopic":"Disadvantages of using an Adjacency list:",
+    "question":"_____ Matrix meaning and definition in DSA Add and Remove Edge in _____ List representation of a Graph Convert _____ Matrix to _____ List representation of Graph Convert _____ List to _____ Matrix representation of a Graph Comparison between _____ List and _____ Matrix representation of Graph",
+    "options":[
+      "Queue",
+      "Tree",
+      "Adjacency",
+      "Stack"
+    ],
+    "answer":"Adjacency"
+  },
+  {
+    "main_topic":"Hashing",
+    "subtopic":"Hash Data Structure Overview",
+    "question":"_____ Set  :  Collection of unique keys (Implemented as  Set in Python ,  Set in JavaScrtipt ,  unordered_set in C++  and  _____Set in Java",
+    "options":[
+      "Queue",
+      "Tree",
+      "Stack",
+      "Hash"
+    ],
+    "answer":"Hash"
+  },
+  {
+    "main_topic":"Hashing",
+    "subtopic":"Components of Hashing",
+    "question":"_____ stores values corresponding to the keys",
+    "options":[
+      "Tree",
+      "Graph",
+      "Queue",
+      "It"
+    ],
+    "answer":"It"
+  },
+  {
+    "main_topic":"Hashing",
+    "subtopic":"How does Hashing work?",
+    "question":"_____ 1:  We know that hash functions (which is some mathematical formula) are used to calculate the hash value which acts as the index of the data structure where the value will be stored",
+    "options":[
+      "Queue",
+      "Stack",
+      "Step",
+      "Tree"
+    ],
+    "answer":"Step"
+  },
+  {
+    "main_topic":"Hashing",
+    "subtopic":"What is a Hash function?",
+    "question":"_____ example:  Consider phone numbers as keys and a hash table of size 100",
+    "options":[
+      "Queue",
+      "For",
+      "Graph",
+      "Tree"
+    ],
+    "answer":"For"
+  },
+  {
+    "main_topic":"Hashing",
+    "subtopic":"What is Collision?",
+    "question":"_____ probability of a hash collision depends on the size of the algorithm, the distribution of hash values and the efficiency of Hash function",
+    "options":[
+      "Queue",
+      "The",
+      "Graph",
+      "Tree"
+    ],
+    "answer":"The"
+  },
+  {
+    "main_topic":"Hashing",
+    "subtopic":"How to handle Collisions?",
+    "question":"_____ tells whether the hash function which we are using is distributing the keys uniformly or not in the hash table",
+    "options":[
+      "Queue",
+      "it",
+      "Tree",
+      "Graph"
+    ],
+    "answer":"it"
+  },
+  {
+    "main_topic":"Hashing",
+    "subtopic":"What is Rehashing?",
+    "question":"_____ the complexity increases",
+    "options":[
+      "Stack",
+      "Queue",
+      "75),",
+      "Tree"
+    ],
+    "answer":"75),"
+  },
+  {
+    "main_topic":"Insertion Sort Algorithm",
+    "subtopic":"Insertion Sort Algorithm",
+    "question":"_____ Python program for implementation of Insertion Sort  _____ Function to sort array using insertion sort def insertionSort(arr):     for i in range(1, len(arr)):         key = arr[i]         j = i - 1          _____ Move elements of arr[0",
+    "options":[
+      "Graph",
+      "#",
+      "Tree",
+      "Queue"
+    ],
+    "answer":"#"
+  },
+  {
+    "main_topic":"Insertion Sort Algorithm",
+    "subtopic":"Complexity Analysis of Insertion Sort  :",
+    "question":"_____ case:  O(n 2 ) , If the list is randomly ordered   Worst case:  O(n 2 ) , If the list is in reverse order Auxiliary Space:   O(1), Insertion sort requires   O(1)   additional space, making it a space-efficient sorting algorithm",
+    "options":[
+      "Graph",
+      "Tree",
+      "Stack",
+      "Average"
+    ],
+    "answer":"Average"
+  },
+  {
+    "main_topic":"Insertion Sort Algorithm",
+    "subtopic":"Advantages  of Insertion Sort:",
+    "question":"_____  sorting algorithm",
+    "options":[
+      "Queue",
+      "Stable",
+      "Stack",
+      "Tree"
+    ],
+    "answer":"Stable"
+  },
+  {
+    "main_topic":"Insertion Sort Algorithm",
+    "subtopic":"Disadvantages  of Insertion Sort:",
+    "question":"_____  of Insertion Sort: **Description:** Inefficient for large lists",
+    "options":[
+      "Graph",
+      "Disadvantages",
+      "Tree",
+      "Queue"
+    ],
+    "answer":"Disadvantages"
+  },
+  {
+    "main_topic":"Insertion Sort Algorithm",
+    "subtopic":"Applications  of Insertion Sort:",
+    "question":"_____ the subarray size becomes small, we switch to insertion sort in these recursive algorithms",
+    "options":[
+      "Stack",
+      "Graph",
+      "When",
+      "Queue"
+    ],
+    "answer":"When"
+  },
+  {
+    "main_topic":"Linked List",
+    "subtopic":"Understanding Node Structure",
+    "question":"_____ Definition of a Node in a singly linked list class Node:     def __init__(self, data):        _____ Data part of the node         self",
+    "options":[
+      "Tree",
+      "Graph",
+      "Queue",
+      "#"
+    ],
+    "answer":"#"
+  },
+  {
+    "main_topic":"Linked List",
+    "subtopic":"Operations on Singly Linked List",
+    "question":"_____ on Singly Linked List **Description:** Traversal Searching Length Insertion: Insert at the beginning Insert at the end Insert at a specific position Deletion: Delete from the beginning Delete from the end Delete a specific node Let's go through each of the operations mentioned above, one by one",
+    "options":[
+      "Tree",
+      "Operations",
+      "Stack",
+      "Queue"
+    ],
+    "answer":"Operations"
+  },
+  {
+    "main_topic":"Linked List",
+    "subtopic":"Traversal of Singly Linked List",
+    "question":"_____ approach: Initialize a pointer current to the head of the list",
+    "options":[
+      "Graph",
+      "Queue",
+      "Step-by-step",
+      "Stack"
+    ],
+    "answer":"Step-by-step"
+  },
+  {
+    "main_topic":"Linked List",
+    "subtopic":"Searching in Singly Linked List",
+    "question":"_____ in Singly Linked List **Description:** _____ in a Singly Linked List refers to the process of looking for a specific element or value within the elements of the linked list",
+    "options":[
+      "Searching",
+      "Stack",
+      "Queue",
+      "Tree"
+    ],
+    "answer":"Searching"
+  },
+  {
+    "main_topic":"Linked List",
+    "subtopic":"Length of Singly Linked List",
+    "question":"_____ to the next node ( current = current->next )",
+    "options":[
+      "Queue",
+      "Tree",
+      "Stack",
+      "Move"
+    ],
+    "answer":"Move"
+  },
+  {
+    "main_topic":"Linked List",
+    "subtopic":"Insertion in Singly Linked List",
+    "question":"_____ is the function for insertion at the end of singly linked list: To insert a node at a specific position, traverse the list to the desired position, link the new node to the next node, and update the links accordingly",
+    "options":[
+      "Tree",
+      "Stack",
+      "Below",
+      "Queue"
+    ],
+    "answer":"Below"
+  },
+  {
+    "main_topic":"Linked List",
+    "subtopic":"Deletion in Singly Linked List",
+    "question":"_____ to insertion, there are different scenarios for deletion: To delete the first node, update the head to point to the second node in the list",
+    "options":[
+      "Similar",
+      "Queue",
+      "Stack",
+      "Tree"
+    ],
+    "answer":"Similar"
+  },
+  {
+    "main_topic":"Linked List",
+    "subtopic":"What is a Doubly Linked List?",
+    "question":"_____ allows for efficient traversal of the list in  both directions , making it suitable for applications where frequent  insertions  and  deletions  are required",
+    "options":[
+      "Stack",
+      "Graph",
+      "Queue",
+      "This"
+    ],
+    "answer":"This"
+  },
+  {
+    "main_topic":"Linked List",
+    "subtopic":"Representation of Doubly Linked List in Data Structure",
+    "question":"_____ of Doubly Linked List in Data Structure **Description:** In a data structure, a doubly linked list is represented using nodes that have three fields:",
+    "options":[
+      "Graph",
+      "Queue",
+      "Representation",
+      "Stack"
+    ],
+    "answer":"Representation"
+  },
+  {
+    "main_topic":"Linked List",
+    "subtopic":"Node Definition",
+    "question":"_____ = _____          # Reference to the previous node         self",
+    "options":[
+      "Graph",
+      "Queue",
+      "data",
+      "Tree"
+    ],
+    "answer":"data"
+  },
+  {
+    "main_topic":"Linked List",
+    "subtopic":"Operations on Doubly Linked List",
+    "question":"_____ on Doubly Linked List **Description:** Traversal in Doubly Linked List Searching in Doubly Linked List Finding Length of Doubly Linked List Insertion in Doubly Linked List : Insertion at the beginning of Doubly Linked List Insertion at the end of the Doubly Linked List Insertion at a specific position in Doubly Linked List Deletion in Doubly Linked List : Deletion of a node at the beginning of Doubly Linked List Deletion of a node at the end of Doubly Linked List Deletion of a node at a specific position in Doubly Linked List Let's go through each of the operations mentioned above, one by one",
+    "options":[
+      "Queue",
+      "Stack",
+      "Operations",
+      "Tree"
+    ],
+    "answer":"Operations"
+  },
+  {
+    "main_topic":"Linked List",
+    "subtopic":"Traversal in Doubly Linked List",
+    "question":"_____ in Doubly Linked List **Description:** To Traverse the doubly list, we can use the following steps: a",
+    "options":[
+      "Traversal",
+      "Tree",
+      "Stack",
+      "Queue"
+    ],
+    "answer":"Traversal"
+  },
+  {
+    "main_topic":"Linked List",
+    "subtopic":"Finding Length of Doubly Linked List",
+    "question":"_____ Length of Doubly Linked List **Description:** To find the length of doubly list, we can use the following steps: Start at the head of the list",
+    "options":[
+      "Stack",
+      "Queue",
+      "Graph",
+      "Finding"
+    ],
+    "answer":"Finding"
+  },
+  {
+    "main_topic":"Linked List",
+    "subtopic":"Insertion at the Beginning in Doubly Linked List",
+    "question":"_____ = head          # Set previous of head as new node     if head is not None:         head",
+    "options":[
+      "next",
+      "Graph",
+      "Queue",
+      "Tree"
+    ],
+    "answer":"next"
+  },
+  {
+    "main_topic":"Linked List",
+    "subtopic":"Insertion at the End of Doubly Linked List",
+    "question":"_____ the next pointer of the new node to nullptr",
+    "options":[
+      "Initialize",
+      "Graph",
+      "Tree",
+      "Stack"
+    ],
+    "answer":"Initialize"
+  },
+  {
+    "main_topic":"Linked List",
+    "subtopic":"Insertion at a Specific Position in Doubly Linked List",
+    "question":"_____ end=\" \")         curr = curr",
+    "options":[
+      "Stack",
+      "Queue",
+      "Graph",
+      "data,"
+    ],
+    "answer":"data,"
+  },
+  {
+    "main_topic":"Linked List",
+    "subtopic":"Deletion at the Beginning of Doubly Linked List",
+    "question":"_____ the new head is not NULL, update the previous pointer of new head to NULL,  head->prev = NULL",
+    "options":[
+      "Graph",
+      "If",
+      "Queue",
+      "Stack"
+    ],
+    "answer":"If"
+  },
+  {
+    "main_topic":"Linked List",
+    "subtopic":"Deletion at the End of Doubly Linked List",
+    "question":"_____ is None:         return None      # Traverse to the last node     curr = head     while curr",
+    "options":[
+      "Queue",
+      "next",
+      "Tree",
+      "Stack"
+    ],
+    "answer":"next"
+  },
+  {
+    "main_topic":"Linked List",
+    "subtopic":"Deletion at a Specific Position in Doubly Linked List",
+    "question":"_____ = None   # Function to delete a node at a specific position  #in the doubly linked list def del_pos(head, pos):     # If the list is empty     if head is None:         return head      curr = head      # Traverse to the node at the given position     for i in range(1, pos):         if curr is None:             return head         curr = curr",
+    "options":[
+      "Graph",
+      "Queue",
+      "next",
+      "Stack"
+    ],
+    "answer":"next"
+  },
+  {
+    "main_topic":"Linked List",
+    "subtopic":"Advantages of Doubly Linked List",
+    "question":"_____ insertion and deletion of nodes:  The presence of pointers to both the previous and next nodes makes it easy to insert or delete nodes from the list, without having to traverse the entire list",
+    "options":[
+      "Queue",
+      "Easy",
+      "Tree",
+      "Stack"
+    ],
+    "answer":"Easy"
+  },
+  {
+    "main_topic":"Linked List",
+    "subtopic":"Disadvantages of Doubly Linked List",
+    "question":"_____ of Doubly Linked List **Description:** More complex than singly linked lists:  Doubly linked lists are more complex than singly linked lists, as they require additional pointers for each node",
+    "options":[
+      "Graph",
+      "Disadvantages",
+      "Stack",
+      "Queue"
+    ],
+    "answer":"Disadvantages"
+  },
+  {
+    "main_topic":"Linked List",
+    "subtopic":"Applications of Doubly Linked List",
+    "question":"_____ Questions on Doubly Linked List MCQs on Linked List",
+    "options":[
+      "Queue",
+      "Practice",
+      "Graph",
+      "Tree"
+    ],
+    "answer":"Practice"
+  },
+  {
+    "main_topic":"Linked List",
+    "subtopic":"What is a Circular Linked List?",
+    "question":"_____ a regular linked list, which ends with a node pointing to  NULL , the last node in a circular linked list points back to the first node",
+    "options":[
+      "Graph",
+      "Unlike",
+      "Tree",
+      "Queue"
+    ],
+    "answer":"Unlike"
+  },
+  {
+    "main_topic":"Linked List",
+    "subtopic":"Types of Circular Linked Lists",
+    "question":"_____ of Circular Linked Lists **Description:** We can create a circular linked list from both  singly linked lists  and  doubly linked lists",
+    "options":[
+      "Tree",
+      "Types",
+      "Queue",
+      "Stack"
+    ],
+    "answer":"Types"
+  },
+  {
+    "main_topic":"Linked List",
+    "subtopic":"Representation of a Circular Singly Linked List",
+    "question":"_____ we create multiple nodes for a circular linked list, we only need to connect the last node back to the first one",
+    "options":[
+      "Stack",
+      "Graph",
+      "Tree",
+      "When"
+    ],
+    "answer":"When"
+  },
+  {
+    "main_topic":"Linked List",
+    "subtopic":"Example of Creating a Circular Linked List",
+    "question":"_____ Initilize and allocate memory for nodes first = Node(2) second = Node(3) last = Node(4)  _____ Connect nodes first",
+    "options":[
+      "Graph",
+      "#",
+      "Tree",
+      "Queue"
+    ],
+    "answer":"#"
+  },
+  {
+    "main_topic":"Linked List",
+    "subtopic":"Operations on the Circular Linked list:",
+    "question":"_____ on the Circular Linked list: **Description:** We can do some operations on the circular linked list similar to the singly and doubly linked list which are: Insertion Insertion at the empty list Insertion at the beginning Insertion at the end  Insertion at the given position Deletion Delete the first node Delete the last node Delete the node from any position Searching Note:  We will be using the circular singly linked list to represent the working of the circular linked list",
+    "options":[
+      "Queue",
+      "Tree",
+      "Operations",
+      "Graph"
+    ],
+    "answer":"Operations"
+  },
+  {
+    "main_topic":"Linked List",
+    "subtopic":"Insertion in the circular linked list:",
+    "question":"_____ = Node(4) last = first",
+    "options":[
+      "Graph",
+      "Stack",
+      "Tree",
+      "next"
+    ],
+    "answer":"next"
+  },
+  {
+    "main_topic":"Linked List",
+    "subtopic":"Deletion from a Circular Linked List",
+    "question":"_____      # If the node to be deleted is found     if curr",
+    "options":[
+      "Stack",
+      "Queue",
+      "next",
+      "Graph"
+    ],
+    "answer":"next"
+  },
+  {
+    "main_topic":"Linked List",
+    "subtopic":"Searching in Circular Linked list",
+    "question":"_____ = Node(3)     first",
+    "options":[
+      "Graph",
+      "next",
+      "Tree",
+      "Stack"
+    ],
+    "answer":"next"
+  },
+  {
+    "main_topic":"Linked List",
+    "subtopic":"Advantages of Circular Linked Lists",
+    "question":"_____ are no null references, making traversal easier and reducing the chances of encountering null pointer exceptions",
+    "options":[
+      "There",
+      "Queue",
+      "Stack",
+      "Tree"
+    ],
+    "answer":"There"
+  },
+  {
+    "main_topic":"Linked List",
+    "subtopic":"Disadvantages of Circular Linked Lists",
+    "question":"_____ can be more challenging due to the circular nature, as traditional methods of traversing linked lists may not apply",
+    "options":[
+      "Debugging",
+      "Graph",
+      "Queue",
+      "Tree"
+    ],
+    "answer":"Debugging"
+  },
+  {
+    "main_topic":"Linked List",
+    "subtopic":"Applications of Circular Linked Lists",
+    "question":"_____ multiplayer games, a circular linked list can be used to switch between players",
+    "options":[
+      "In",
+      "Queue",
+      "Tree",
+      "Stack"
+    ],
+    "answer":"In"
+  },
+  {
+    "main_topic":"Merge Sort",
+    "subtopic":"Merge Sort",
+    "question":"_____ simple terms, we can say that the process of merge sort is to divide the array into two halves, sort each half, and then merge the sorted halves back together",
+    "options":[
+      "Graph",
+      "Tree",
+      "Stack",
+      "In"
+    ],
+    "answer":"In"
+  },
+  {
+    "main_topic":"Merge Sort",
+    "subtopic":"How does Merge Sort work?",
+    "question":"_____ does Merge Sort work? **Description:** Merge sort is a popular sorting algorithm known for its efficiency and stability",
+    "options":[
+      "Graph",
+      "Queue",
+      "Stack",
+      "How"
+    ],
+    "answer":"How"
+  },
+  {
+    "main_topic":"Merge Sort",
+    "subtopic":"Complexity Analysis of Merge Sort",
+    "question":"_____ Analysis of Merge Sort **Description:** Time _____: Best Case: O(n log n), When the array is already sorted or nearly sorted",
+    "options":[
+      "Complexity",
+      "Graph",
+      "Stack",
+      "Tree"
+    ],
+    "answer":"Complexity"
+  },
+  {
+    "main_topic":"Merge Sort",
+    "subtopic":"Applications of Merge Sort",
+    "question":"_____ is a preferred algorithm for sorting Linked lists",
+    "options":[
+      "Graph",
+      "Stack",
+      "Queue",
+      "It"
+    ],
+    "answer":"It"
+  },
+  {
+    "main_topic":"Merge Sort",
+    "subtopic":"Advantages and Disadvantages of Merge Sort",
+    "question":"_____ can be a disadvantage in applications where memory usage is a concern",
+    "options":[
+      "This",
+      "Graph",
+      "Queue",
+      "Stack"
+    ],
+    "answer":"This"
+  },
+  {
+    "main_topic":"QuickSort",
+    "subtopic":"How does QuickSort Algorithm work?",
+    "question":"_____ are many different choices for picking pivots",
+    "options":[
+      "Queue",
+      "Tree",
+      "Stack",
+      "There"
+    ],
+    "answer":"There"
+  },
+  {
+    "main_topic":"QuickSort",
+    "subtopic":"Working of Partition Algorithm with Illustration",
+    "question":"_____ of Partition Algorithm with Illustration **Description:** Let us understand the working of partition algorithm with the help of the following example:",
+    "options":[
+      "Working",
+      "Stack",
+      "Tree",
+      "Graph"
+    ],
+    "answer":"Working"
+  },
+  {
+    "main_topic":"QuickSort",
+    "subtopic":"Illustration of QuickSort Algorithm",
+    "question":"_____ from low to      # i are smaller after every iteration     for j in range(low, high):         if arr[j] < pivot:             i += 1             swap(arr, i, j)          # Move pivot after smaller elements and     # return its position     swap(arr, i + 1, high)     return i + 1  # Swap function def swap(arr, i, j):     arr[i], arr[j] = arr[j], arr[i]  # The QuickSort function implementation def quickSort(arr, low, high):     if low < high:                  # pi is the partition return index of pivot         pi = partition(arr, low, high)                  # Recursion calls for smaller elements         # and greater or equals elements         quickSort(arr, low, pi - 1)         quickSort(arr, pi + 1, high)  # Main driver code if __name__ == \"__main__\":     arr = [10, 7, 8, 9, 1, 5]     n = len(arr)      quickSort(arr, 0, n - 1)          for val in arr:         print(val, end=\" \")",
+    "options":[
+      "Elements",
+      "Queue",
+      "Tree",
+      "Stack"
+    ],
+    "answer":"Elements"
+  },
+  {
+    "main_topic":"QuickSort",
+    "subtopic":"Complexity Analysis of Quick Sort",
+    "question":"_____ Case:  (O(n\u00b2)), Occurs when the smallest or largest element is always chosen as the pivot (e",
+    "options":[
+      "Stack",
+      "Tree",
+      "Queue",
+      "Worst"
+    ],
+    "answer":"Worst"
+  },
+  {
+    "main_topic":"QuickSort",
+    "subtopic":"Advantages of Quick Sort",
+    "question":"_____ general purpose algorithm for large data when stability is not required",
+    "options":[
+      "Graph",
+      "Tree",
+      "Queue",
+      "Fastest"
+    ],
+    "answer":"Fastest"
+  },
+  {
+    "main_topic":"QuickSort",
+    "subtopic":"Disadvantages of Quick Sort",
+    "question":"_____ is not a stable sort, meaning that if two elements have the same key, their relative order will not be preserved in the sorted output in case of quick sort, because here we are swapping elements according to the pivot\u2019s position (without considering their original positions)",
+    "options":[
+      "It",
+      "Stack",
+      "Tree",
+      "Graph"
+    ],
+    "answer":"It"
+  },
+  {
+    "main_topic":"QuickSort",
+    "subtopic":"Applications of Quick Sort",
+    "question":"_____ in theoretical computer science for analyzing average-case complexity and developing new techniques",
+    "options":[
+      "Tree",
+      "Important",
+      "Stack",
+      "Graph"
+    ],
+    "answer":"Important"
+  },
+  {
+    "main_topic":"Rabin-Karp Algorithm",
+    "subtopic":"Rabin-Karp Algorithm:",
+    "question":"_____ Algorithm: **Description:** In the  Naive String Matching  algorithm, we check whether every substring of the text of the pattern\u2019s size is equal to the pattern or not one by one",
+    "options":[
+      "Graph",
+      "Rabin-Karp",
+      "Stack",
+      "Queue"
+    ],
+    "answer":"Rabin-Karp"
+  },
+  {
+    "main_topic":"Rabin-Karp Algorithm",
+    "subtopic":"How is Hash Value calculated in Rabin-Karp?",
+    "question":"_____ they are same, store the starting index as a valid answer",
+    "options":[
+      "Graph",
+      "Stack",
+      "Tree",
+      "If"
+    ],
+    "answer":"If"
+  },
+  {
+    "main_topic":"Rabin-Karp Algorithm",
+    "subtopic":"Limitations of Rabin-Karp Algorithm",
+    "question":"_____ greatly reduces the spurious hit",
+    "options":[
+      "It",
+      "Stack",
+      "Tree",
+      "Queue"
+    ],
+    "answer":"It"
+  },
+  {
+    "main_topic":"Stack",
+    "subtopic":"Representation of Stack Data Structure:",
+    "question":"_____ of Stack Data Structure: **Description:** Stack follows LIFO (Last In First Out) Principle so the element which is pushed last is popped first",
+    "options":[
+      "Queue",
+      "Representation",
+      "Graph",
+      "Stack"
+    ],
+    "answer":"Representation"
+  },
+  {
+    "main_topic":"Stack",
+    "subtopic":"Types of Stack:",
+    "question":"_____ Size Stack   : A dynamic size stack can grow or shrink dynamically",
+    "options":[
+      "Dynamic",
+      "Tree",
+      "Queue",
+      "Stack"
+    ],
+    "answer":"Dynamic"
+  },
+  {
+    "main_topic":"Stack",
+    "subtopic":"Basic Operations on Stack:",
+    "question":"_____ the stack is full   (top == capacity-1)   , then   Stack Overflows   and we cannot insert the element to the stack",
+    "options":[
+      "Tree",
+      "If",
+      "Stack",
+      "Graph"
+    ],
+    "answer":"If"
+  },
+  {
+    "main_topic":"Stack",
+    "subtopic":"Implementation of Stack",
+    "question":"_____ of Stack **Description:** The basic operations that can be performed on a stack include push, pop, and peek",
+    "options":[
+      "Tree",
+      "Implementation",
+      "Queue",
+      "Graph"
+    ],
+    "answer":"Implementation"
+  },
+  {
+    "main_topic":"Stack",
+    "subtopic":"Complexity Analysis of Operations on Stack Data Structure:",
+    "question":"_____ Analysis of Operations on Stack Data Structure: **Description:** Next Articles: Applications, Advantages and Disadvantages of Stack    Implement a stack using singly linked list    Basic Operations in Stack Data Structure with Implementations    Top 50 Problems on Stack Data Structure asked in SDE Interviews    Applications, Advantages and Disadvantages of Stack    Stack for Competitive Programming",
+    "options":[
+      "Complexity",
+      "Tree",
+      "Graph",
+      "Queue"
+    ],
+    "answer":"Complexity"
+  },
+  {
+    "main_topic":"Stack",
+    "subtopic":"Implement Stack using Array:",
+    "question":"_____ Stack using Array: **Description:** Step-by-step approach:",
+    "options":[
+      "Stack",
+      "Implement",
+      "Graph",
+      "Tree"
+    ],
+    "answer":"Implement"
+  },
+  {
+    "main_topic":"Stack",
+    "subtopic":"Implement Stack Operations using Array:",
+    "question":"_____ Stack Operations using Array: **Description:** Here are the following operations of implement stack using array: Adds an item to the stack",
+    "options":[
+      "Queue",
+      "Tree",
+      "Stack",
+      "Implement"
+    ],
+    "answer":"Implement"
+  },
+  {
+    "main_topic":"Stack",
+    "subtopic":"Advantages of Array Implementation:",
+    "question":"_____ is saved as pointers are not involved",
+    "options":[
+      "Memory",
+      "Stack",
+      "Graph",
+      "Queue"
+    ],
+    "answer":"Memory"
+  },
+  {
+    "main_topic":"Stack",
+    "subtopic":"Disadvantages of Array Implementation:",
+    "question":"_____ of Array Implementation: **Description:** It is not dynamic i",
+    "options":[
+      "Disadvantages",
+      "Tree",
+      "Queue",
+      "Stack"
+    ],
+    "answer":"Disadvantages"
+  },
+  {
+    "main_topic":"Stack",
+    "subtopic":"Stack Operations:",
+    "question":"_____ Operations: **Description:** push() :  Insert a new element into the stack i",
+    "options":[
+      "Stack",
+      "Queue",
+      "Tree",
+      "Stack"
+    ],
+    "answer":"Stack"
+  },
+  {
+    "main_topic":"Stack",
+    "subtopic":"Display Operation:",
+    "question":"_____ an expression is parsed, it is converted into postfix notation and pushed onto a stack",
+    "options":[
+      "When",
+      "Queue",
+      "Tree",
+      "Stack"
+    ],
+    "answer":"When"
+  }
+]
