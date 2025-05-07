@@ -2,3 +2,5 @@ transformers
 accelerate
 bitsandbytes
 torch
+AutoModelForCausalLM
+AutoTokenizer
