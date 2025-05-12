@@ -2,5 +2,8 @@ transformers
 accelerate
 bitsandbytes
 torch
-AutoModelForCausalLM
-AutoTokenizer
+openai
+OpenAI
+dotenv
+
+#pip install -r requirements.txt
