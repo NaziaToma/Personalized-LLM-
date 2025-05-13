@@ -1,0 +1,76 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    ports:
+      - 5173:5173
+    develop:
+      watch:
+        - action: sync
+          path: ./frontend/
+          target: /frontend
+          ignore:
+            - node_modules
+
+  backend:
+    build:
+      context: .
+    ports:
+      - 8000:8000
+    volumes:
+      - ./backend:/backend
+    command: >
+      sh -c "python manage.py migrate &&
+             python manage.py runserver 0.0.0.0:8000"
+    environment:
+      - DB_HOST=db
+      - DB_NAME=db
+      - DB_USER=user
+      - DB_PASS=localdevpw
+      - CELERY_BROKER_URL=amqp://mquser:bunnypass123@mq:5672//
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: postgres:17.1
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_DB=db
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=localdevpw
+    healthcheck:
+      test: ["CMD", "pg_isready", "-q", "-d", "db", "-U", "user"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  mq:
+    image: rabbitmq:3.13.7-alpine
+    environment:
+      - RABBITMQ_DEFAULT_USER=mquser
+      - RABBITMQ_DEFAULT_PASS=bunnypass123
+
+  worker:
+    build:
+      context: .
+    volumes:
+      - ./backend:/backend
+    command: >
+      sh -c "celery -A backend worker -l INFO"
+    environment:
+      - DB_HOST=db
+      - DB_NAME=db
+      - DB_USER=user
+      - DB_PASS=localdevpw
+      - CELERY_BROKER_URL=amqp://mquser:bunnypass123@mq:5672//
+    depends_on:
+      - backend
+      - mq
+
+volumes:
+  db-data:
