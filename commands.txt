@@ -1,8 +1,13 @@
 apply changes to the database command
 -> docker compose run --rm backend sh -c "python manage.py makemigrations"
 
-see whats happening/run
+see whats happening/run/start docker
 -> docker compose up --watch
 
 creating super user
 -> docker compose run --rm backend python manage.py createsuperuser
+
+pip install -r requirements.txt
+
+building docker image
+docker compose build
