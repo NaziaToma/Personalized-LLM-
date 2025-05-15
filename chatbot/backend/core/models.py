@@ -54,7 +54,7 @@ class AiRequest(models.Model):
     
     def _queue_job(self):
         """add job to queue, asynchronous task"""
-        handle_ai_request_job.delay(self.ai)
+        handle_ai_request_job.delay(self.id)
     
     
     def handle(self):
@@ -66,10 +66,17 @@ class AiRequest(models.Model):
         try:
             completion = client.chat.completions.create(
                 model= "gpt-4o-mini",
-                messages=self.messages
+                messages=self.message
             )
             self.response = completion.to_dict()
             self.status = self.COMPLETE
         except:
             self.status=self.FAILED
         self.save()
+    
+    
+    def save(self, **kwargs):
+        is_new =self._state.adding
+        super().save(**kwargs)
+        if is_new:
+            self._queue_job()

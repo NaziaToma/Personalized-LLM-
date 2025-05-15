@@ -11,3 +11,5 @@ pip install -r requirements.txt
 
 building docker image
 docker compose build
+
+docker compose up --build --watch
