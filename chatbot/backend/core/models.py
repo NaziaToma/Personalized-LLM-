@@ -1,4 +1,6 @@
+from openai import OpenAI
 from django.db import models
+from core.tasks import handle_ai_request_job
 
 
 class Recipe(models.Model):
@@ -50,3 +52,24 @@ class AiRequest(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
+    def _queue_job(self):
+        """add job to queue, asynchronous task"""
+        handle_ai_request_job.delay(self.ai)
+    
+    
+    def handle(self):
+        """Handle request"""
+        
+        self.status = self.RUNNING
+        self.save()
+        client = OpenAI()
+        try:
+            completion = client.chat.completions.create(
+                model= "gpt-4o-mini",
+                messages=self.messages
+            )
+            self.response = completion.to_dict()
+            self.status = self.COMPLETE
+        except:
+            self.status=self.FAILED
+        self.save()
