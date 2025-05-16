@@ -17,6 +17,52 @@ class AiChatSession(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
+    #last request in the session
+    def get_last_request(self):
+        """return the most recent req or None """
+        return self.airequest_set.all().order_by('-created_at').first()
+        
+    def _create_message(self, message, role="user"):
+        """create a message for the AI"""
+        return {"role": role, "content": message}
+
+    def create_first_message(self, message):
+        """Creating first message in the session"""
+        return [
+            self._create_message("You're a CS note maker and you reply with concise learning materials.", "system"),
+            self._create_message(message, "user")
+        ]
+    def messages(self):
+        """Return messages in the conversation including the AI response"""
+        all_messages = []
+        request = self.get_last_request()
+        
+        if request:
+            all_messages.extend(request.messages)
+            try:
+                all_messages.append(request.response["choices"][0]["message"])
+            except (KeyError, TypeError, IndexError):
+                pass
+        return all_messages
+    
+    def send(self, message):
+        """send a message to the AI"""
+        last_request = self.get_last_request()
+        
+        if not last_request:
+            AiRequest.objects.create(
+                session=self, messages=self.create_first_message(message)
+            )
+        elif last_request.status in [AiRequest.COMPLETE, AiRequest.FAILED]:
+            AiRequest.objects.create(
+                session = self,
+                messages = self.messages() + [
+                    self._create_message(message, "user")
+                ]
+            )
+        else:
+            return 
+
 #AI request model
 class AiRequest(models.Model):
     
@@ -43,7 +89,7 @@ class AiRequest(models.Model):
         blank= True
     )
     #This stores user input
-    message = models.JSONField()
+    messages = models.JSONField()
     
     #This stores AI's response 
     response = models.JSONField(null = True, blank = True)
@@ -66,7 +112,7 @@ class AiRequest(models.Model):
         try:
             completion = client.chat.completions.create(
                 model= "gpt-4o-mini",
-                messages=self.message
+                messages=self.messages
             )
             self.response = completion.to_dict()
             self.status = self.COMPLETE

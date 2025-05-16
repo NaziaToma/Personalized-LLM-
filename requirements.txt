@@ -12,3 +12,4 @@ psycopg[c]==3.2.3
 celery==5.4.0
 
 #pip install -r requirements.txt
+

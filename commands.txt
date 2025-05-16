@@ -13,3 +13,10 @@ building docker image
 docker compose build
 
 docker compose up --build --watch
+
+docker compose run --rm backend sh -c "python manage.py shell"
+
+>>> from core.models import AiChatSession
+>>> session = AiChatSession.objects.create()
+>>> session.send("you are cs note generator")
+session.messages()

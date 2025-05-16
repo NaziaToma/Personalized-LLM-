@@ -33,6 +33,8 @@ services:
     depends_on:
       db:
         condition: service_healthy
+      mq:
+        condition: service_healthy
 
   db:
     image: postgres:17.1
@@ -55,6 +57,11 @@ services:
     environment:
       - RABBITMQ_DEFAULT_USER=mquser
       - RABBITMQ_DEFAULT_PASS=bunnypass123
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "status"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
   worker:
     build:
